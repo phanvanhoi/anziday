@@ -1,0 +1,52 @@
+<Toolbar android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:background="#1549FC"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <Button
+        android:id="@+id/btnBackMain"
+        android:background="@drawable/ic_left_arrow"
+        android:layout_marginRight="10dp"
+        android:layout_width="17dp"
+        android:layout_height="17dp" />
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginRight="5dp"
+        android:src="@drawable/logofood" />
+    <LinearLayout
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:background="@drawable/row_conner"
+        android:gravity="right"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <EditText
+            android:id="@+id/edtSearchSubNav"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="30dp"
+            android:background="#00000000"
+            android:focusable="false"
+            android:hint="Tìm kiếm sản phẩm ..."
+            android:textColor="#2b2b2b"
+            android:textColorHint="#2b2b2b"
+            android:textSize="11.7dp" />
+        <Button
+            android:id="@+id/btnSearchSubNav"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="right"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/search" />
+    </LinearLayout>
+    <Button
+        android:layout_marginLeft="25dp"
+        android:background="@drawable/noti"
+        android:layout_width="25dp"
+        android:layout_height="25dp" />
+
+</Toolbar>

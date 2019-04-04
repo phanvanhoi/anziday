@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".RegisterActivity">
+
+    <ImageView
+        android:id="@+id/imgLogoTit"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/foodslogo" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/usernameWrapper"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imgLogoTit"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="21dp"
+        android:hint="Họ tên"
+        android:textColorHint="#000000"
+        app:hintEnabled="true">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/edtFullname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape"
+            android:inputType="textPersonName"
+            android:maxLength="80"
+            android:padding="5dp"
+            android:textColor="#000000" />
+
+    </android.support.design.widget.TextInputLayout>
+
+   <android.support.design.widget.TextInputLayout
+       android:id="@+id/usernameWrapper1"
+       android:hint="Email"
+       android:layout_centerHorizontal="true"
+       android:textColorHint="#000000"
+       android:layout_height="wrap_content"
+       android:layout_below="@id/usernameWrapper"
+       android:layout_width="300dp"/>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/usernameWrapper2"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/usernameWrapper1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:hint="Tên đăng nhập"
+        android:textColorHint="#000000">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/edtUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/usernameWrapper2"
+            android:background="@drawable/shape"
+            android:inputType="textPersonName"
+            android:maxLength="16"
+            android:padding="5dp"
+            android:textColor="#000000"
+            app:passwordToggleEnabled="true" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/usernameWrapper3"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/usernameWrapper2"
+        android:layout_alignStart="@+id/usernameWrapper"
+        android:layout_marginTop="14dp"
+        android:hint="Mật khẩu"
+        android:textColorHint="#000000"
+        app:passwordToggleEnabled="true">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/edtPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/usernameWrapper3"
+            android:background="@drawable/shape"
+            android:inputType="textPassword"
+            android:maxLength="20"
+            android:padding="5dp"
+            android:textColor="#000000"
+            app:passwordToggleEnabled="true" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/usernameWrapper4"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/usernameWrapper3"
+        android:layout_alignStart="@+id/usernameWrapper"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="10dp"
+        android:hint="Nhập lại mật khẩu"
+        android:textColorHint="#000000"
+        app:passwordToggleEnabled="true">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/edtRePassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/usernameWrapper4"
+            android:background="@drawable/shape"
+            android:inputType="textPassword"
+            android:maxLength="20"
+            android:minEms="4"
+            android:padding="5dp"
+            android:textColor="#000000"
+            app:passwordToggleEnabled="true" />
+    </android.support.design.widget.TextInputLayout>
+
+
+    <Button
+        android:id="@+id/btnCreateAcc"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="420dp"
+        android:background="@drawable/button_custom"
+        android:text="Đăng kí"
+        android:textColor="#000000" />
+
+    <Button
+        android:id="@+id/btnCancel"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="420dp"
+        android:layout_marginEnd="28dp"
+        android:background="@drawable/button_custom"
+        android:text="Hủy"
+        android:textColor="#000000" />
+
+
+</RelativeLayout>
