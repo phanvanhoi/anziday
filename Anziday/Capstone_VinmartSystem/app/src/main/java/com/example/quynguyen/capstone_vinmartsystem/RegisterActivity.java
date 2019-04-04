@@ -93,7 +93,9 @@ public class RegisterActivity extends AppCompatActivity {
                             user.setFullName(edtFullname.getText().toString());
                             user.setUserName(edtUser.getText().toString());
                             user.setPassWord(edtPassword.getText().toString());
+                            //putPrarcelable để truyền đối tương từ activity này sang activity khác
                             bundle.putParcelable("Account", user);
+                            // truyền đối tượng bundle sang fragment
                             fragment_profile.setArguments(bundle);
                             intent.putExtras(bundle);
                             setResult(RESULT_OK, intent);
