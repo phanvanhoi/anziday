@@ -1,0 +1,35 @@
+{
+  "project_info": {
+    "project_number": "287966994864",
+    "firebase_url": "https://anziday1.firebaseio.com",
+    "project_id": "anziday1",
+    "storage_bucket": "anziday1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:287966994864:android:d9b248e7a1250748",
+        "android_client_info": {
+          "package_name": "com.Leogo.Anziday"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCESyCgr0RU9MfyTpOWFjWUvSdYYmZtbvM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "287966994864-mvla1498ql26nsq1a0psaaq2flsbieja.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
