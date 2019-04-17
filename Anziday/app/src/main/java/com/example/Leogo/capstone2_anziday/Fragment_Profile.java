@@ -69,7 +69,7 @@ public class Fragment_Profile extends Fragment {
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                checkUser(url);
+//                checkUser(url);
             }
         });
         return view;
@@ -87,60 +87,60 @@ public class Fragment_Profile extends Fragment {
         }
     }
 
-    private void checkUser(String url){
-        RequestQueue requestQueue = Volley.newRequestQueue(getContext());
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, url,
-                new Response.Listener<String>() {
-                    @Override
-                    public void onResponse(String response) {
-                        try {
-                            JSONObject jsonObject = new JSONObject(response);
-                            if(jsonObject.getInt("success") == 1){
-                                User objUser = new User(
-                                        jsonObject.getInt("cus_id"),
-                                        jsonObject.getString("fullname"),
-                                        jsonObject.getString("gmail"),
-                                        jsonObject.getString("user"),
-                                        jsonObject.getString("pass"),
-                                        jsonObject.getString("address"),
-                                        jsonObject.getString("phone")
-                                        );
-                                Toast.makeText(getActivity(), "Đăng nhập thành công", Toast.LENGTH_SHORT).show();
-                                if(jsonObject.getInt("role") == 3){
-//                                    sharedPreferences = getActivity().getSharedPreferences("login",getContext().MODE_PRIVATE);
-//                                    editor = sharedPreferences.edit();
-//                                    editor.putInt("cus_id",objUser.getCusID());
-//                                    editor.commit();
-//                                    Intent intent = new Intent(getActivity(),MapActivity.class);
+//    private void checkUser(String url){
+//        RequestQueue requestQueue = Volley.newRequestQueue(getContext());
+//        StringRequest stringRequest = new StringRequest(Request.Method.POST, url,
+//                new Response.Listener<String>() {
+//                    @Override
+//                    public void onResponse(String response) {
+//                        try {
+//                            JSONObject jsonObject = new JSONObject(response);
+//                            if(jsonObject.getInt("success") == 1){
+//                                User objUser = new User(
+//                                        jsonObject.getInt("cus_id"),
+//                                        jsonObject.getString("fullname"),
+//                                        jsonObject.getString("gmail"),
+//                                        jsonObject.getString("user"),
+//                                        jsonObject.getString("pass"),
+//                                        jsonObject.getString("address"),
+//                                        jsonObject.getString("phone")
+//                                        );
+//                                Toast.makeText(getActivity(), "Đăng nhập thành công", Toast.LENGTH_SHORT).show();
+//                                if(jsonObject.getInt("role") == 3){
+////                                    sharedPreferences = getActivity().getSharedPreferences("login",getContext().MODE_PRIVATE);
+////                                    editor = sharedPreferences.edit();
+////                                    editor.putInt("cus_id",objUser.getCusID());
+////                                    editor.commit();
+////                                    Intent intent = new Intent(getActivity(),MapActivity.class);
+////                                    getActivity().startActivity(intent);
+//                                }else {
+//                                    Intent intent = new Intent(getActivity(), MainActivity.class);
+//                                    intent.putExtra("user", objUser);
 //                                    getActivity().startActivity(intent);
-                                }else {
-                                    Intent intent = new Intent(getActivity(), MainActivity.class);
-                                    intent.putExtra("user", objUser);
-                                    getActivity().startActivity(intent);
-                                }
-                            }else{
-                                Toast.makeText(getActivity(), "Đăng nhập không thành công", Toast.LENGTH_SHORT).show();
-                            }
-                        } catch (JSONException e) {
-                            e.printStackTrace();
-                        }
-                    }
-                },
-                new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-                        Toast.makeText(getActivity(), "Lỗi server", Toast.LENGTH_SHORT).show();
-                    }
-                }
-        ){
-            @Override
-            protected Map<String, String> getParams() throws AuthFailureError {
-                Map<String,String> params = new HashMap<>();
-                params.put("user",edtUser.getText().toString().trim());
-                params.put("pass",stringLibrary.md5(edtPassword.getText().toString().trim()));
-                return params;
-            }
-        };
-        requestQueue.add(stringRequest);
-    }
+//                                }
+//                            }else{
+//                                Toast.makeText(getActivity(), "Đăng nhập không thành công", Toast.LENGTH_SHORT).show();
+//                            }
+//                        } catch (JSONException e) {
+//                            e.printStackTrace();
+//                        }
+//                    }
+//                },
+//                new Response.ErrorListener() {
+//                    @Override
+//                    public void onErrorResponse(VolleyError error) {
+//                        Toast.makeText(getActivity(), "Lỗi server", Toast.LENGTH_SHORT).show();
+//                    }
+//                }
+//        ){
+//            @Override
+//            protected Map<String, String> getParams() throws AuthFailureError {
+//                Map<String,String> params = new HashMap<>();
+//                params.put("user",edtUser.getText().toString().trim());
+//                params.put("pass",stringLibrary.md5(edtPassword.getText().toString().trim()));
+//                return params;
+//            }
+//        };
+//        requestQueue.add(stringRequest);
+//    }
 }

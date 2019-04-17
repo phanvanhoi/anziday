@@ -4,42 +4,48 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
     <LinearLayout
-        android:background="@drawable/background_custom"
         android:layout_width="match_parent"
-        android:orientation="vertical"
-        android:layout_height="150dp">
+        android:layout_height="150dp"
+        android:background="@drawable/background_custom"
+        android:orientation="vertical">
+
         <ImageView
-            android:layout_gravity="center_horizontal"
-            android:src="@drawable/avatar"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/avatar" />
+
         <TextView
             android:id="@+id/txtUserName"
-            android:layout_marginTop="10dp"
-            android:layout_gravity="center_horizontal"
-            android:text="Admin"
-            android:textStyle="bold"
-            android:textSize="21sp"
-            android:textColor="#fff"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:text="Admin"
+            android:textColor="#fff"
+            android:textSize="21sp"
+            android:textStyle="bold" />
     </LinearLayout>
 
     <android.support.v7.widget.CardView
         android:id="@+id/detailView"
-        android:layout_above="@id/buttonView"
         android:layout_width="370dp"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="20dp"
-        android:layout_marginTop="170dp"
+        android:layout_height="350dp"
+        android:layout_above="@id/buttonView"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="45dp"
         app:cardCornerRadius="10dp">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="339dp"
+            android:layout_height="350dp"
+            android:layout_alignTop="@+id/detailView"
+            android:layout_marginLeft="30dp"
+            android:layout_marginBottom="300dp"
             android:orientation="vertical">
+
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -51,7 +57,29 @@
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:layout_marginLeft="30dp"
-                    android:src="@drawable/address_icon" />
+                    android:src="@drawable/name" />
+
+                <TextView
+                    android:id="@+id/txtName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="30dp"
+                    android:text="Nghia Tran"
+                    android:textColor="#0f0f0f" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:src="@drawable/home" />
 
                 <TextView
                     android:id="@+id/txtAddress"
@@ -73,15 +101,15 @@
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:layout_marginLeft="30dp"
-                    android:src="@drawable/email_icon" />
+                    android:src="@drawable/syringe" />
 
                 <TextView
-                    android:id="@+id/txtEmail"
+                    android:id="@+id/txtBenhAn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_marginLeft="30dp"
-                    android:text="admin@gmail.com"
+                    android:text="Tiểu đường"
                     android:textColor="#0f0f0f" />
             </LinearLayout>
 
@@ -95,43 +123,69 @@
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:layout_marginLeft="30dp"
-                    android:src="@drawable/phonenumber_icon" />
+                    android:src="@drawable/diung" />
 
                 <TextView
-                    android:id="@+id/txtPhoneNumber"
+                    android:id="@+id/txtDiUng"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_marginLeft="30dp"
-                    android:text="0122334455"
+                    android:text="Đậu phộng, tôm"
                     android:textColor="#0f0f0f" />
             </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:src="@drawable/group" />
+
+                <TextView
+                    android:id="@+id/txtNhomnguoi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="30dp"
+                    android:text="Tăng cân"
+                    android:textColor="#0f0f0f" />
+            </LinearLayout>
+
         </LinearLayout>
 
     </android.support.v7.widget.CardView>
+
     <LinearLayout
         android:id="@+id/buttonView"
-        android:layout_marginBottom="10dp"
-        android:layout_marginLeft="70dp"
-        android:layout_alignParentBottom="true"
-        android:orientation="horizontal"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_above="@id/buttonView"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="70dp"
+        android:layout_marginBottom="102dp"
+        android:orientation="horizontal">
 
         <Button
             android:id="@+id/btnUpdate"
-            android:background="@drawable/login_custom"
-            android:text="Update"
-            android:textColor="#fff"
             android:layout_width="100dp"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_custom"
+            android:text="Cập Nhật"
+            android:textColor="#fff" />
+
         <Button
             android:id="@+id/btnLogout"
-            android:layout_marginLeft="30dp"
-            android:background="@drawable/login_custom"
-            android:text="Logout"
-            android:textColor="#fff"
             android:layout_width="100dp"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:background="@drawable/button_custom"
+            android:text="Đăng Xuất"
+            android:textColor="#fff" />
     </LinearLayout>
 </RelativeLayout>
