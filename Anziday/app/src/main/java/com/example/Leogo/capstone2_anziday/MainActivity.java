@@ -38,11 +38,11 @@ public class MainActivity extends AppCompatActivity {
         sharedPreferences = getSharedPreferences("login",MODE_PRIVATE);
         //Nhận dữ liệu từ Login hoặc Update đổ vào Detail_Profile
         if(bundle != null){
-            User objUser = bundle.getParcelable("user");
-            bundle.putParcelable("user",objUser);
-            fragment_detail_profile = new Fragment_Detail_Profile();
-            fragment_detail_profile.setArguments(bundle);
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, fragment_detail_profile).commit();
+//            User objUser = bundle.getParcelable("user");
+//            bundle.putParcelable("user",objUser);
+//            fragment_detail_profile = new Fragment_Detail_Profile();
+//            fragment_detail_profile.setArguments(bundle);
+//            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, fragment_detail_profile).commit();
         }else if(sharedPreferences.getInt("loginForCart",0) == 1) {
             //bundle == null tức chưa login thì kiểm tra user có addCart không nếu có phải Login
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Fragment_Profile()).commit();
@@ -66,7 +66,10 @@ public class MainActivity extends AppCompatActivity {
                             break;
                         case R.id.nav_profile:
                             if(bundle != null) {
+                                User objUser = bundle.getParcelable("user");
+                                bundle.putParcelable("user",objUser);
                                 selectedFragment = new Fragment_Detail_Profile();
+                                selectedFragment.setArguments(bundle);
                             }else{
                                 selectedFragment = new Fragment_Profile();
                             }

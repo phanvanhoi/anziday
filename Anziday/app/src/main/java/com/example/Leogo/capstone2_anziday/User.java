@@ -7,12 +7,13 @@ public class User implements Parcelable {
     private String fullName;
     private String userName;
     private String passWord;
+    private String dateBirth;
     private String address;
     private String allergy;
     private String illness;
     private String groupPerson;
 
-    public User(String fullName, String userName, String passWord, String address, String allergy, String illness, String groupPerson) {
+    public User(String fullName, String userName, String passWord, String address, String allergy, String illness, String groupPerson,String dateBirth) {
         this.fullName = fullName;
         this.userName = userName;
         this.passWord = passWord;
@@ -20,6 +21,7 @@ public class User implements Parcelable {
         this.allergy = allergy;
         this.illness = illness;
         this.groupPerson = groupPerson;
+        this.dateBirth = dateBirth;
     }
 
     public User(){
@@ -34,10 +36,19 @@ public class User implements Parcelable {
         this.allergy = in.readString();
         this.illness = in.readString();
         this.groupPerson = in.readString();
+        this.dateBirth = in.readString();
     }
 
     public String getFullName() {
         return fullName;
+    }
+
+    public String getDateBirth() {
+        return dateBirth;
+    }
+
+    public void setDateBirth(String dateBirth) {
+        this.dateBirth = dateBirth;
     }
 
     public void setFullName(String fullName) {
@@ -110,6 +121,7 @@ public class User implements Parcelable {
         dest.writeString(allergy);
         dest.writeString(illness);
         dest.writeString(groupPerson);
+        dest.writeString(dateBirth);
     }
     public static final Creator<User> CREATOR = new Creator<User>() {
         @Override

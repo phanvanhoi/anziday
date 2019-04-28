@@ -24,13 +24,6 @@
             android:textSize="20sp"
             android:textStyle="bold" />
 
-        <EditText
-            android:id="@+id/edtUpdateName"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_margin="5dp"
-            android:hint="Họ tên" />
 
         <EditText
             android:id="@+id/edtDateBirth"
@@ -38,7 +31,6 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_margin="5dp"
-            android:enabled="false"
             android:hint="Ngày sinh" />
 
 
@@ -64,6 +56,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_margin="5dp"
+            android:focusable="false"
             android:hint="Dị ứng thức ăn" />
 
         <EditText
@@ -72,6 +65,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_margin="5dp"
+            android:focusable="false"
             android:hint="Tiền sử bệnh" />
 
         <EditText
@@ -80,6 +74,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_margin="5dp"
+            android:focusable="false"
             android:layout_marginBottom="20dp"
             android:hint="Nhóm người" />
 
