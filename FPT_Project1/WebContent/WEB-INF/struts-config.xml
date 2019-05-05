@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts 
+Configuration 1.3//EN" "http://struts.apache.org/dtds/struts-config_1_3.dtd">
+<struts-config>
+	<form-beans>
+		<form-bean name="creNewMedicForm" type="com.form.CreateNewMedicForm" />
+		<form-bean name="prescripManagementForm" type="com.form.PrescripManagementForm" />
+		<form-bean name="notificationsForm" type="com.form.NotificationForm" />
+		<form-bean name="loginForm" type="com.form.LoginForm"/>
+		<form-bean name="changePasswordForm" type="com.form.ChangePasswordForm"/>
+		<form-bean name="changeUserInfoForm" type="com.form.ChangeUserInfoForm"/>
+		<form-bean name="acountUserTypeOfPeopleForm" type="com.form.AcountUserTypeOfPeopleForm"/>
+		<form-bean name="addAddictForm" type="com.form.AddAddictForm"/>
+		<form-bean name="listAddictForm" type="com.form.ListAddictForm"/>
+		<form-bean name="listPrescripForm" type="com.form.ListPrescripForm"/>
+		<form-bean name="statisticalForm" type="com.form.StatisticalForm" />
+		<form-bean name="accountForm" type="com.form.AccountForm" />
+		<form-bean name="LoginForm" type="com.form.Login" />
+		<form-bean name="roomForm" type="com.form.RoomForm" />
+		<form-bean name="TreatmentAreaForm" type="com.form.TreatmentAreaForm" />
+		<form-bean name="FormUsers" type="com.form.UserForm" />
+	</form-beans>
+	<action-mappings>
+	
+	<!-- trong nghia action -->
+	
+	<action name="loginForm" 
+				path="/login"
+				scope="request" 
+				type="com.action.LoginAction">
+			<forward name="login" path="/login.jsp"></forward>
+			<forward name="loginSuccess" path="/view-user.do"/>
+			<forward name="loginFail" path="/login.jsp"/>
+		</action>
+		
+		<action name="loginForm" 
+				path="/logout"
+				scope="request" 
+				type="com.action.LogoutAction">
+			<forward name="logoutSuccess" path="/login.do"/>
+		</action>
+		
+		<action name="loginForm" 
+				path="/home"
+				scope="request" 
+				type="com.action.HomeAction">
+			<forward name="homeSuccess" path="/template/home.jsp" />
+		</action>
+		
+		<action name="loginForm" 
+				path="/view-detail-info-user"
+				scope="request" 
+				type="com.action.ViewDetailInfoUserAction">
+			<forward name="viewDetailInfoUserSucces" path="/template/view-detail-info-user.jsp" />
+		</action>
+		
+		<action name="changePasswordForm" 
+				path="/change-password"
+				scope="request" 
+				type="com.action.ChangePasswordAction">
+			<forward name="changePassword" path="/template/change-password.jsp" />
+			<forward name="changePasswordSuccess" path="/template/change-password.jsp" />
+		</action>
+		
+		<action name="changeUserInfoForm" 
+				path="/change-user-info"
+				scope="request" 
+				type="com.action.ChangeUserInfoAction">
+			<forward name="changeUserInfo" path="/template/change-user-info.jsp" />
+			<forward name="changeUserInfoSuccess" path="/template/change-user-info.jsp"></forward>
+		</action>
+		
+		<action name="notificationsForm" 
+				path="/view-notification"
+				scope="request" 
+				type="com.action.NotificationsAction">
+			<forward name="viewNotificationSuccess" path="/template/view-notifications.jsp" />
+		</action>
+		
+		<action name="notificationsForm" 
+				path="/manage-notification"
+				scope="request" 
+				type="com.action.NotificationsAction">
+			<forward name="viewNotificationSuccess" path="/template/manage-notifications.jsp" />
+		</action>
+		
+		<action name="notificationsForm" 
+				path="/manage-delete-notification"
+				scope="request" 
+				type="com.action.DeleteNotificationAction">
+			<forward name="deleteNotificationSuccess" path="/manage-notification.do" />
+		</action>
+		
+		<action name="notificationsForm" 
+				path="/manage-update-notification"
+				scope="request" 
+				type="colm.action.UpdateNotificationAction">
+			<forward name="updateNotificationSuccess" path="/manage-notification.do" />
+		</action>
+		
+		<action name="notificationsForm" 
+				path="/manage-insert-notification"
+				scope="request" 
+				type="com.action.InsertNotificationAction">
+			<forward name="insertNotification" path="/template/insert-notifications.jsp"></forward>
+			<forward name="insertNotificationSuccess" path="/template/insert-notifications.jsp" />
+		</action>
+		
+		<action name="acountUserTypeOfPeopleForm" 
+				path="/view-user"
+				scope="request" 
+				type="com.action.UserAction">
+			<forward name="viewUserListSuccess" path="/template/view-user.jsp" />
+		</action>
+	
+	<!-- end trong nghia action -->
+	
+	
+	
+	<!--  nghia action -->
+		<action  name="creNewMedicForm"
+			path="/create-medic" scope="request" type="com.action.CreateNewMedicAction" validate="true">
+			<forward name="createSucess" path="/template/Qlthuocdieutri.jsp" />
+			<forward name="createError" path="/template/Qlthuocdieutri.jsp"></forward>
+			<forward name="loadDrop" path="/template/Qlthuocdieutri.jsp" />
+		</action>
+		<action  name="creNewMedicForm"
+			path="/medic-list" scope="request" type="com.action.MedicListAction">
+			<forward name="loadList" path="/template/Danhsachthuoc.jsp" />
+		</action>
+		<action  name="creNewMedicForm"
+			path="/update-medic" scope="request" type="com.action.UpdateMedicAction">
+			<forward name="updateSuscess" path="/medic-list.do" />
+			<forward name="updateError" path="/medic-list.do" />
+		</action>
+		<action  name="creNewMedicForm"
+			path="/delete-medic" scope="request" type="com.action.DeleteMedicAction">
+			<forward name="deleteSucess" path="/medic-list.do" />
+			<forward name="deleteError" path="/medic-list.do" /> 
+		</action>
+		<action name="prescripManagementForm"
+			path="/quanlybenhan" scope="request" type="com.action.PatientManageAction">
+			<forward name="loadList" path="/template/QLBenhAn.jsp" />
+		</action>
+		
+	<!-- end nghia action -->
+	
+	
+	<!-- khai action -->
+	
+	<action  name="addAddictForm"
+			path="/addAddict" scope="request" type="com.action.AddAddictAction">
+			<forward name="addAddict" path="/template/khaismodule/AddAddict.jsp" />
+			<forward name = "addAddictFinish" path="/listAddict.do" />
+			
+		</action>
+	<action  name="listAddictForm"
+			path="/listAddict" scope="request" type="com.action.AddictMedicDetailAction">
+			<forward name="listAddict" path="/template/khaismodule/AddictList.jsp" />
+		</action>
+		<action  name="addAddictForm"
+			path="/updateAddict" scope="request" type="com.action.UpdateAddictAction">
+			<forward name="updateAddict" path="/template/khaismodule/UpdateAddict.jsp" />
+			<forward name="updateFinish" path="/listAddict.do" />
+		</action>
+		<action  name="addAddictForm"
+			path="/deleteAddict" scope="request" type="com.action.DeleteAddictAction">
+			<forward name="xoaxong" path="/listAddict.do" />
+		</action>
+		<action  name="listPrescripForm"
+			path="/listPrescrip" scope="request" type="com.action.ListPrescripAction">
+			<forward name="prescripList" path="/template/khaismodule/PrescripList.jsp" />
+		</action>
+	
+	<!-- end khai action -->
+	
+	<!-- hoi action -->
+		
+		<action input="/template/ManageAccountMembers.jsp" name="accountForm"
+			path="/manage-account" scope="request" type="com.action.ManageAccountMemberAction"
+			validate="true">
+			<forward name="managerAcc" path="/template/hoimodule/ManageAccountMembers.jsp" />
+		</action>
+		<action name="accountForm" path="/update-account" scope="request"
+			type="com.action.UpdateAccountMembersAction">
+			<forward name="manageAccount" path="/manage-account.do" />
+			<forward name="manage-account" path="/manage-account.do" />
+		</action>
+
+		<action path="/create-statistical" scope="request"
+			type="com.action.StatisticalAction">
+			<forward name="chart" path="/template/hoimodule/chart.jsp" />
+		</action>
+	
+		
+	
+	<!-- end hoi action -->
+	
+	<!-- hung action -->
+	 <action name="LoginForm" path="/actionLogin" scope="request"
+			type="com.action.ActionLogin">
+			<forward name="success" path="/template/form.jsp" />
+			<forward name="fail" path="/template/hungmodule/Login.jsp" />
+		</action>
+		<action name="roomForm" path="/action-shows"
+				parameter="showInfo"
+				type="com.action.ActionRoom">
+				<forward name="showinfoss" path="/template/hungmodule/xemchitiet.jsp" />
+		</action>
+		<action name="roomForm" path="/action-insert"
+				parameter="insertRoom"
+				type="com.action.ActionRoom">
+				<forward name="loadDrop" path="/template/hungmodule/themphongdieutri.jsp" />
+				<forward name="Insert" path="/template/hungmodule/themphongdieutri.jsp" />
+		</action>
+		<action name="roomForm" path="/update-room"
+				parameter="updateRoom"
+				type="com.action.ActionRoom">
+				<forward name="update" path="/action-shows.do"/>
+				<forward name="fail" path="/template/hungmodule/xemchitiet.jsp"/>
+		</action>
+		<action name="roomForm" path="/delete-room"
+				parameter="deleteRoom"
+				type="com.action.ActionRoom">
+				<forward name="deletes" path="/action-shows.do"/>
+				<forward name="fail" path="/template/hungmodule/xemchitiet.jsp"/>
+		</action>
+		<action name="FormUsers" path="/action-InsertInfo"
+				parameter="insertUsers"
+				scope="request"
+				type="com.action.ActionUser">
+				<forward name="Insert" path="/template/hungmodule/QLthongtinnguoidung.jsp"/>
+				<forward name="loadPage" path="/template/hungmodule/QLthongtinnguoidung.jsp"/>
+		</action>
+		<action name="FormUsers" path="/action-showInfos"
+				parameter="showInfo"
+				scope="request"
+				type="com.action.ActionUser">
+				<forward name="showinfoss" path="/template/hungmodule/Xinchitietnguoidung.jsp"/>
+		</action>
+		<action name="FormUsers" path="/action-UpdateUser"
+				parameter="UpdateInfoUser"
+				scope="request"
+				type="com.action.ActionUser">
+				<forward name="showinfoss" path="/template/hungmodule/Xinchitietnguoidung.jsp"/>
+				<forward name="update" path="/action-showInfos.do"/>
+		</action>
+		<action name="FormUsers" path="/action-DeleteUser"
+				parameter="deleteInfoUser"
+				scope="request"
+				type="com.action.ActionUser">
+				<forward name="delete" path="/action-showInfos.do"/>
+				<forward name="fail" path="/action-showInfos.do"/>
+		</action>
+	<!-- end hung action -->
+	</action-mappings>
+	<message-resources parameter="com.action.ApplicationResources" />
+	
+</struts-config>

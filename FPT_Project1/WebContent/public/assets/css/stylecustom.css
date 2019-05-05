@@ -1,0 +1,24 @@
+.request-input{
+	color: red;
+}
+.data-input{
+	width: 300px;
+}
+#search {
+	padding-top: 15px;
+	display: flex;
+	justify-content: space-between;
+}
+#search #search-box{
+	width: 50%;
+}
+#search #search-box{
+
+}
+#searchBtn{
+	margin-right: 10px;
+}
+
+.data-collect {
+	padding: 3px 5px;
+}
