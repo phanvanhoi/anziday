@@ -13,7 +13,12 @@
           "package_name": "com.Leogo.Anziday"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "287966994864-mvla1498ql26nsq1a0psaaq2flsbieja.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyCESyCgr0RU9MfyTpOWFjWUvSdYYmZtbvM"

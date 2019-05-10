@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="355dp"
+        android:layout_height="534dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView_foodNameDetail"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:textAlignment="center"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/imageView_foodDetail"
+                android:layout_width="297dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="30dp" />
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="224dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView_decription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="vertical"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+        </ScrollView>
+
+
+        <TextView
+            android:id="@+id/textView_RatingDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#F10A0A"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RatingBar
+                android:id="@+id/ratingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:numStars="5"
+                android:rating="5.0"
+                android:stepSize="1.0" />
+
+            <Button
+                android:id="@+id/btn_Raiting"
+                android:layout_width="119dp"
+                android:layout_height="match_parent"
+                android:shadowRadius="5"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:text="Rating" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
