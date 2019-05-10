@@ -9,8 +9,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
@@ -26,6 +29,9 @@ public class UpdateUserActivity extends AppCompatActivity {
     EditText edtUpdateName,edtDateBirth,edtUpdateAddress,edtFavoriteFood,edtDiUng,editIllness,editGroupPerson;
     Button btnUpdate, btnCancle;
     User user;
+    String locationSelected = null;
+    private Spinner spinner;
+    private static final String[] locationArr = {"Miền bắc", "Miền trung", "Miền nam"};
     String [] diungItems,groupItems,illnessItems;
     boolean[] diungchecked;
     boolean[] groupchecked;
@@ -40,6 +46,24 @@ public class UpdateUserActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_update_user);
         AnhXa();
+        // dropdow dia chi
+        spinner = (Spinner) findViewById(R.id.spinner);
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this,android.R.layout.simple_spinner_item,locationArr);
+        adapter.setDropDownViewResource(android.R.layout.simple_list_item_single_choice);
+        spinner.setAdapter(adapter);
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+//                edtUpdateAddress.setText(locationArr[i]);
+                  locationSelected = spinner.getItemAtPosition(i).toString();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+                locationSelected = "";
+            }
+        });
+
         //  bắt sự kiện click trên edit để arlet
         editIllness.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -221,12 +245,7 @@ public class UpdateUserActivity extends AppCompatActivity {
         btnCancle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                sharedPreferences = getSharedPreferences("login",MODE_PRIVATE);
-                editor = sharedPreferences.edit();
-                editor.putInt("loginForCart",2);
-                editor.commit();
                 Intent intent = new Intent(UpdateUserActivity.this,MainActivity.class);
-                intent.putExtra("user", user);
                 startActivity(intent);
             }
         });
@@ -236,7 +255,7 @@ public class UpdateUserActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Bundle bundle = getIntent().getExtras();
                 User user = (User) bundle.getParcelable("Account");
-                user.setAddress(edtUpdateAddress.getText().toString());
+                user.setAddress(locationSelected);
                 user.setAllergy(edtDiUng.getText().toString());
                 user.setIllness(editIllness.getText().toString());
                 user.setGroupPerson(editGroupPerson.getText().toString());
@@ -250,7 +269,7 @@ public class UpdateUserActivity extends AppCompatActivity {
         });
     }
     public void AnhXa(){
-        edtUpdateAddress = (EditText) findViewById(R.id.edtUpdateAddress);
+//        edtUpdateAddress = (EditText) findViewById(R.id.edtUpdateAddress);
         edtDateBirth = (EditText) findViewById(R.id.edtDateBirth);
         edtFavoriteFood = (EditText) findViewById(R.id.edtFavoriteFood);
         edtDiUng =(EditText) findViewById(R.id.edtDiUng);

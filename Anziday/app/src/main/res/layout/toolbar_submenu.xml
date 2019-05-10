@@ -30,7 +30,7 @@
             android:layout_height="wrap_content"
             android:layout_marginRight="30dp"
             android:background="#00000000"
-            android:hint="Tìm kiếm sản phẩm ..."
+            android:hint="Tìm kiếm món ăn ..."
             android:textColor="#2b2b2b"
             android:textColorHint="#2b2b2b"
             android:textSize="11.7dp" />

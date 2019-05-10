@@ -29,7 +29,7 @@
 											<th width="10%">Mô tả</th>
 											<th width="20%">Tiền sử bệnh</th>
 											<th width="20%">Nhóm người</th>
-											<th width="20%">Xem</th>
+											<th width="20%">Hình thức</th>
 										</tr>
 									</thead>
 									<tbody id="content">	
@@ -83,21 +83,20 @@
 	})
 	</script>
 	
-<!-- <script>
+ <script>
 	var db = firebase.firestore();
 	content = '';
-	db.collection("users").get().then(function(querySnapshot) {
+	db.collection("foods").get().then(function(querySnapshot) {
 	    querySnapshot.forEach(function(doc) {
 	    	content +='<tr role="row">'
-	    				+'<td>' + doc.id+ '</td>'
-	    				+'<td>' + doc.data().fullName + '</td>'
-	    				+'<td>' + doc.data().address + '</td>'
-	    				+'<td>' + doc.data().dateBirth + '</td>'
-	    				+'<td>' + doc.data().allergy + '</td>'
+	    				+'<td>' + doc.data().nameFood +'</td>'
+	    				+'<td>' + doc.data().material + '</td>'
+	    				+'<td>' + doc.data().decription + '</td>'
 	    				+'<td>' + doc.data().illness + '</td>'
-	    				+'<td>' + doc.data().groupPerson + '</td>'+
+	    				+'<td>' + doc.data().groupPerson + '</td>'
+	    				+'<td>' + doc.data().formatly + '</td>'+
 	    			   '</tr>'
 	    });
 	    document.getElementById('content').innerHTML = content;
 	});
-</script> -->
+</script>

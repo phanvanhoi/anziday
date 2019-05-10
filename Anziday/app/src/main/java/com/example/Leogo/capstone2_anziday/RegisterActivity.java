@@ -62,7 +62,7 @@ public class RegisterActivity extends AppCompatActivity {
                     Toast.makeText(RegisterActivity.this, "Vui lòng nhập đầy đủ thông tin", Toast.LENGTH_SHORT).show();
                 } else if (edtRepassword.getText().toString().equals(edtPassword.getText().toString().trim()) == false) {
                     Toast.makeText(RegisterActivity.this, "Vui lòng nhập lại đúng password", Toast.LENGTH_SHORT).show();
-                } else if (edtPassword.getText().toString().length() < 2) {
+                } else if (edtPassword.getText().toString().length() < 8) {
                     Toast.makeText(RegisterActivity.this, "Mật khẩu phải từ 8 đến 20 ký tự", Toast.LENGTH_SHORT).show();
                 } else if (edtUser.getText().toString().length() < 4) {
                     Toast.makeText(RegisterActivity.this, "Username phải từ 4 đến 16 ký tự", Toast.LENGTH_SHORT).show();

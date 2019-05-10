@@ -53,6 +53,8 @@
 							href="${pageContext.request.contextPath}/template/add-food.jsp">Thêm
 								món ăn</a></li>
 						<li><i class="menu-icon ti-themify-logo"></i><a
+							href="${pageContext.request.contextPath}/template/add-matirial.jsp">Thêm nguyên liệu</a></li>
+						<li><i class="menu-icon ti-themify-logo"></i><a
 							href="${pageContext.request.contextPath}/template/add-list-food.jsp">Thêm danh sách món ăn
 							</a></li>
 						<li><i class="menu-icon ti-themify-logo"></i><a

@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,6 +25,13 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -39,19 +47,19 @@ public class Fragment_Profile extends Fragment {
 
     SharedPreferences sharedPreferences;
     SharedPreferences.Editor editor;
-    StringLibrary stringLibrary = new StringLibrary();
 
     Button btnLogin;
-    EditText edtFullname, edtUser , edtEmail, edtPassword;
+    EditText edtUser , edtPassword;
     TextView txtRegister;
     Fragment_Home fragment_home;
-    User user;
-    String url = new Connect().urlData + "/getuser.php";
+    User user = new User();
+    Intent intent;
+    Validation validation = new Validation();
+    FirebaseFirestore db = FirebaseFirestore.getInstance();
     public static final int REQUEST_CODE = 1997;
-
     @Nullable
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable final ViewGroup container, @Nullable Bundle savedInstanceState) {
         final View view = inflater.inflate(R.layout.fragment_profile,container,false);
 
         edtUser = view.findViewById(R.id.edtUserLogin);
@@ -69,7 +77,58 @@ public class Fragment_Profile extends Fragment {
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                checkUser(url);
+                if (edtUser.getText().toString().equals("") || edtPassword.getText().toString().equals("")
+                ) {
+                    Toast.makeText(getActivity(), "Vui lòng nhập đầy đủ thông tin", Toast.LENGTH_SHORT).show();
+                } else if (edtUser.getText().toString().equals("")) {
+                    Toast.makeText(getActivity(), "Tên đăng nhập không được để trống", Toast.LENGTH_SHORT).show();
+                } else if (edtPassword.getText().toString().equals("")) {
+                    Toast.makeText(getActivity(), "Mật khẩu không được để trống", Toast.LENGTH_SHORT).show();
+                } else if (edtUser.getText().toString().equals("")) {
+                    Toast.makeText(getActivity(), "Tên đăng nhập không được để trống", Toast.LENGTH_SHORT).show();
+                } else if (edtUser.getText().toString().length() < 4 || edtUser.getText().toString().length() > 16) {
+                    Toast.makeText(getActivity(), "Tên đăng nhập từ 4 > 16 kí tự", Toast.LENGTH_SHORT).show();
+                } else if (edtPassword.getText().toString().length() < 4 || edtPassword.getText().toString().length() > 16) {
+                    Toast.makeText(getActivity(), "Mật khẩu từ 4 > 16 kí tự", Toast.LENGTH_SHORT).show();
+                } else if (validation.checkSpecialKey(edtUser.getText().toString().trim()) == false) {
+                    Toast.makeText(getActivity(), "Tên đăng nhập không được chứa kí tự đặc biệt", Toast.LENGTH_SHORT).show();
+                } else {
+                    checkUser(edtUser.getText().toString(), edtPassword.getText().toString());
+                    new Thread() {
+                        @Override
+                        public void run() {
+                            try {
+                                this.sleep(3000);
+                            } catch (InterruptedException e) {
+                                e.printStackTrace();
+                            }
+                            if (user.getUserName() == null) {
+                                // đăng nhập thất bại
+                                getActivity().runOnUiThread(new Runnable() {
+                                    public void run() {
+                                        Toast.makeText(getActivity(), "Tên đăng nhập hoặc mật khẩu không đúng", Toast.LENGTH_SHORT).show();
+                                    }
+                                });
+                            } else if (user.getUserName() != null) {
+
+                                // đăng nhập thành công
+                                intent = new Intent(getActivity(), MainActivity.class);
+                                Bundle bundle = new Bundle();
+                                bundle.putParcelable("user", user);
+                                intent.putExtras(bundle);
+                                startActivityForResult(intent, REQUEST_CODE);
+                                getActivity().runOnUiThread(new Runnable() {
+                                    public void run() {
+                                        Toast.makeText(getActivity(), "Đăng nhập thành công", Toast.LENGTH_SHORT).show();
+                                    }
+                                });
+                            }
+
+
+                        }
+                    }.start();
+                }
+
             }
         });
         return view;
@@ -87,60 +146,26 @@ public class Fragment_Profile extends Fragment {
         }
     }
 
-//    private void checkUser(String url){
-//        RequestQueue requestQueue = Volley.newRequestQueue(getContext());
-//        StringRequest stringRequest = new StringRequest(Request.Method.POST, url,
-//                new Response.Listener<String>() {
-//                    @Override
-//                    public void onResponse(String response) {
-//                        try {
-//                            JSONObject jsonObject = new JSONObject(response);
-//                            if(jsonObject.getInt("success") == 1){
-//                                User objUser = new User(
-//                                        jsonObject.getInt("cus_id"),
-//                                        jsonObject.getString("fullname"),
-//                                        jsonObject.getString("gmail"),
-//                                        jsonObject.getString("user"),
-//                                        jsonObject.getString("pass"),
-//                                        jsonObject.getString("address"),
-//                                        jsonObject.getString("phone")
-//                                        );
-//                                Toast.makeText(getActivity(), "Đăng nhập thành công", Toast.LENGTH_SHORT).show();
-//                                if(jsonObject.getInt("role") == 3){
-////                                    sharedPreferences = getActivity().getSharedPreferences("login",getContext().MODE_PRIVATE);
-////                                    editor = sharedPreferences.edit();
-////                                    editor.putInt("cus_id",objUser.getCusID());
-////                                    editor.commit();
-////                                    Intent intent = new Intent(getActivity(),MapActivity.class);
-////                                    getActivity().startActivity(intent);
-//                                }else {
-//                                    Intent intent = new Intent(getActivity(), MainActivity.class);
-//                                    intent.putExtra("user", objUser);
-//                                    getActivity().startActivity(intent);
-//                                }
-//                            }else{
-//                                Toast.makeText(getActivity(), "Đăng nhập không thành công", Toast.LENGTH_SHORT).show();
-//                            }
-//                        } catch (JSONException e) {
-//                            e.printStackTrace();
-//                        }
-//                    }
-//                },
-//                new Response.ErrorListener() {
-//                    @Override
-//                    public void onErrorResponse(VolleyError error) {
-//                        Toast.makeText(getActivity(), "Lỗi server", Toast.LENGTH_SHORT).show();
-//                    }
-//                }
-//        ){
-//            @Override
-//            protected Map<String, String> getParams() throws AuthFailureError {
-//                Map<String,String> params = new HashMap<>();
-//                params.put("user",edtUser.getText().toString().trim());
-//                params.put("pass",stringLibrary.md5(edtPassword.getText().toString().trim()));
-//                return params;
-//            }
-//        };
-//        requestQueue.add(stringRequest);
-//    }
+    private void checkUser(String username,String password) {
+        db.collection("users").whereEqualTo("userName", username).whereEqualTo("passWord",password).get()
+                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                        if (task.isSuccessful()) {
+                            for (QueryDocumentSnapshot document : task.getResult()) {
+                                user.setUserName(document.get("userName").toString());
+                                user.setFullName(document.get("fullName").toString());
+                                user.setDateBirth(document.get("dateBirth").toString());
+                                user.setIllness(document.get("illness").toString());
+                                user.setGroupPerson(document.get("groupPerson").toString());
+                                user.setAllergy(document.get("allergy").toString());
+                                user.setAddress(document.get("address").toString());
+//                                Log.d("AAA",user.getUserName());
+                            }
+                        } else {
+                            Log.d("AAA", "Error getting documents: ", task.getException());
+                        }
+                    }
+                });
+    }
 }

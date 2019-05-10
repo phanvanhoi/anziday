@@ -38,11 +38,8 @@ public class MainActivity extends AppCompatActivity {
         sharedPreferences = getSharedPreferences("login",MODE_PRIVATE);
         //Nhận dữ liệu từ Login hoặc Update đổ vào Detail_Profile
         if(bundle != null){
-//            User objUser = bundle.getParcelable("user");
-//            bundle.putParcelable("user",objUser);
-//            fragment_detail_profile = new Fragment_Detail_Profile();
-//            fragment_detail_profile.setArguments(bundle);
-//            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, fragment_detail_profile).commit();
+//            User user = bundle.getParcelable("user");
+//            Toast.makeText(this,user.getFullName(), Toast.LENGTH_SHORT).show();
         }else if(sharedPreferences.getInt("loginForCart",0) == 1) {
             //bundle == null tức chưa login thì kiểm tra user có addCart không nếu có phải Login
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Fragment_Profile()).commit();

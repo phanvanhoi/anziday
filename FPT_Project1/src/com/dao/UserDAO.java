@@ -12,7 +12,6 @@ import java.util.Map;
 
 import com.bean.Account;
 import com.bean.AcountUserTypeOfPeople;
-import com.bean.TreatmentArea;
 import com.bean.User;
 
 import connection.DataAccess;
@@ -21,11 +20,11 @@ public class UserDAO {
 	
 	DataAccess instanceSQL = DataAccess.getInstance();
 	
-	List<TreatmentArea> treatmentAreas;
-	public UserDAO() {
-		treatmentAreas = new ArrayList<TreatmentArea>();
-				// TODO Auto-generated constructor stub
-	}
+//	List<TreatmentArea> treatmentAreas;
+//	public UserDAO() {
+//		treatmentAreas = new ArrayList<TreatmentArea>();
+//				// TODO Auto-generated constructor stub
+//	}
 	
 	public boolean insertUser(User user){
 		boolean flag=false;

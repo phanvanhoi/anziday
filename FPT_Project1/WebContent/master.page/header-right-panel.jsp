@@ -1,16 +1,4 @@
-<script src="https://www.gstatic.com/firebasejs/5.8.4/firebase.js"></script>
-<script>
-	// Initialize Firebase
-	var config = {
-		apiKey : "AIzaSyDn5dAYlaCqKJfdDMlW_jq9H-O7CoI_vzc",
-		authDomain : "fptproject-1819.firebaseapp.com",
-		databaseURL : "https://fptproject-1819.firebaseio.com",
-		projectId : "fptproject-1819",
-		storageBucket : "fptproject-1819.appspot.com",
-		messagingSenderId : "572735629267"
-	};
-	firebase.initializeApp(config);
-</script>
+
 <!-- Header-->
 <header id="header" class="header">
 

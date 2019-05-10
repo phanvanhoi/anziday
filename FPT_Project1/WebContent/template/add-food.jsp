@@ -21,7 +21,6 @@
 								<strong>Thêm món ăn</strong>
 							</div>
 							<div class="card-body card-block">
-								<form action="">
 									<table>
 										<tr>
 											<td><div class="form-group">
@@ -58,13 +57,22 @@
 										</tr>
 										<tr>
 											<td><div class="form-group">
-													<label for="nf-email" class=" form-control-label">
-														Hình thức <span class="request-input" style="color: red">(*)</span>
+													<label for="nf-email" class=" form-control-label">Hình thức
+														 <span class="request-input" style="color: red">(*)</span>
 													</label>
 												</div></td>
-											<td class="data-input"><input type="text" id="fommatly"
-												name="quantity" placeholder="hình thức" required="required"
-												title="Không được để trống" class="form-control"></td>
+											<td>
+												<div class="form-group">
+													<select id="formatly" class="form-control selectpicker" multiple
+														data-live-search="true">
+														<option value="Điểm tâm">Điểm tâm</option>
+														<option value="Tráng miệng">Tráng miệng</option>
+														<option value="Ăn trưa">Ăn trưa</option>
+														<option value="Ăn tối">Ăn tối</option>
+													</select>
+												</div>
+											</td>
+
 										</tr>
 										<tr>
 											<td><div class="form-group">
@@ -101,9 +109,9 @@
 													<select id="location-drop"
 														class="form-control selectpicker"  multiple
 														data-live-search="true">
-														<option value="0">Miền Bắc</option>
-														<option value="1">Miền Trung</option>
-														<option value="2">Miền Nam</option>
+														<option value="Miền Bắc">Miền Bắc</option>
+														<option value="Miền Trung">Miền Trung</option>
+														<option value="Miền Nam">Miền Nam</option>
 													</select>
 												</div>
 											</td>
@@ -119,8 +127,8 @@
 												<div class="form-group">
 													<select id="session-drop" class="form-control selectpicker" multiple
 														data-live-search="true">
-														<option value="0">Mùa nóng</option>
-														<option value="1">Lạnh</option>
+														<option value="Mùa nóng">Mùa nóng</option>
+														<option value="Lạnh">Lạnh</option>
 													</select>
 												</div>
 											</td>
@@ -143,15 +151,14 @@
 
 
 									<div class="card-footer">
-										<button type="submit" class="btn btn-primary btn-sm"
-											name="submit" value="submit" id="add-btn">
+										<button class="btn btn-primary btn-sm"
+											 id="add-btn">
 											<i class="fa fa-dot-circle-o"></i> Thêm
 										</button>
 										<button type="reset" class="btn btn-danger btn-sm">
 											<i class="fa fa-ban"></i> Trở về
 										</button>
 									</div>
-								</form>
 							</div>
 
 						</div>
@@ -271,6 +278,7 @@
 		/* khai bao bien de xuong khi onclikc lay du lieu */
 		 var sessionSelected = [];  
 	     var locationSelected = [];
+	     var formatlySelected = [];
 	     
 	     	/* session-drop bat su kien muti select	 */
 		 
@@ -280,13 +288,28 @@
 		              sessionSelected = [];
 		              $(session).each(function(index, brand){
 		            	  
-		            	  sessionSelected.push([$(this).val()]);  
+		            	  sessionSelected.push($(this).val());  
 		              });
 		              
 		              console.log(sessionSelected);
 		             
 		          }
 		        });
+	     	
+		        $('#formatly').multiselect({
+			          onChange: function(element, checked) {
+			              var formatly = $('#formatly option:selected');
+			              formatlySelected = [];
+			              $(formatly).each(function(index, brand){
+			            	  
+			            	  formatlySelected.push($(this).val());  
+			              });
+			              
+			              console.log(formatlySelected);
+			             
+			          }
+			        });
+	     	
 		        /* location-drop bat su kien muti select */
 		        $('#location-drop').multiselect({
 			         onChange: function(element, checked) {
@@ -294,7 +317,7 @@
 			        	  locationSelected = [];
 			        	  $(location).each(function(index, brand){
 			        		  
-			            	  locationSelected.push([$(this).val()]);  
+			            	  locationSelected.push($(this).val());  
 			              });
 			          
 		       		 console.log(locationSelected);
@@ -302,31 +325,67 @@
 		    	}
 		   	});
 		   
-/* 			var btn = document.getElementById('add-btn');
+			var btn = document.getElementById('add-btn');
 			btn.addEventListener('click', function() {
 				var foodName = document.getElementById('food-name');
 				var matirial = document.getElementById('matirial');
-				var decription = document.getElementById('decription');
+				var decription = document.getElementById('comment');
 				var groupPerson = document.getElementById('group-person');
 				var fommatly = document.getElementById('fommatly');
 				var illness = document.getElementById('illness');
 				var location = document.getElementById('location-drop');
 				var image = document.getElementById('image');
-				
-				var slipstrImage = image.substring(image.lastIndexOf(""),);
+				var sessionDrop = document.getElementById('session-drop');
+				var str = image.value;
+				var imagelink = str.substring(str.lastIndexOf("\\")+1,str.length);
+				console.log(foodName.value);
 				var docdata = {
 						nameFood : foodName.value,
-						matirial : dataSelected,
+						material : dataSelected,
 						illness	 : illnejt,
 						groupPerson : gupPerson,
-						formatly : fommatly.value,
-						location : locationSelected,
-						decription : sessionSelected,
-						image : 
-						link	 : 
+						formatly : formatlySelected,
+						region : locationSelected,
+						session : sessionSelected,
+						decription : decription.value,
+						image : imagelink,
+						link	 : "",
 						rating 	 : 0
+				};
+				console.log(docdata);
+				if(validateInput(docdata) == true){
+					 db.collection("foods").add(docdata).then(function() {
+					   	alert("Thêm dữ liệu thành công");
+					    foodName.value = "";
+					    matirial.value = "";
+					    decription.value = "";
+					    fommatly ="";
+					    groupPerson ="";
+					    illness ="";
+					    location ="";
+					});  
 				}
-				
 			});
-			 */
+		
+ 		function validateInput(docdata){
+			if(docdata.nameFood == null) {
+				alert("Tên thức ăn không được để trống");
+				return false;
+			} else if (docdata.illness == null){
+				alert("Loại bệnh không được để trống");
+				return false;
+			} else if (docdata.groupPerson ==null){
+				alert("Nhóm người không được để trống");
+				return false;
+			} else if (docdata.formatly == null){
+				alert("Hình thức món ăn không được để trống");
+				return false;
+			}  else if (docdata.decription ==null){
+				alert("Mô tả không được để trống");
+				return false;
+			} else if (docdata.image == null){
+				alert("Tên thức ăn không được để trống");
+				return false;
+			} else return true;
+		} 
 		</script>
