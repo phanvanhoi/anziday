@@ -71,6 +71,7 @@ public class Fragment_Profile extends Fragment {
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(),RegisterActivity.class);
                 startActivityForResult(intent,REQUEST_CODE);
+
             }
         });
 

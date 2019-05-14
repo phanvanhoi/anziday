@@ -27,6 +27,7 @@ import com.google.firebase.firestore.QuerySnapshot;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 
 public class Fragment_DetailFood extends Fragment {
     private ImageView imageView_foodDetail;
@@ -72,13 +73,13 @@ public class Fragment_DetailFood extends Fragment {
                                 @Override
                                 public void onComplete(@NonNull Task<QuerySnapshot> task) {
                                     if (task.isSuccessful()) {
-                                        if (task.getResult()!=null){
+                                        if (!Objects.requireNonNull(task.getResult()).isEmpty()){
                                             for (QueryDocumentSnapshot document : task.getResult()) {
-                                                id = document.getId();
+                                                updateRaitingContain(document.getId());
                                             }
                                         }
                                         else {
-                                            id="newField";
+                                            updateRaitingNotContain();
                                         }
 
                                     }
@@ -104,12 +105,12 @@ public class Fragment_DetailFood extends Fragment {
     }
 
     public void updateRaitingNotContain(){
-        CollectionReference rating = db.collection("rating");
+
         Map<String, Object> rating1 = new HashMap<>();
         rating1.put("user", user.getUserName());
         rating1.put("foodID", list.get(4));
         rating1.put("pointRate", ratingBar.getRating());
-        rating.document("rating1").set(rating1);
+        db.collection("rating").add(rating1);
     }
 
     @SuppressLint("SetTextI18n")
@@ -125,7 +126,7 @@ public class Fragment_DetailFood extends Fragment {
         textView_decription.setMovementMethod(new ScrollingMovementMethod());
         btn_Raiting.setText("Submit");
 
-        if (id.equals("newField")){
+        /*if (id.equals("newField")){
             new Thread() {
                 @Override
                 public void run() {
@@ -158,7 +159,7 @@ public class Fragment_DetailFood extends Fragment {
         }else
             Toast.makeText(getContext(),
                     "không có dữ liệu",
-                    Toast.LENGTH_SHORT).show();
+                    Toast.LENGTH_SHORT).show();*/
     }
 
     // Tìm ID của Image ứng với tên của ảnh (Trong thư mục mipmap).

@@ -1,83 +1,23 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/mainActivity"
-    android:layout_width="match_parent"
+<RelativeLayout android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical">
-
-
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout
+        android:id="@+id/fragment_container"
         android:layout_above="@+id/bottom_nav"
-        android:layout_marginBottom="8dp"
-        android:orientation="vertical">
-
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
         <include layout="@layout/toolbar_submenu"></include>
-
-
-        <LinearLayout
-            android:id="@+id/fragment_container"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_above="@+id/bottom_nav"
-            android:orientation="vertical">
-
-            <!--<TextView-->
-                <!--android:id="@+id/txtBuoiSang"-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="25dp"-->
-                <!--android:textColor="#8B03FF10"-->
-                <!--android:textStyle="bold" />-->
-
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/fragment_container_recyclerView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:listSelector="@drawable/list_selector" />
-
-            <!--<TextView-->
-                <!--android:id="@+id/txtBuoiTrua"-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="25dp"-->
-                <!--android:textColor="#8BFF03A3"-->
-                <!--android:textStyle="bold" />-->
-
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/fragment_container_recyclerView1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:listSelector="@drawable/list_selector" />
-
-            <!--<TextView-->
-                <!--android:id="@+id/txtBuoiToi"-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="25dp"-->
-                <!--android:textColor="#1487A5"-->
-                <!--android:textStyle="bold" />-->
-
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/fragment_container_recyclerView2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:listSelector="@drawable/list_selector" />
-
-            <!--<fragment-->
-            <!--android:id="@+id/fragment"-->
-            <!--android:name="com.example.Leogo.capstone2_anziday.Fragment_Home"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="546dp" />-->
-
-        </LinearLayout>
-    </LinearLayout>
+    </FrameLayout>
 
     <android.support.design.widget.BottomNavigationView
-        android:id="@+id/bottom_nav"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
         android:background="#1549FC"
-        app:menu="@menu/menu_bottom_nav"></android.support.design.widget.BottomNavigationView>
+        android:id="@+id/bottom_nav"
+        app:menu="@menu/menu_bottom_nav"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </android.support.design.widget.BottomNavigationView>
 
 </RelativeLayout>

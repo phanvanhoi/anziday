@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -27,14 +28,14 @@ public class FoodRecyclerViewAdapter extends RecyclerView.Adapter<FoodRecyclerVi
         private Button detail_button;
         private ImageView imageView_food;
         private TextView textView_foodName;
-        private TextView textView_Rating;
+        RatingBar ratingBar;
 
         ViewHolder(View itemView) {
             super(itemView);
             detail_button = itemView.findViewById(R.id.detail_button);
             imageView_food = itemView.findViewById(R.id.imageView_food);
             textView_foodName = itemView.findViewById(R.id.textView_foodName);
-            textView_Rating = itemView.findViewById(R.id.textView_Rating);
+            ratingBar = itemView.findViewById(R.id.ratingBar);
 
             //Xử lý khi nút Chi tiết được bấm
             detail_button.setOnClickListener(new View.OnClickListener() {
@@ -83,7 +84,8 @@ public class FoodRecyclerViewAdapter extends RecyclerView.Adapter<FoodRecyclerVi
         final food getFoodIndex = mfood.get(i);
         viewHolder.textView_foodName.setText(getFoodIndex.getNameFood());
         viewHolder.detail_button.setText("Detail");
-        viewHolder.textView_Rating.setText("Raiting: "+ getFoodIndex.getRating());
+        viewHolder.ratingBar.setRating(Float.parseFloat(getFoodIndex.getRating()+""));
+        viewHolder.ratingBar.setIsIndicator(true);
         int imageId = mContext.getResources().getIdentifier( ""+getFoodIndex.getImage() , "drawable", mContext.getApplicationContext().getPackageName());
         viewHolder.imageView_food.setImageResource(imageId);
 

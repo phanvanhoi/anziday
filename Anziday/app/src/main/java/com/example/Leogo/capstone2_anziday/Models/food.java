@@ -6,7 +6,7 @@ import android.os.Parcelable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class food implements Parcelable{
+public class food{
     private String foodID;
     private String decription;
     private ArrayList<String> formatly;
@@ -136,7 +136,7 @@ public class food implements Parcelable{
         this.rating = rating;
     }
 
-    food(Parcel in) {
+    /*food(Parcel in) {
         this.decription = in.readString();
         this.formatly = new ArrayList<>();
         this.illness = new ArrayList<>();
@@ -148,13 +148,13 @@ public class food implements Parcelable{
         this.region = new ArrayList<>();
         this.session = new ArrayList<>();
 
-        /*this.name = in.readString();
+        *//*this.name = in.readString();
         this.yearsOfExperience = in.readInt();
         this.skillSet = new ArrayList<Skill>();
         in.readTypedList(skillSet, Skill.CREATOR);
-        this.favoriteFloat = in.readFloat();*/
+        this.favoriteFloat = in.readFloat();*//*
     }
-    /*this.decription = decription;
+    *//*this.decription = decription;
             this.formatly = formatly;
             this.illness = illness;
             this.image = image;
@@ -163,7 +163,7 @@ public class food implements Parcelable{
             this.nameFood = nameFood;
             this.rating = rating;
             this.region = region;
-            this.session = session*/
+            this.session = session*//*
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(decription);
         dest.writeTypedList((List)formatly);
@@ -176,9 +176,9 @@ public class food implements Parcelable{
         dest.writeTypedList((List) region);
         dest.writeTypedList((List)session);
 
-        /*dest.writeInt(yearsOfExperience);
+        *//*dest.writeInt(yearsOfExperience);
         dest.writeTypedList(skillSet);
-        dest.writeFloat(favoriteFloat);*/
+        dest.writeFloat(favoriteFloat);*//*
     }
 
     public int describeContents() {
@@ -230,6 +230,6 @@ public class food implements Parcelable{
             return 0;
         }
     }
-
+*/
 
 }

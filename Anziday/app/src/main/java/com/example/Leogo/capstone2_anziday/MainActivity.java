@@ -13,6 +13,7 @@ import android.speech.tts.TextToSpeech;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -20,14 +21,10 @@ import android.text.format.DateUtils;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup.LayoutParams;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
-
-import com.example.Leogo.capstone2_anziday.Adapter.FoodRecyclerViewAdapter;
-import com.example.Leogo.capstone2_anziday.Adapter.FoodRecyclerViewImageAdapter;
 import com.example.Leogo.capstone2_anziday.Models.food;
 
 import java.util.ArrayList;
@@ -38,26 +35,13 @@ import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
     SharedPreferences sharedPreferences;
-    EditText edtSearch;
-    Fragment_Home fragment_home;
-    Fragment_Profile fragment_profile;
-    Fragment_Detail_Profile fragment_detail_profile;
     Bundle bundle;
     BottomNavigationView bottomNavigationView;
-    private EditText edtSearchSubNav;
+    public EditText edtSearchSubNav;
     private Button btnSearchSubNav;
-    RecyclerView recyclerView;
-    RecyclerView recyclerView1;
-    //RecyclerView recyclerView2;
-    LayoutParams params;
-    LayoutParams params1;
-    //LayoutParams params2;
-    FoodRecyclerViewImageAdapter foodRecyclerViewAdapter;
-    FoodRecyclerViewAdapter foodRecyclerViewAdapter1;
-    FoodRecyclerViewAdapter foodRecyclerViewAdapter2;
-    //TextView txtBuoiSang,txtBuoiTrua,txtBuoiToi;
-    //LayoutParams paramBuoiSang,paramBuoiTrua,paramBuoiToi;
     Fragment_DetailFood fragment_detailFood;
+    Button btnBackMain;
+
 
     private Fragment_Home new_fragment_home;
     private ImageButton btnVoiceSearch;
@@ -73,15 +57,22 @@ public class MainActivity extends AppCompatActivity {
         edtSearchSubNav = findViewById(R.id.edtSearchSubNav);
         btnSearchSubNav = findViewById(R.id.btnSearchSubNav);
 
-//        txtBuoiSang = findViewById(R.id.txtBuoiSang);
-//        txtBuoiSang.setText("Bữa Sáng");
-//        txtBuoiTrua = findViewById(R.id.txtBuoiTrua);
-//        txtBuoiTrua.setText("Bữa Trưa");
-//        txtBuoiToi = findViewById(R.id.txtBuoiToi);
-//        txtBuoiToi.setText("Bữa Tối");
-
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, Fragment_Home.newInstance()).commit();
-
+        btnVoiceSearch = findViewById(R.id.btnVoiceSearch);
+        btnVoiceSearch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
+                intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL,
+                        RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
+                intent.putExtra(RecognizerIntent.EXTRA_MAX_RESULTS, 1);
+                intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale.UK);
+                if (!intent.hasExtra(RecognizerIntent.EXTRA_CALLING_PACKAGE)) {
+                    intent.putExtra(RecognizerIntent.EXTRA_CALLING_PACKAGE, "com.dummy");
+                }
+                mySpeechRecognizer.startListening(intent);
+            }
+        });
 
         bundle = getIntent().getExtras();
         bottomNavigationView = findViewById(R.id.bottom_nav);
@@ -96,15 +87,6 @@ public class MainActivity extends AppCompatActivity {
                 new_fragment_home.setArguments(bundle1);
                 if (fragment_detailFood != null) {
                     clearStack();
-                    params.height = 800;
-                    params1.height = 1200;
-                    //params2.height = 600;
-                    /*paramBuoiSang.height = 50;
-                    paramBuoiTrua.height = 50;
-                    paramBuoiToi.height = 50;
-//                    txtBuoiSang.setLayoutParams(paramBuoiSang);
-//                    txtBuoiTrua.setLayoutParams(paramBuoiTrua);
-//                    txtBuoiToi.setLayoutParams(paramBuoiToi);*/
                     bundle = getIntent().getExtras();
                     if (bundle != null) {
                         User objUser = bundle.getParcelable("user");
@@ -136,61 +118,18 @@ public class MainActivity extends AppCompatActivity {
         }
         bottomNavigationView.setOnNavigationItemSelectedListener(navLister);
 
-        recyclerView = findViewById(R.id.fragment_container_recyclerView);
-        params = recyclerView.getLayoutParams();
-        //paramBuoiSang = txtBuoiSang.getLayoutParams();
-        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
-        mLayoutManager.scrollToPosition(0);//Thiết lập phần tử mặc định nếu muốn
-        recyclerView.setHasFixedSize(true);//Mượt hơn nếu k cập nhập gì
-        recyclerView.setLayoutManager(mLayoutManager);
 
-
-        recyclerView1 = findViewById(R.id.fragment_container_recyclerView1);
-        params1 = recyclerView1.getLayoutParams();
-        //paramBuoiTrua = txtBuoiTrua.getLayoutParams();
-        RecyclerView.LayoutManager mLayoutManager1 = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
-        mLayoutManager.scrollToPosition(0);//Thiết lập phần tử mặc định nếu muốn
-        recyclerView1.setHasFixedSize(true);//Mượt hơn nếu k cập nhập gì
-        recyclerView1.setLayoutManager(mLayoutManager1);
-
-        /*recyclerView2 = findViewById(R.id.fragment_container_recyclerView2);
-        params2 =  recyclerView2.getLayoutParams();
-        //paramBuoiToi = txtBuoiToi.getLayoutParams();
-        RecyclerView.LayoutManager mLayoutManager2 = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
-        mLayoutManager.scrollToPosition(0);//Thiết lập phần tử mặc định nếu muốn
-        recyclerView2.setHasFixedSize(true);//Mượt hơn nếu k cập nhập gì
-        recyclerView2.setLayoutManager(mLayoutManager2);*/
-
-        params.height = 800;
-        params1.height = 1200;
-        //params2.height = 600;
-
-
-        btnVoiceSearch = findViewById(R.id.btnVoiceSearch);
-        btnVoiceSearch.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
-                intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL,
-                        RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
-                intent.putExtra(RecognizerIntent.EXTRA_MAX_RESULTS, 1);
-                intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale.UK);
-                if (!intent.hasExtra(RecognizerIntent.EXTRA_CALLING_PACKAGE)) {
-                    intent.putExtra(RecognizerIntent.EXTRA_CALLING_PACKAGE, "com.dummy");
-                }
-                /*Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
-                intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL,
-                        RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
-                intent.putExtra(RecognizerIntent.EXTRA_CALLING_PACKAGE,
-                        getApplication().getPackageName());
-                intent.putExtra(RecognizerIntent.EXTRA_MAX_RESULTS, 1);
-                intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale.getDefault());
-                intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_PREFERENCE, "en");*/
-                mySpeechRecognizer.startListening(intent);
-            }
-        });
         initializeTextToSpeech();
         initializeSpeechRecognizer();
+
+        btnBackMain = findViewById(R.id.btnBackMain);
+        btnBackMain.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(),MainActivity.class));
+            }
+        });
+
 
     }
 
@@ -364,15 +303,6 @@ public class MainActivity extends AppCompatActivity {
     @SuppressLint("SetTextI18n")
     public void detailFood(food food) {
         if (food.getNameFood() != null && !food.getNameFood().equals("")) {
-            params.height = 0;
-            params1.height = 0;
-            //params2.height = 0;
-           /* paramBuoiSang.height = 0;
-            paramBuoiTrua.height = 0;
-            paramBuoiToi.height = 0;
-            txtBuoiSang.setLayoutParams(paramBuoiSang);
-            txtBuoiTrua.setLayoutParams(paramBuoiTrua);
-            txtBuoiToi.setLayoutParams(paramBuoiToi);*/
 
             fragment_detailFood = new Fragment_DetailFood();
             Bundle bundle1 = new Bundle();
@@ -396,18 +326,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    public void createRecycleView(ArrayList<food> listSang, ArrayList<food> listTrua, ArrayList<food> listToi, ArrayList<food> listFullData) {
-        foodRecyclerViewAdapter = new FoodRecyclerViewImageAdapter(this, listSang, listFullData);
-        foodRecyclerViewAdapter1 = new FoodRecyclerViewAdapter(this, listTrua, listFullData);
-        //foodRecyclerViewAdapter2 = new FoodRecyclerViewAdapter(this, listToi, listFullData);
-    }
-
-    public void addControl() {
-        recyclerView.setAdapter(foodRecyclerViewAdapter);
-        recyclerView1.setAdapter(foodRecyclerViewAdapter1);
-        //recyclerView2.setAdapter(foodRecyclerViewAdapter2);
-    }
-
 
     private BottomNavigationView.OnNavigationItemSelectedListener navLister =
             new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -417,54 +335,27 @@ public class MainActivity extends AppCompatActivity {
 
                     switch (item.getItemId()) {
                         case R.id.nav_home:
-                            params.height = 800;
-                            params1.height = 1200;
                             selectedFragment = Fragment_Home.newInstance();
-                            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, selectedFragment).commit();
-                            //params2.height = 600;
 
-                            /*paramBuoiSang.height = 50;
-                            paramBuoiTrua.height = 50;
-                            paramBuoiToi.height = 50;
-                            txtBuoiSang.setLayoutParams(paramBuoiSang);
-                            txtBuoiTrua.setLayoutParams(paramBuoiTrua);
-                            txtBuoiToi.setLayoutParams(paramBuoiToi);*/
-                            //selectedFragment = new_fragment_home;
-                            //fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+                            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, selectedFragment).commit();
                             break;
 
                         case R.id.nav_suggest:
-                            params.height = 0;
-                            params1.height = 0;
-                            //params2.height = 0;
-
-                            /*paramBuoiSang.height = 0;
-                            paramBuoiTrua.height = 0;
-                            paramBuoiToi.height = 0;
-                            txtBuoiSang.setLayoutParams(paramBuoiSang);
-                            txtBuoiTrua.setLayoutParams(paramBuoiTrua);
-                            txtBuoiToi.setLayoutParams(paramBuoiToi);*/
+                            selectedFragment = new Fragment_Recommend();
+                            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, selectedFragment).addToBackStack(null).commit();
                             break;
                         case R.id.nav_profile:
-                            params.height = 0;
-                            params1.height = 0;
-                            //params2.height = 0;
 
-                            /*paramBuoiSang.height = 0;
-                            paramBuoiTrua.height = 0;
-                            paramBuoiToi.height = 0;
-                            txtBuoiSang.setLayoutParams(paramBuoiSang);
-                            txtBuoiTrua.setLayoutParams(paramBuoiTrua);
-                            txtBuoiToi.setLayoutParams(paramBuoiToi);*/
                             if (bundle != null) {
                                 User objUser = bundle.getParcelable("user");
                                 bundle.putParcelable("user", objUser);
                                 selectedFragment = new Fragment_Detail_Profile();
                                 selectedFragment.setArguments(bundle);
+
                                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, selectedFragment).commit();
                             } else {
                                 selectedFragment = new Fragment_Profile();
-                                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, selectedFragment).commit();
+                                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, selectedFragment).addToBackStack(null).commit();
                             }
                             break;
                     }
@@ -474,16 +365,6 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void yeuCauLogin() {
-        params.height = 0;
-        params1.height = 0;
-        //params2.height = 0;
-
-        /*paramBuoiSang.height = 0;
-        paramBuoiTrua.height = 0;
-        paramBuoiToi.height = 0;
-        txtBuoiSang.setLayoutParams(paramBuoiSang);
-        txtBuoiTrua.setLayoutParams(paramBuoiTrua);
-        txtBuoiToi.setLayoutParams(paramBuoiToi);*/
 
         bottomNavigationView.setSelectedItemId(R.id.nav_profile);
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Fragment_Profile()).commit();

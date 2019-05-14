@@ -9,11 +9,16 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.annotation.RequiresApi;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.ViewGroup.LayoutParams;
 
+import com.example.Leogo.capstone2_anziday.Adapter.FoodRecyclerViewAdapter;
+import com.example.Leogo.capstone2_anziday.Adapter.FoodRecyclerViewImageAdapter;
 import com.example.Leogo.capstone2_anziday.Models.food;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -38,6 +43,12 @@ public class Fragment_Home extends Fragment {
     private ArrayList<food> listSang;
     private ArrayList<food> listTrua;
     private ArrayList<food> listToi;
+    private RecyclerView recyclerView;
+    private RecyclerView recyclerView1;
+    LayoutParams params;
+    LayoutParams params1;
+    FoodRecyclerViewImageAdapter foodRecyclerViewImageAdapter;
+    FoodRecyclerViewAdapter foodRecyclerViewAdapter;
 
     private FirebaseFirestore db;
     private MainActivity myContext;
@@ -45,6 +56,198 @@ public class Fragment_Home extends Fragment {
 
     public void insertDataFood() {
         db = FirebaseFirestore.getInstance();
+
+
+        //-------------------------------------Start material------------------------------
+        Map<String, Object> matirial = new HashMap<>();
+        matirial.put("groupPerson", Arrays.asList("Tim mạch","Tiểu đường"));
+        matirial.put("illness", Arrays.asList("","Gan Nhiễm Mỡ"));
+        matirial.put("name","Mỡ heo");
+        db.collection("matirial").document("idmatirial0").set(matirial);
+
+        Map<String, Object> matirial1 = new HashMap<>();
+        matirial1.put("groupPerson", Arrays.asList("Tim mạch","Tiểu đường"));
+        matirial1.put("illness", Arrays.asList("","Bị Sởi"));
+        matirial1.put("name","Gà ");
+        db.collection("matirial").document("idmatirial1").set(matirial1);
+
+        Map<String, Object> matirial2 = new HashMap<>();
+        matirial2.put("groupPerson", Arrays.asList("Tim mạch","Tiểu đường"));
+        matirial2.put("illness", Arrays.asList("Dị Ứng Da",""));
+        matirial2.put("name","Phẩm Màu");
+        db.collection("matirial").document("idmatirial2").set(matirial2);
+
+        Map<String, Object> matirial3 = new HashMap<>();
+        matirial3.put("groupPerson", Arrays.asList("Tim mạch","Tiểu đường"));
+        matirial3.put("illness", Arrays.asList("Nứt Nẻ",""));
+        matirial3.put("name","Bạc Hà ");
+        db.collection("matirial").document("idmatirial3").set(matirial3);
+
+        Map<String, Object> matirial4 = new HashMap<>();
+        matirial4.put("groupPerson", Arrays.asList("Tim mạch","Tiểu đường"));
+        matirial4.put("illness", Arrays.asList("Tim mạch","Tiểu đường"));
+        matirial4.put("name","Đường ");
+        db.collection("matirial").document("idmatirial4").set(matirial4);
+
+        Map<String, Object> matirial5 = new HashMap<>();
+        matirial5.put("groupPerson", Arrays.asList("Tim mạch",""));
+        matirial5.put("illness", Arrays.asList("Béo Phì",""));
+        matirial5.put("name","Cá Mè ");
+        db.collection("matirial").document("idmatirial5").set(matirial5);
+
+        Map<String, Object> matirial6 = new HashMap<>();
+        matirial6.put("groupPerson", Arrays.asList("Tim mạch","Tiểu đường"));
+        matirial6.put("illness", Arrays.asList("Tim mạch","Gan Nhiễm Mỡ"));
+        matirial6.put("name","Thịt Chó");
+        db.collection("matirial").document("idmatirial6").set(matirial6);
+
+        Map<String, Object> matirial7 = new HashMap<>();
+        matirial7.put("groupPerson", Arrays.asList("Tim mạch",""));
+        matirial7.put("illness", Arrays.asList("Bệnh Sáng Khuẩn",""));
+        matirial7.put("name","Huyết Heo");
+        db.collection("matirial").document("idmatirial7").set(matirial7);
+
+        Map<String, Object> matirial8 = new HashMap<>();
+        matirial8.put("groupPerson", Arrays.asList("Tim mạch","Tiểu đường"));
+        matirial8.put("illness", Arrays.asList("Béo Phì",""));
+        matirial8.put("name","Cá Chim");
+        db.collection("matirial").document("idmatirial8").set(matirial8);
+
+        Map<String, Object> matirial9 = new HashMap<>();
+        matirial9.put("groupPerson", Arrays.asList("Tim mạch","Tiểu đường"));
+        matirial9.put("illness", Arrays.asList("Ho Lao",""));
+        matirial9.put("name","Rau Cải Ngòng");
+        db.collection("matirial").document("idmatirial9").set(matirial9);
+
+        Map<String, Object> matirial10 = new HashMap<>();
+        matirial10.put("groupPerson", Arrays.asList("Tim mạch","Tiểu đường"));
+        matirial10.put("illness", Arrays.asList("","Hen xuyễn"));
+        matirial10.put("name","Búp Xú ");
+        db.collection("matirial").document("idmatirial10").set(matirial10);
+
+        Map<String, Object> matirial11 = new HashMap<>();
+        matirial11.put("groupPerson", Arrays.asList("Tim mạch","Tiểu đường"));
+        matirial11.put("illness", Arrays.asList("","Béo Phì"));
+        matirial11.put("name","Bào Ngư");
+        db.collection("matirial").document("idmatirial11").set(matirial11);
+
+        Map<String, Object> matirial12 = new HashMap<>();
+        matirial12.put("groupPerson", Arrays.asList("Tim mạch","Tiểu đường"));
+        matirial12.put("illness", Arrays.asList("","Tiểu Đường"));
+        matirial12.put("name","Thit heo ");
+        db.collection("matirial").document("idmatirial12").set(matirial12);
+
+        Map<String, Object> matirial13 = new HashMap<>();
+        matirial13.put("groupPerson", Arrays.asList("Tim mạch","Tiểu đường"));
+        matirial13.put("illness", Arrays.asList("","Huyết Áp"));
+        matirial13.put("name","Thit Bò ");
+        db.collection("matirial").document("idmatirial13").set(matirial13);
+
+        Map<String, Object> matirial14 = new HashMap<>();
+        matirial14.put("groupPerson", Arrays.asList("Tim mạch","Tiểu đường"));
+        matirial14.put("illness", Arrays.asList(" Tim Mạch",""));
+        matirial14.put("name","Hat Lạc ");
+        db.collection("matirial").document("idmatirial14").set(matirial14);
+
+        Map<String, Object> matirial15 = new HashMap<>();
+        matirial15.put("groupPerson", Arrays.asList("Tim mạch",""));
+        matirial15.put("illness", Arrays.asList(" ","Sáng Khuẩn "));
+        matirial15.put("name","Mía ");
+        db.collection("matirial").document("idmatirial15").set(matirial15);
+
+        Map<String, Object> matirial16 = new HashMap<>();
+        matirial16.put("groupPerson", Arrays.asList("","Tiểu đường"));
+        matirial16.put("illness", Arrays.asList("Đường Ruột "," "));
+        matirial16.put("name","Chả Cá ");
+        db.collection("matirial").document("idmatirial16").set(matirial16);
+
+        Map<String, Object> matirial17 = new HashMap<>();
+        matirial17.put("groupPerson", Arrays.asList("Tim mạch","Tiểu đường"));
+        matirial17.put("illness", Arrays.asList("Tim Mạch"," "));
+        matirial17.put("name","Hành Tây ");
+        db.collection("matirial").document("idmatirial17").set(matirial17);
+
+        Map<String, Object> matirial18 = new HashMap<>();
+        matirial18.put("groupPerson", Arrays.asList("Tim mạch",""));
+        matirial18.put("illness", Arrays.asList("Đâu Đầu"," "));
+        matirial18.put("name","Nước Dừa ");
+        db.collection("matirial").document("idmatirial18").set(matirial18);
+
+        Map<String, Object> matirial19 = new HashMap<>();
+        matirial19.put("groupPerson", Arrays.asList("","Tiểu đường"));
+        matirial19.put("illness", Arrays.asList("Sáng Khuẩn"," "));
+        matirial19.put("name","Lòng Heo ");
+        db.collection("matirial").document("idmatirial19").set(matirial19);
+
+        Map<String, Object> matirial20 = new HashMap<>();
+        matirial20.put("groupPerson", Arrays.asList("Tim mạch","Tiểu đường"));
+        matirial20.put("illness", Arrays.asList("Tim Mạch"," "));
+        matirial20.put("name","Rau Ram ");
+        db.collection("matirial").document("idmatirial20").set(matirial20);
+
+        Map<String, Object> matirial21 = new HashMap<>();
+        matirial21.put("groupPerson", Arrays.asList("Tim mạch",""));
+        matirial21.put("illness", Arrays.asList("Lông Ben"," "));
+        matirial21.put("name","Trứng Vịt Lộn ");
+        db.collection("matirial").document("idmatirial21").set(matirial21);
+
+        Map<String, Object> matirial22 = new HashMap<>();
+        matirial22.put("groupPerson", Arrays.asList("Tim mạch",""));
+        matirial22.put("illness", Arrays.asList("","Béo Phì "));
+        matirial22.put("name","Kem ");
+        db.collection("matirial").document("idmatirial22").set(matirial22);
+
+        Map<String, Object> matirial23 = new HashMap<>();
+        matirial23.put("groupPerson", Arrays.asList("Tim mạch",""));
+        matirial23.put("illness", Arrays.asList(" Đau Bụng","Béo Phì"));
+        matirial23.put("name"," sữa");
+        db.collection("matirial").document("idmatirial23").set(matirial23);
+
+        Map<String, Object> matirial24 = new HashMap<>();
+        matirial24.put("groupPerson", Arrays.asList("Tim mạch",""));
+        matirial24.put("illness", Arrays.asList(" Mỡ Nhiễm Máu","Beo Phì"));
+        matirial24.put("name"," Bơ");
+        db.collection("matirial").document("idmatirial24").set(matirial24);
+
+        Map<String, Object> matirial25 = new HashMap<>();
+        matirial25.put("groupPerson", Arrays.asList("Tim mạch",""));
+        matirial25.put("illness", Arrays.asList("Sốt","Ho"));
+        matirial25.put("name"," Vú Sữa");
+        db.collection("matirial").document("idmatirial25").set(matirial25);
+
+        Map<String, Object> matirial26 = new HashMap<>();
+        matirial26.put("groupPerson", Arrays.asList("","Tiểu Đường"));
+        matirial26.put("illness", Arrays.asList(" Sốt","Trúng Gió"));
+        matirial26.put("name"," Cồn ");
+        db.collection("matirial").document("idmatirial26").set(matirial26);
+
+        Map<String, Object> matirial27 = new HashMap<>();
+        matirial27.put("groupPerson", Arrays.asList("Tim Mạch","Tiểu Đường"));
+        matirial27.put("illness", Arrays.asList(" Tiêu Chảy","Ngộ Đọc Thực Phẩm"));
+        matirial27.put("name"," Rau Má ");
+        db.collection("matirial").document("idmatirial27").set(matirial27);
+
+        Map<String, Object> matirial28 = new HashMap<>();
+        matirial28.put("groupPerson", Arrays.asList("Tim Mạch","Tiểu Đường"));
+        matirial28.put("illness", Arrays.asList(" Tiêu Chảy","Ngộ Đọc Thực Phẩm"));
+        matirial28.put("name"," Đu Đủ ");
+        db.collection("matirial").document("idmatirial28").set(matirial28);
+
+        Map<String, Object> matirial29 = new HashMap<>();
+        matirial29.put("groupPerson", Arrays.asList("Tim Mạch",""));
+        matirial29.put("illness", Arrays.asList(" Tiêu Chảy"," Béo Phì"));
+        matirial29.put("name"," Thịt Vit ");
+        db.collection("matirial").document("idmatirial29").set(matirial29);
+
+        Map<String, Object> matirial30 = new HashMap<>();
+        matirial30.put("groupPerson", Arrays.asList("Tim Mạch"," Tiểu Đường"));
+        matirial30.put("illness", Arrays.asList(" Tiêu Chảy",""));
+        matirial30.put("name"," Cà Chua ");
+        db.collection("matirial").document("idmatirial30").set(matirial30);
+
+
+
+        //-----------------------------end material-----------------------------
         CollectionReference foods = db.collection("foods");
         Map<String, Object> Heo1 = new HashMap<>();
         Heo1.put("decription", "Nguyên liệu:\n" +
@@ -77,6 +280,7 @@ public class Fragment_Home extends Fragment {
         Heo1.put("rating", 4.7);
         Heo1.put("region", Arrays.asList("Miền Trung"));
         Heo1.put("session", Arrays.asList("Mùa Mưa"));
+        Heo1.put("groupPerson",Arrays.asList("Tăng cân"));
         foods.document("Heo1").set(Heo1);
 
 
@@ -115,6 +319,7 @@ public class Fragment_Home extends Fragment {
         Heo2.put("rating", 4.7);
         Heo2.put("region", Arrays.asList("Miền Trung"));
         Heo2.put("session", Arrays.asList("Mùa Mưa"));
+        Heo2.put("groupPerson",Arrays.asList("Tăng cân"));
         foods.document("Heo2").set(Heo2);
 
 
@@ -153,6 +358,7 @@ public class Fragment_Home extends Fragment {
         Heo3.put("rating", 4.7);
         Heo3.put("region", Arrays.asList("Miền Trung"));
         Heo3.put("session", Arrays.asList("Mùa Mưa"));
+        Heo3.put("groupPerson",Arrays.asList("Tăng cân"));
         foods.document("Heo3").set(Heo3);
 
 
@@ -178,6 +384,7 @@ public class Fragment_Home extends Fragment {
         Heo4.put("rating", 4.7);
         Heo4.put("region", Arrays.asList("Miền Trung"));
         Heo4.put("session", Arrays.asList("Mùa Mưa"));
+        Heo4.put("groupPerson",Arrays.asList("Tăng cân"));
         foods.document("Heo4").set(Heo4);
 
         Map<String, Object> Heo5 = new HashMap<>();
@@ -207,6 +414,7 @@ public class Fragment_Home extends Fragment {
         Heo5.put("rating", 4.7);
         Heo5.put("region", Arrays.asList("Miền Trung"));
         Heo5.put("session", Arrays.asList("Mùa Mưa"));
+        Heo5.put("groupPerson",Arrays.asList("Tăng cân"));
         foods.document("Heo5").set(Heo5);
 
         Map<String, Object> Heo6 = new HashMap<>();
@@ -256,6 +464,7 @@ public class Fragment_Home extends Fragment {
         Heo6.put("rating", 4.7);
         Heo6.put("region", Arrays.asList("Miền Trung"));
         Heo6.put("session", Arrays.asList("Mùa Mưa"));
+        Heo6.put("groupPerson",Arrays.asList("Tăng cân"));
         foods.document("Heo6").set(Heo6);
 
 
@@ -291,6 +500,7 @@ public class Fragment_Home extends Fragment {
         Heo7.put("rating", 4.7);
         Heo7.put("region", Arrays.asList("Miền Trung"));
         Heo7.put("session", Arrays.asList("Mùa Mưa"));
+        Heo7.put("groupPerson",Arrays.asList("Tăng cân"));
         foods.document("Heo7").set(Heo7);
 
         Map<String, Object> Heo8 = new HashMap<>();
@@ -324,6 +534,7 @@ public class Fragment_Home extends Fragment {
         Heo8.put("rating", 4.7);
         Heo8.put("region", Arrays.asList("Miền Trung"));
         Heo8.put("session", Arrays.asList("Mùa Mưa"));
+        Heo8.put("groupPerson",Arrays.asList("Tăng cân"));
         foods.document("Heo8").set(Heo8);
 
         Map<String, Object> Heo9 = new HashMap<>();
@@ -357,6 +568,7 @@ public class Fragment_Home extends Fragment {
         Heo9.put("rating", 4.7);
         Heo9.put("region", Arrays.asList("Miền Trung"));
         Heo9.put("session", Arrays.asList("Mùa Mưa"));
+        Heo9.put("groupPerson",Arrays.asList("Tăng cân"));
         foods.document("Heo9").set(Heo9);
 
         Map<String, Object> Heo10 = new HashMap<>();
@@ -385,6 +597,7 @@ public class Fragment_Home extends Fragment {
         Heo10.put("rating", 4.7);
         Heo10.put("region", Arrays.asList("Miền Trung"));
         Heo10.put("session", Arrays.asList("Mùa Mưa"));
+        Heo10.put("groupPerson",Arrays.asList("Tăng cân"));
         foods.document("Heo10").set(Heo10);
 
 
@@ -415,7 +628,9 @@ public class Fragment_Home extends Fragment {
         Heo11.put("rating", 4.7);
         Heo11.put("region", Arrays.asList("Miền Trung"));
         Heo11.put("session", Arrays.asList("Mùa Mưa"));
+        Heo11.put("groupPerson",Arrays.asList("Tăng cân"));
         foods.document("Heo11").set(Heo11);
+
 
         Map<String, Object> Heo12 = new HashMap<>();
         Heo12.put("decription", "Nguyên liệu:\n" +
@@ -442,7 +657,491 @@ public class Fragment_Home extends Fragment {
         Heo12.put("rating", 4.7);
         Heo12.put("region", Arrays.asList("Miền Trung"));
         Heo12.put("session", Arrays.asList("Mùa Mưa"));
+        Heo12.put("groupPerson",Arrays.asList("Tăng cân"));
         foods.document("Heo12").set(Heo12);
+
+
+        // Rau củ
+
+        Map<String, Object> rau1 = new HashMap<>();
+        rau1.put("decription", "Chuẩn bị:\n" +
+                "\n" +
+                "Rau củ quả ưa thích (cà rốt, rau xanh, súp lơ, đậu bắp…)\n" +
+                "Nguyên liệu làm kho quẹt gồm:\n" +
+                "\n" +
+                "400g thịt ba chỉ\n" +
+                "50g tôm nõn khô\n" +
+                "2 củ hành khô\n" +
+                "Vài nhánh tỏi, 1 quả ớt, 2 nhánh hành lá\n" +
+                "1 thìa đường, 2 thìa nước mắm, hạt tiêu, 1 thìa tương ớt\n"+
+                "Cách làm:\n" +
+                "\n" +
+                "Đối với rau củ quả, sau khi sơ chế sạch, làm kho quẹt xong, luộc chín cho vào tô nước đá tầm 1-2 phút để tăng độ giòn, sau đó cho ra dĩa vừa nóng ăn sẽ ngon hơn.\n" +
+                "\n" +
+                "Đối với nước kho quẹt:\n" +
+                "\n" +
+                "Bước 1: Thịt ba chỉ sau khi mua về, rửa sạch, để ráo nước, lạng bỏ phần bì rồi thái thành từng miếng hình hạt vừa nhỏ.\n" +
+                "\n" +
+                "Bước 2: Tôm khô rửa sạch, ngâm 10 phút trong nước cho mềm rồi vớt ra để ráo nước, hành khô và tỏi băm nhỏ, hành lá thái nhỏ, ớt thái miếng vát chéo.\n" +
+                "\n" +
+                "Bước 3: Cho thịt vào chảo xào cho ra bớt mỡ, đến khi thịt xém vàng thì vớt ra dĩa. Lấy bớt phần dầu, sau đó bật bếp cho dầu nóng lại thì thêm hành với tỏi vào phi thơm, cho tôm khô xào sơ qua đến khi dậy mùi thì cho nước mắm, đường, hạt nêm, ớt tương vào đảo đều.\n" +
+                "\n" +
+                "Bước 4: Tiếp đó cho phần thịt ba chỉ vào rồi thêm ít nước xâm xấp mặt thịt rồi đậy vung đun đến khi thịt sôi lại thì hạ nhỏ lửa.\n" +
+                "\n" +
+                "Khi thịt chín mềm, nước sốt sền sệt thì nêm nếm lại cho vừa miệng rồi tắt bếp. Chị em có thể rắc thêm ít tiêu và hành lá cho món ăn thêm đẹp mắt và thơm ngon.");
+        rau1.put("formatly", Arrays.asList("Ăn trưa","Ăn tối"));
+        rau1.put("illness", Arrays.asList("béo phì", "gout","cao huyết áp","tim mạch"));
+        rau1.put("image", "rau1");
+        rau1.put("link", "link ne");
+        rau1.put("material", Arrays.asList("Ma1", "Ma2"));
+        rau1.put("nameFood", "Rau củ luộc kho quẹt");
+        rau1.put("rating", 4.7);
+        rau1.put("region", Arrays.asList("Miền Trung"));
+        rau1.put("session", Arrays.asList("Mùa Mưa"));
+        rau1.put("groupPerson",Arrays.asList("Tăng cân"));
+        foods.document("rau1").set(rau1);
+
+
+        Map<String, Object> rau2 = new HashMap<>();
+        rau2.put("decription", "Chuẩn bị:\n" +
+                "\n" +
+                "450g cải ngồng, tước sạch phần thân và lá già, rửa sạch, để ráo (tùy lượng ăn)\n" +
+                "15ml dầu ăn\n" +
+                "3-4 tép tỏi tùy thích\n" +
+                "1 nhúm muối\n" +
+                "Vài giọt dầu mè\n"+
+                "Cách làm:\n" +
+                "\n" +
+                "Bước 1: Cải ngồng sơ chế xong để ráo, tỏi đập dập.\n" +
+                "\n" +
+                "Bước 2: Cho nước sôi vào nồi sôi, sau đó thêm ít muối và vài giọt dầu mè, tiến hành chần sơ qua cải ngồng trong 1 phút (nên nhúng phần thân trước 30 phút, sau đó mới cho lá vào, bí kíp này giúp cải ngồng luôn xanh khi xào).\n" +
+                "\n" +
+                "Bước 3: Cho cải ra chậu nước đá trong 1-2 phút thì vớt ra để ráo.\n" +
+                "\n" +
+                "Bước 4: Cho dầu vào chảo, phi thơm vàng tỏi, cho rau vào xào với lửa lớn, nêm thêm ít muối và vài giọt dầu mè đảo đều đến khi rau chín thì tắt bếp.");
+        rau2.put("formatly", Arrays.asList("Ăn trưa","Ăn tối"));
+        rau2.put("illness", Arrays.asList("béo phì", "gout","cao huyết áp","tim mạch"));
+        rau2.put("image", "rau2");
+        rau2.put("link", "link ne");
+        rau2.put("material", Arrays.asList("Ma1", "Ma2"));
+        rau2.put("nameFood", "Cải ngồng xào tỏi xanh giòn");
+        rau2.put("rating", 4.7);
+        rau2.put("region", Arrays.asList("Miền Trung"));
+        rau2.put("session", Arrays.asList("Mùa Mưa"));
+        rau2.put("groupPerson",Arrays.asList("Tăng cân"));
+        foods.document("rau2").set(rau2);
+
+
+        Map<String, Object> rau3 = new HashMap<>();
+        rau3.put("decription", "Chuẩn bị:\n" +
+                "\n" +
+                "150g thịt bò mềm\n" +
+                "1 bó rau khoai ngon tươi\n" +
+                "30g lạc\n" +
+                "2-3 củ hành khô\n" +
+                "1 củ tỏi\n" +
+                "1 trái ớt\n" +
+                "4-5 trái quất\n" +
+                "1 trái chanh\n" +
+                "Gia vị (muối, đường, bột nêm, nước mắm, dầu ăn…)\n"+
+                "Cách làm:\n" +
+                "\n" +
+                "Bước 1: Rau lang nhặt lấy phần lá, bỏ cọng, lá già, sau đó ngâm với nước muối từ 3-5 phút, rửa sạch và để ráo.\n" +
+                "\n" +
+                "Bước 2: Thịt bò lựa loại mềm, nếu có gân lọc bỏ gân, màng, rửa sạch, thái mỏng, để ráo.\n" +
+                "\n" +
+                "Hành khô bóc vỏ thái lát mỏng, tỏi đập dập, băm nhỏ, ớt thái nhỏ.\n" +
+                "\n" +
+                "Ướp thịt bò với ít hạt nêm, tiêu và ⅓ chỗ tỏi vừa băm ở trên, trộn đều để trong 15 phút cho bò thấm.\n" +
+                "\n" +
+                "Bước 3: Lạc rang chín, xa bỏ vỏ, sau đó giã dập.\n" +
+                "\n" +
+                "Bước 4: Cho nước vào nồi luộc chín với ít muối, sau khi luộc, bạn dùng đũa tãi đều cho rau nguội và giữ được độ xanh ngon.\n" +
+                "\n" +
+                "Bước 5: Pha nước trộn gỏi gồm: 1 thìa nước mắm, 2 thìa đường, 1 thìa nước cốt chanh hoặc quất, khuấy cho đường tan rồi cho ớt và ½ phần tỏi còn lại vào.\n" +
+                "\n" +
+                "Bước 6: Cho chảo lên bếp, chảo nóng cho dầu vào phi thơm với hành, sau đó vớt ra để riêng, cho phần tỏi băm còn lại vào phi thơm. Cho thịt bò vào đảo nhanh tay, bò chín là được.\n" +
+                "\n" +
+                "Bước 7: Cho rau vào tô lớn, cho nước trộn gỏi vào, nêm nếm vừa ăn. Cho bò ở trên cùng, đảo đều tay, cuối cùng cho lạc rang, hành phi vào là hoàn thành.");
+        rau3.put("formatly", Arrays.asList("Điểm tâm","Ăn tối"));
+        rau3.put("illness", Arrays.asList("béo phì", "gout","cao huyết áp","tim mạch"));
+        rau3.put("image", "rau3");
+        rau3.put("link", "link ne");
+        rau3.put("material", Arrays.asList("Ma1", "Ma2"));
+        rau3.put("nameFood", "Nộm rau lang thịt bò");
+        rau3.put("rating", 4.7);
+        rau3.put("region", Arrays.asList("Miền Trung"));
+        rau3.put("session", Arrays.asList("Mùa Mưa"));
+        rau3.put("groupPerson",Arrays.asList("Tăng cân"));
+        foods.document("rau3").set(rau3);
+
+
+        Map<String, Object> rau4 = new HashMap<>();
+        rau4.put("decription", "Chuẩn bị:\n" +
+                "\n" +
+                "100g mì Ý ống hoặc mì Udon Hakubaku đều được\n" +
+                "½ quả ớt chuông đỏ hoặc cam\n" +
+                "1 trái dưa leo\n" +
+                "200g cà chua bi hoặc cà chua cherry\n" +
+                "3 lát thịt nguội\n" +
+                "1- 2 khoanh dứa tươi\n" +
+                "¼ củ hành tây\n"+
+                "Cách làm:\n" +
+                "\n" +
+                "Bước 1: Làm phần sốt gồm: 30g sốt mayonnaise, 30g kem chua, 30g nước dứa ép, 5g đường, 2 nhánh tỏi bằm và chút tiêu.\n" +
+                "\n" +
+                "Bước 2: Tất cả các nguyên liệu rửa sạch, thái miếng vừa ăn.\n" +
+                "\n" +
+                "Với mỳ thì bạn luộc chín, xả qua nước.\n" +
+                "\n" +
+                "Bước 3: Mỳ chín cho tất cả vào tô lớn, cho phần sốt vào trộn đều, nêm nếm vừa ăn là được.\n" +
+                "\n" +
+                "Để món này thêm ngon bạn nên cho vào ngăn mát tủ lạnh từ 1-2h để có vị giòn.");
+        rau4.put("formatly", Arrays.asList("Điểm tâm","Ăn tối"));
+        rau4.put("illness", Arrays.asList("béo phì", "gout","cao huyết áp","tim mạch"));
+        rau4.put("image", "rau4");
+        rau4.put("link", "link ne");
+        rau4.put("material", Arrays.asList("Ma1", "Ma2"));
+        rau4.put("nameFood", "Salad Hawaii");
+        rau4.put("rating", 4.7);
+        rau4.put("region", Arrays.asList("Miền Trung"));
+        rau4.put("session", Arrays.asList("Mùa Mưa"));
+        rau4.put("groupPerson",Arrays.asList("Tăng cân"));
+        foods.document("rau4").set(rau4);
+
+
+        Map<String, Object> rau5 = new HashMap<>();
+        rau5.put("decription", "Chuẩn bị:\n" +
+                "\n" +
+                "100g mì Ý ống hoặc mì Udon Hakubaku đều được\n" +
+                "½ quả ớt chuông đỏ hoặc cam\n" +
+                "1 trái dưa leo\n" +
+                "200g cà chua bi hoặc cà chua cherry\n" +
+                "3 lát thịt nguội\n" +
+                "1- 2 khoanh dứa tươi\n" +
+                "¼ củ hành tây\n"+
+                "Cách làm:\n" +
+                "\n" +
+                "Bước 1: Làm phần sốt gồm: 30g sốt mayonnaise, 30g kem chua, 30g nước dứa ép, 5g đường, 2 nhánh tỏi bằm và chút tiêu.\n" +
+                "\n" +
+                "Bước 2: Tất cả các nguyên liệu rửa sạch, thái miếng vừa ăn.\n" +
+                "\n" +
+                "Với mỳ thì bạn luộc chín, xả qua nước.\n" +
+                "\n" +
+                "Bước 3: Mỳ chín cho tất cả vào tô lớn, cho phần sốt vào trộn đều, nêm nếm vừa ăn là được.\n" +
+                "\n" +
+                "Để món này thêm ngon bạn nên cho vào ngăn mát tủ lạnh từ 1-2h để có vị giòn.");
+        rau5.put("formatly", Arrays.asList("Điểm tâm","Ăn tối"));
+        rau5.put("illness", Arrays.asList("béo phì", "gout","cao huyết áp","tim mạch"));
+        rau5.put("image", "rau5");
+        rau5.put("link", "link ne");
+        rau5.put("material", Arrays.asList("Ma1", "Ma2"));
+        rau5.put("nameFood", "Cải bó xôi xào tỏi");
+        rau5.put("rating", 4.7);
+        rau5.put("region", Arrays.asList("Miền Trung"));
+        rau5.put("session", Arrays.asList("Mùa Mưa"));
+        rau5.put("groupPerson",Arrays.asList("Tăng cân"));
+        foods.document("rau5").set(rau5);
+
+
+        Map<String, Object> rau6 = new HashMap<>();
+        rau6.put("decription", "Chuẩn bị:\n" +
+                "\n" +
+                "4-5 củ khoai tây\n" +
+                "4 thìa hành tây, 3 thìa ớt chuông xanh, 3 thìa cà rốt xắt hạt lựu, 2 thìa rau mùi tây băm nhỏ.\n" +
+                "Dầu ăn, muối, tiêu\n" +
+                "Nước sốt cà chua\n" +
+                "Nguyên liệu làm bột (140g bột mì, 140g bột chiên xù, 1 quả trứng, ít muối, tiêu)\n"+
+                "Cách làm:\n" +
+                "\n" +
+                "Bước 1: Cho ít dầu ăn vào chảo, dầu nóng, cho phần hành tây, ớt chuông, cà rốt vào xào chín.\n" +
+                "\n" +
+                "Bước 2: Khoai tây luộc chín, nghiền nhuyễn, trộn với mùi tây và hỗn hợp vừa xào, nêm thêm ít muối, tiêu rồi hòa quyện.\n" +
+                "\n" +
+                "Bước 3: Chia khoai thành nhiều phần bằng nhau sau đó vo tròn lại, lăn qua bột mì, trứng đánh tan và cuối cùng là bột chiên xù.\n" +
+                "\n" +
+                "Bước 4: Cho dầu vào chảo và tiến hành chiên xù các viên khoai tây.\n" +
+                "\n" +
+                "Món này ăn kèm với nước sốt cà chua sẽ vô cùng bắt bài.");
+        rau6.put("formatly", Arrays.asList("Điểm tâm","Ăn tối"));
+        rau6.put("illness", Arrays.asList("béo phì", "gout","cao huyết áp","tim mạch"));
+        rau6.put("image", "rau6");
+        rau6.put("link", "link ne");
+        rau6.put("material", Arrays.asList("Ma1", "Ma2"));
+        rau6.put("nameFood", "Chả viên rau củ");
+        rau6.put("rating", 4.7);
+        rau6.put("region", Arrays.asList("Miền Trung"));
+        rau6.put("session", Arrays.asList("Mùa Mưa"));
+        rau6.put("groupPerson",Arrays.asList("Tăng cân"));
+        foods.document("rau6").set(rau6);
+
+
+        Map<String, Object> rau7 = new HashMap<>();
+        rau7.put("decription", "Chuẩn bị:\n" +
+                "\n" +
+                "300g bông cải xanh\n" +
+                "200g cà rốt\n" +
+                "500g xương má heo\n" +
+                "Vài lát gừng\n" +
+                "Hành, ngò\n" +
+                "Gia vị (muối, hạt nêm, tiêu…)\n" +
+                "Cách làm:\n" +
+                "\n" +
+                "Bước 1: Xương heo sau khi mua về bạn rửa sạch, chặt thành miếng nhỏ vừa ăn, ngâm trong 15 phút với ít muối và gừng, rửa lại cho sạch và để ráo.\n" +
+                "\n" +
+                "Bước 2: Cà rốt bào vỏ, tỉa hình mà bạn thích để món ăn thêm đẹp mắt. Bông cải rửa sạch, thái miếng vừa ăn.\n" +
+                "\n" +
+                "Bước 3: Hầm xương heo với 1.5 lít nước sôi trong 30 phút, trong lúc hầm nên vớt phần bọt đen để nước dùng trong. Sau đó cho cà rốt vào hầm cùng.\n" +
+                "\n" +
+                "Bước 4: Sau khi cà rốt chín, xương mềm thì cho bông cải vào nấu trong 10 phút, nêm nếm gia vị vừa ăn là được.\n" +
+                "\n" +
+                "Cho canh ra tô rắc thêm hành ngò ");
+        rau7.put("formatly", Arrays.asList("Ăn trưa","Ăn tối"));
+        rau7.put("illness", Arrays.asList("béo phì", "gout","cao huyết áp","tim mạch"));
+        rau7.put("image", "rau7");
+        rau7.put("link", "link ne");
+        rau7.put("material", Arrays.asList("Ma1", "Ma2"));
+        rau7.put("nameFood", "Canh bông cải xanh");
+        rau7.put("rating", 4.7);
+        rau7.put("region", Arrays.asList("Miền Trung"));
+        rau7.put("session", Arrays.asList("Mùa Mưa"));
+        rau7.put("groupPerson",Arrays.asList("Tăng cân"));
+        foods.document("rau7").set(rau7);
+
+
+        Map<String, Object> rau8 = new HashMap<>();
+        rau8.put("decription", "Chuẩn bị:\n" +
+                "\n" +
+                "1 bông cải xanh cỡ nhỏ hoặc vừa\n" +
+                "1 củ cà rốt\n" +
+                "3 - 4 củ cải đỏ\n" +
+                "1 nắm hạnh nhân rang chín, đập dập hoặc xắt lát\n" +
+                "1 nắm vừng trắng\n" +
+                "Sốt trộn salad: 30ml dầu vừng, 30ml dầu ăn, 40ml giấm táo, 30ml nước tương, 40ml mật ong, 2 nhánh tỏi đập dập. 1 mẩu gừng băm nhỏ, ½ muỗng cà phê ớt bột.\n "+
+                "Cách làm:\n" +
+                "\n" +
+                "Bước 1: Sơ chế các nguyên liệu\n" +
+                "\n" +
+                "Bông cải cắt thành miếng vừa ăn, rửa sạch và để ráo.\n" +
+                "Củ cải đỏ rửa sạch, thái lát mỏng\n" +
+                "Cà rốt nạo vỏ, cắt hình que 3cm\n" +
+                "Bông cải xanh cắt nhỏ, rửa sạch, chần qua nước sôi trong 2 phút rồi để ráo.\n" +
+                "Bước 2: Cho tất cả vào bát to trộn đều với nước sốt, bọc găng và cho vào ngăn mát tủ lạnh từ 30 phút đến 1h đồng hồ trước khi ăn để thêm hấp dẫn nha.");
+        rau8.put("formatly", Arrays.asList("Ăn trưa","Ăn tối"));
+        rau8.put("illness", Arrays.asList("béo phì", "gout","cao huyết áp","tim mạch"));
+        rau8.put("image", "rau8");
+        rau8.put("link", "link ne");
+        rau8.put("material", Arrays.asList("Ma1", "Ma2"));
+        rau8.put("nameFood", "Salad bông cải xanh");
+        rau8.put("rating", 4.7);
+        rau8.put("region", Arrays.asList("Miền Trung"));
+        rau8.put("session", Arrays.asList("Mùa Mưa"));
+        rau8.put("groupPerson",Arrays.asList("Tăng cân"));
+        foods.document("rau8").set(rau8);
+
+        Map<String, Object> rau9 = new HashMap<>();
+        rau9.put("decription", "Chuẩn bị:\n" +
+                "\n" +
+                "1 bắp ngô ngọt\n" +
+                "10g bơ nhạt\n" +
+                "1 thìa súp nước tương\n" +
+                "ít hạt tiêu\n"+
+                "Cách làm:\n" +
+                "\n" +
+                "Bước 1: Ngô rửa sạch, tách hạt, để ở nhiệt độ phòng cho mềm\n" +
+                "\n" +
+                "Bước 2: Cho bơ vào chảo đun chảy, sau đó cho ngô vào đảo đều.\n" +
+                "\n" +
+                "Tiếp tục cho nước tương vào đảo đều, thêm nốt phần bơ còn lại đến khi bơ tan và quyện với ngô.\n" +
+                "\n" +
+                "Bước 3: Rắc thêm ít hạt tiêu là có thể thưởng thức.");
+        rau9.put("formatly", Arrays.asList("Ăn trưa","Ăn tối"));
+        rau9.put("illness", Arrays.asList("béo phì", "gout","cao huyết áp","tim mạch"));
+        rau9.put("image", "rau9");
+        rau9.put("link", "link ne");
+        rau9.put("material", Arrays.asList("Ma1", "Ma2"));
+        rau9.put("nameFood", "Ngô xào lạ miệng");
+        rau9.put("rating", 4.7);
+        rau9.put("region", Arrays.asList("Miền Trung"));
+        rau9.put("session", Arrays.asList("Mùa Mưa"));
+        rau9.put("groupPerson",Arrays.asList("Tăng cân"));
+        foods.document("rau9").set(rau9);
+
+
+        Map<String, Object> rau10 = new HashMap<>();
+        rau10.put("decription", "Chuẩn bị:\n" +
+                "\n" +
+                "250g cải thìa, rửa sạch thái miếng vừa ăn\n" +
+                "2 thìa dầu thực vật\n" +
+                "4 cái nấm (hương, đông cô, mỡ tùy chọn)\n" +
+                "3 nhánh tỏi băm nhỏ\n" +
+                "½ thìa cà phê muối\n"+
+                "Cách làm:\n" +
+                "\n" +
+                "Bước 1: Cho dầu vào nồi phi thơm với tỏi, xào sơ qua nấm\n" +
+                "\n" +
+                "Bước 2: Giữ lửa lớn, cho tiếp cải thìa đã sơ chế vào xào nhanh tay, nêm thêm ít muối là hoàn thành.\n" +
+                "\n" +
+                "Với cách chế biến này bạn sẽ không cần quá nhiều gia vị mà vẫn thưởng thức được vị ngon ngọt tự nhiên của rau và nấm.");
+        rau10.put("formatly", Arrays.asList("Ăn trưa","Ăn tối"));
+        rau10.put("illness", Arrays.asList("béo phì", "gout","cao huyết áp","tim mạch"));
+        rau10.put("image", "rau10");
+        rau10.put("link", "link ne");
+        rau10.put("material", Arrays.asList("Ma1", "Ma2"));
+        rau10.put("nameFood", "Cải thìa xào nấm");
+        rau10.put("rating", 4.7);
+        rau10.put("region", Arrays.asList("Miền Trung"));
+        rau10.put("session", Arrays.asList("Mùa Mưa"));
+        rau10.put("groupPerson",Arrays.asList("Tăng cân"));
+        foods.document("rau10").set(rau10);
+
+
+        Map<String, Object> rau11 = new HashMap<>();
+        rau11.put("decription", "Chuẩn bị:\n" +
+                "\n" +
+                "250g cải thìa, rửa sạch thái miếng vừa ăn\n" +
+                "2 thìa dầu thực vật\n" +
+                "4 cái nấm (hương, đông cô, mỡ tùy chọn)\n" +
+                "3 nhánh tỏi băm nhỏ\n" +
+                "½ thìa cà phê muối\n"+
+                "Cách làm:\n" +
+                "\n" +
+                "Bước 1: Cho dầu vào nồi phi thơm với tỏi, xào sơ qua nấm\n" +
+                "\n" +
+                "Bước 2: Giữ lửa lớn, cho tiếp cải thìa đã sơ chế vào xào nhanh tay, nêm thêm ít muối là hoàn thành.\n" +
+                "\n" +
+                "Với cách chế biến này bạn sẽ không cần quá nhiều gia vị mà vẫn thưởng thức được vị ngon ngọt tự nhiên của rau và nấm.");
+        rau11.put("formatly", Arrays.asList("Ăn trưa","Ăn tối"));
+        rau11.put("illness", Arrays.asList("béo phì", "gout","cao huyết áp","tim mạch"));
+        rau11.put("image", "rau11");
+        rau11.put("link", "link ne");
+        rau11.put("material", Arrays.asList("Ma1", "Ma2"));
+        rau11.put("nameFood", "Rau cần muối xổi");
+        rau11.put("rating", 4.7);
+        rau11.put("region", Arrays.asList("Miền Trung"));
+        rau11.put("session", Arrays.asList("Mùa Mưa"));
+        rau11.put("groupPerson",Arrays.asList("Tăng cân"));
+        foods.document("rau11").set(rau11);
+
+
+        Map<String, Object> rau12 = new HashMap<>();
+        rau12.put("decription", "Chuẩn bị:\n" +
+                "\n" +
+                "250g cải thìa, rửa sạch thái miếng vừa ăn\n" +
+                "2 thìa dầu thực vật\n" +
+                "4 cái nấm (hương, đông cô, mỡ tùy chọn)\n" +
+                "3 nhánh tỏi băm nhỏ\n" +
+                "½ thìa cà phê muối\n"+
+                "Cách làm:\n" +
+                "\n" +
+                "Bước 1: Cho dầu vào nồi phi thơm với tỏi, xào sơ qua nấm\n" +
+                "\n" +
+                "Bước 2: Giữ lửa lớn, cho tiếp cải thìa đã sơ chế vào xào nhanh tay, nêm thêm ít muối là hoàn thành.\n" +
+                "\n" +
+                "Với cách chế biến này bạn sẽ không cần quá nhiều gia vị mà vẫn thưởng thức được vị ngon ngọt tự nhiên của rau và nấm.");
+        rau12.put("formatly", Arrays.asList("Ăn trưa","Ăn tối"));
+        rau12.put("illness", Arrays.asList("béo phì", "gout","cao huyết áp","tim mạch"));
+        rau12.put("image", "rau12");
+        rau12.put("link", "link ne");
+        rau12.put("material", Arrays.asList("Ma1", "Ma2"));
+        rau12.put("nameFood", "Canh hầm rau củ");
+        rau12.put("rating", 4.7);
+        rau12.put("region", Arrays.asList("Miền Trung"));
+        rau12.put("session", Arrays.asList("Mùa Mưa"));
+        rau12.put("groupPerson",Arrays.asList("Tăng cân"));
+        foods.document("rau12").set(rau12);
+
+        Map<String, Object> rau13 = new HashMap<>();
+        rau13.put("decription", "Chuẩn bị:\n" +
+                "\n" +
+                "250g cải thìa, rửa sạch thái miếng vừa ăn\n" +
+                "2 thìa dầu thực vật\n" +
+                "4 cái nấm (hương, đông cô, mỡ tùy chọn)\n" +
+                "3 nhánh tỏi băm nhỏ\n" +
+                "½ thìa cà phê muối\n"+
+                "Cách làm:\n" +
+                "\n" +
+                "Bước 1: Cho dầu vào nồi phi thơm với tỏi, xào sơ qua nấm\n" +
+                "\n" +
+                "Bước 2: Giữ lửa lớn, cho tiếp cải thìa đã sơ chế vào xào nhanh tay, nêm thêm ít muối là hoàn thành.\n" +
+                "\n" +
+                "Với cách chế biến này bạn sẽ không cần quá nhiều gia vị mà vẫn thưởng thức được vị ngon ngọt tự nhiên của rau và nấm.");
+        rau13.put("formatly", Arrays.asList("Ăn trưa","Ăn tối"));
+        rau13.put("illness", Arrays.asList("béo phì", "gout","cao huyết áp","tim mạch"));
+        rau13.put("image", "rau13");
+        rau13.put("link", "link ne");
+        rau13.put("material", Arrays.asList("Ma1", "Ma2"));
+        rau13.put("nameFood", "Món cà tím xào");
+        rau13.put("rating", 4.7);
+        rau13.put("region", Arrays.asList("Miền Trung"));
+        rau13.put("session", Arrays.asList("Mùa Mưa"));
+        rau13.put("groupPerson",Arrays.asList("Tăng cân"));
+        foods.document("rau13").set(rau13);
+
+
+        Map<String, Object> rau14 = new HashMap<>();
+        rau14.put("decription", "Chuẩn bị:\n" +
+                "\n" +
+                "250g cải thìa, rửa sạch thái miếng vừa ăn\n" +
+                "2 thìa dầu thực vật\n" +
+                "4 cái nấm (hương, đông cô, mỡ tùy chọn)\n" +
+                "3 nhánh tỏi băm nhỏ\n" +
+                "½ thìa cà phê muối\n"+
+                "Cách làm:\n" +
+                "\n" +
+                "Bước 1: Cho dầu vào nồi phi thơm với tỏi, xào sơ qua nấm\n" +
+                "\n" +
+                "Bước 2: Giữ lửa lớn, cho tiếp cải thìa đã sơ chế vào xào nhanh tay, nêm thêm ít muối là hoàn thành.\n" +
+                "\n" +
+                "Với cách chế biến này bạn sẽ không cần quá nhiều gia vị mà vẫn thưởng thức được vị ngon ngọt tự nhiên của rau và nấm.");
+        rau14.put("formatly", Arrays.asList("Ăn trưa","Ăn tối"));
+        rau14.put("illness", Arrays.asList("béo phì", "gout","cao huyết áp","tim mạch"));
+        rau14.put("image", "rau14");
+        rau14.put("link", "link ne");
+        rau14.put("material", Arrays.asList("Ma1", "Ma2"));
+        rau14.put("nameFood", "Cải thảo xào giấm");
+        rau14.put("rating", 4.7);
+        rau14.put("region", Arrays.asList("Miền Trung"));
+        rau14.put("session", Arrays.asList("Mùa Mưa"));
+        rau14.put("groupPerson",Arrays.asList("Tăng cân"));
+        foods.document("rau14").set(rau14);
+
+
+        Map<String, Object> rau15 = new HashMap<>();
+        rau15.put("decription", "Chuẩn bị:\n" +
+                "\n" +
+                "250g cải thìa, rửa sạch thái miếng vừa ăn\n" +
+                "2 thìa dầu thực vật\n" +
+                "4 cái nấm (hương, đông cô, mỡ tùy chọn)\n" +
+                "3 nhánh tỏi băm nhỏ\n" +
+                "½ thìa cà phê muối\n"+
+                "Cách làm:\n" +
+                "\n" +
+                "Bước 1: Cho dầu vào nồi phi thơm với tỏi, xào sơ qua nấm\n" +
+                "\n" +
+                "Bước 2: Giữ lửa lớn, cho tiếp cải thìa đã sơ chế vào xào nhanh tay, nêm thêm ít muối là hoàn thành.\n" +
+                "\n" +
+                "Với cách chế biến này bạn sẽ không cần quá nhiều gia vị mà vẫn thưởng thức được vị ngon ngọt tự nhiên của rau và nấm.");
+        rau15.put("formatly", Arrays.asList("Ăn trưa","Ăn tối"));
+        rau15.put("illness", Arrays.asList("béo phì", "gout","cao huyết áp","tim mạch"));
+        rau15.put("image", "rau15");
+        rau15.put("link", "link ne");
+        rau15.put("material", Arrays.asList("Ma1", "Ma2"));
+        rau15.put("nameFood", "Cải thảo luộc kiểu mới");
+        rau15.put("rating", 4.7);
+        rau15.put("region", Arrays.asList("Miền Trung"));
+        rau15.put("session", Arrays.asList("Mùa Mưa"));
+        rau15.put("groupPerson",Arrays.asList("Tăng cân"));
+        foods.document("rau15").set(rau15);
+
+
+
+
+
+
+
+
+
 
         CollectionReference rating = db.collection("rating");
 
@@ -507,6 +1206,200 @@ public class Fragment_Home extends Fragment {
         rating10.put("pointRate", 3);
         rating.document("rating10").set(rating10);
 
+        //-------------------------------------Start Raiting-------------------------------
+        //Anvn01,HanhT01,HungTH01,nghiatnh1,tritcm
+        //Heo7, Heo1, rau10, rau9, rau12, Heo2
+
+        Map<String, Object> ratingAnvn01H7 = new HashMap<>();
+        ratingAnvn01H7.put("user", "Anvn01");
+        ratingAnvn01H7.put("foodID", "Heo7");
+        ratingAnvn01H7.put("pointRate", 1);
+        rating.document("ratingAnvn01H7").set(ratingAnvn01H7);
+
+        Map<String, Object> ratingAnvn01H1 = new HashMap<>();
+        ratingAnvn01H1.put("user", "Anvn01");
+        ratingAnvn01H1.put("foodID", "Heo1");
+        ratingAnvn01H1.put("pointRate", 5);
+        rating.document("ratingAnvn01H1").set(ratingAnvn01H1);
+
+        Map<String, Object> ratingAnvn01r10 = new HashMap<>();
+        ratingAnvn01r10.put("user", "Anvn01");
+        ratingAnvn01r10.put("foodID", "rau10");
+        ratingAnvn01r10.put("pointRate", 4);
+        rating.document("ratingAnvn01r10").set(ratingAnvn01r10);
+
+        Map<String, Object> ratingAnvn01r12 = new HashMap<>();
+        ratingAnvn01r12.put("user", "Anvn01");
+        ratingAnvn01r12.put("foodID", "rau12");
+        ratingAnvn01r12.put("pointRate", 3);
+        rating.document("ratingAnvn01r12").set(ratingAnvn01r12);
+
+
+        //HanhT01,HungTH01,nghiatnh1,tritcm
+        //Heo7, Heo1, rau10, rau9, rau12, Heo2
+        Map<String, Object> ratingHanhT01H2 = new HashMap<>();
+        ratingHanhT01H2.put("user", "HanhT01");
+        ratingHanhT01H2.put("foodID", "Heo2");
+        ratingHanhT01H2.put("pointRate", 4);
+        rating.document("ratingHanhT01H2").set(ratingHanhT01H2);
+
+        Map<String, Object> ratingHanhT01H7 = new HashMap<>();
+        ratingHanhT01H7.put("user", "HanhT01");
+        ratingHanhT01H7.put("foodID", "Heo7");
+        ratingHanhT01H7.put("pointRate", 5);
+        rating.document("ratingHanhT01H7").set(ratingHanhT01H7);
+
+        Map<String, Object> ratingHanhT01r10 = new HashMap<>();
+        ratingHanhT01r10.put("user", "HanhT01");
+        ratingHanhT01r10.put("foodID", "rau10");
+        ratingHanhT01r10.put("pointRate", 4);
+        rating.document("ratingHanhT01r10").set(ratingHanhT01r10);
+
+        Map<String, Object> ratingHanhT01r9 = new HashMap<>();
+        ratingHanhT01r9.put("user", "HanhT01");
+        ratingHanhT01r9.put("foodID", "rau9");
+        ratingHanhT01r9.put("pointRate", 5);
+        rating.document("ratingHanhT01r9").set(ratingHanhT01r9);
+
+        Map<String, Object> ratingHanhT01r12 = new HashMap<>();
+        ratingHanhT01r12.put("user", "HanhT01");
+        ratingHanhT01r12.put("foodID", "Heo2");
+        ratingHanhT01r12.put("pointRate", 1);
+        rating.document("ratingHanhT01r12").set(ratingHanhT01r12);
+
+        Map<String, Object> ratingHanhT01H1 = new HashMap<>();
+        ratingHanhT01H1.put("user", "HanhT01");
+        ratingHanhT01H1.put("foodID", "Heo1");
+        ratingHanhT01H1.put("pointRate", 2);
+        rating.document("ratingHanhT01H1").set(ratingHanhT01H1);
+
+
+
+        //HungTH01,nghiatnh1,tritcm
+        //Heo7, Heo1, rau10, rau9, rau12, Heo2
+
+        Map<String, Object> ratingHungTH01H7 = new HashMap<>();
+        ratingHungTH01H7.put("user", "HungTH01");
+        ratingHungTH01H7.put("foodID", "Heo7");
+        ratingHungTH01H7.put("pointRate", 5);
+        rating.document("ratingHungTH01H7").set(ratingHungTH01H7);
+
+        Map<String, Object> ratingHungTH01r10 = new HashMap<>();
+        ratingHungTH01r10.put("user", "HungTH01");
+        ratingHungTH01r10.put("foodID", "rau10");
+        ratingHungTH01r10.put("pointRate", 4);
+        rating.document("ratingHungTH01r10").set(ratingHungTH01r10);
+
+        Map<String, Object> ratingHungTH01rau9 = new HashMap<>();
+        ratingHungTH01rau9.put("user", "HungTH01");
+        ratingHungTH01rau9.put("foodID", "rau9");
+        ratingHungTH01rau9.put("pointRate", 2);
+        rating.document("ratingHungTH01rau9").set(ratingHungTH01rau9);
+
+        Map<String, Object> ratingHungTH01r12 = new HashMap<>();
+        ratingHungTH01r12.put("user", "HungTH01");
+        ratingHungTH01r12.put("foodID", "rau12");
+        ratingHungTH01r12.put("pointRate", 4);
+        rating.document("ratingHungTH01r12").set(ratingHungTH01r12);
+
+        Map<String, Object> ratingHungTH01H2 = new HashMap<>();
+        ratingHungTH01H2.put("user", "HungTH01");
+        ratingHungTH01H2.put("foodID", "Heo2");
+        ratingHungTH01H2.put("pointRate", 3);
+        rating.document("ratingHungTH01H2").set(ratingHungTH01H2);
+
+
+
+        //nghiatnh1,tritcm
+        //Heo7, Heo1, rau10, rau9, rau12, Heo2
+
+        Map<String, Object> ratingnghiatnh1H7 = new HashMap<>();
+        ratingnghiatnh1H7.put("user", "nghiatnh1");
+        ratingnghiatnh1H7.put("foodID", "Heo7");
+        ratingnghiatnh1H7.put("pointRate", 5);
+        rating.document("ratingnghiatnh1H7").set(ratingnghiatnh1H7);
+
+        Map<String, Object> ratingnghiatnh1H1 = new HashMap<>();
+        ratingnghiatnh1H1.put("user", "nghiatnh1");
+        ratingnghiatnh1H1.put("foodID", "Heo1");
+        ratingnghiatnh1H1.put("pointRate", 1);
+        rating.document("ratingnghiatnh1H1").set(ratingnghiatnh1H1);
+
+        Map<String, Object> ratingnghiatnh1r10 = new HashMap<>();
+        ratingnghiatnh1r10.put("user", "nghiatnh1");
+        ratingnghiatnh1r10.put("foodID", "rau10");
+        ratingnghiatnh1r10.put("pointRate", 3);
+        rating.document("ratingnghiatnh1r10").set(ratingnghiatnh1r10);
+
+        Map<String, Object> ratingnghiatnh1r9 = new HashMap<>();
+        ratingnghiatnh1r9.put("user", "nghiatnh1");
+        ratingnghiatnh1r9.put("foodID", "rau9");
+        ratingnghiatnh1r9.put("pointRate", 4);
+        rating.document("ratingnghiatnh1r9").set(ratingnghiatnh1r9);
+
+        //tritcm
+        //Heo7, Heo1, rau10, rau9, rau12, Heo2
+
+        Map<String, Object> ratingtritcmH7 = new HashMap<>();
+        ratingtritcmH7.put("user", "tritcm");
+        ratingtritcmH7.put("foodID", "Heo7");
+        ratingtritcmH7.put("pointRate", 2);
+        rating.document("ratingtritcmH7").set(ratingtritcmH7);
+
+        Map<String, Object> ratingtritcmH1 = new HashMap<>();
+        ratingtritcmH1.put("user", "tritcm");
+        ratingtritcmH1.put("foodID", "Heo1");
+        ratingtritcmH1.put("pointRate", 1);
+        rating.document("ratingtritcmH1").set(ratingtritcmH1);
+
+        Map<String, Object> ratingtritcmr10 = new HashMap<>();
+        ratingtritcmr10.put("user", "tritcm");
+        ratingtritcmr10.put("foodID", "rau10");
+        ratingtritcmr10.put("pointRate", 5);
+        rating.document("ratingtritcmr10").set(ratingtritcmr10);
+
+        Map<String, Object> ratingtritcmrau9 = new HashMap<>();
+        ratingtritcmrau9.put("user", "tritcm");
+        ratingtritcmrau9.put("foodID", "rau9");
+        ratingtritcmrau9.put("pointRate", 4);
+        rating.document("ratingtritcmrau9").set(ratingtritcmrau9);
+
+        Map<String, Object> ratingtritcmr12 = new HashMap<>();
+        ratingtritcmr12.put("user", "tritcm");
+        ratingtritcmr12.put("foodID", "rau9");
+        ratingtritcmr12.put("pointRate", 2);
+        rating.document("ratingtritcmr12").set(ratingtritcmr12);
+
+
+
+        //hungnk
+        //Heo7, Heo1, rau10, rau9, rau12, Heo2
+        Map<String, Object> ratinghungnkH7 = new HashMap<>();
+        ratinghungnkH7.put("user", "hungnk");
+        ratinghungnkH7.put("foodID", "Heo7");
+        ratinghungnkH7.put("pointRate", 2);
+        rating.document("ratinghungnkH7").set(ratinghungnkH7);
+
+        Map<String, Object> ratinghungnkH1 = new HashMap<>();
+        ratinghungnkH1.put("user", "hungnk");
+        ratinghungnkH1.put("foodID", "Heo1");
+        ratinghungnkH1.put("pointRate", 1);
+        rating.document("ratinghungnkH1").set(ratinghungnkH1);
+
+        Map<String, Object> ratinghungnkr10 = new HashMap<>();
+        ratinghungnkr10.put("user", "hungnk");
+        ratinghungnkr10.put("foodID", "rau10");
+        ratinghungnkr10.put("pointRate", 5);
+        rating.document("ratinghungnkr10").set(ratinghungnkr10);
+
+        Map<String, Object> ratinghungnkr9 = new HashMap<>();
+        ratinghungnkr9.put("user", "hungnk");
+        ratinghungnkr9.put("foodID", "rau9");
+        ratinghungnkr9.put("pointRate", 4);
+        rating.document("ratinghungnkr9").set(ratinghungnkr9);
+
+        //-------------------------------------End Raiting--------------------------------
+
 
         // Create a query against the collection.
         //Query query = foods.whereEqualTo("formatly", "Bữa Trưa"); //Lấy thuộc tính formatly có bữa tối
@@ -543,8 +1436,6 @@ public class Fragment_Home extends Fragment {
     public void onSaveInstanceState(@NonNull Bundle outState) {
         super.onSaveInstanceState(outState);
         ///Save the fragment's instance
-        outState.putParcelableArrayList("listAdap", listAdap);
-        outState.putParcelableArrayList("listFullData", listFullData);
     }
 
     Bundle saved;
@@ -580,10 +1471,10 @@ public class Fragment_Home extends Fragment {
                                     mapRating.put(document.getData().get("foodID").toString(),
                                             Double.parseDouble(document.getData().get("pointRate").toString()));
                                 } else {
-                                    DecimalFormat df = new DecimalFormat("#.0");
+                                    DecimalFormat df = new DecimalFormat("#,0");
                                     double value = (mapRating.get(document.getData().get("foodID").toString()) +
                                             Double.parseDouble(document.getData().get("pointRate").toString())) / 2;
-                                    value =Double.parseDouble(df.format(value));
+                                    value = Double.parseDouble(df.format(value));
                                     mapRating.replace(document.getData().get("foodID").toString(), value);
                                 }
 
@@ -723,8 +1614,26 @@ public class Fragment_Home extends Fragment {
         listSang = new ArrayList<>();
         listTrua = new ArrayList<>();
         listToi = new ArrayList<>();
+        //insertDataFood();
         View view = inflater.inflate(R.layout.fragment_home, container, false);
         bundle = getArguments();
+
+        recyclerView = view.findViewById(R.id.fragment_container_recyclerView);
+        params = recyclerView.getLayoutParams();
+        //paramBuoiSang = txtBuoiSang.getLayoutParams();
+        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false);
+        mLayoutManager.scrollToPosition(0);//Thiết lập phần tử mặc định nếu muốn
+        recyclerView.setHasFixedSize(true);//Mượt hơn nếu k cập nhập gì
+        recyclerView.setLayoutManager(mLayoutManager);
+
+
+        recyclerView1 = view.findViewById(R.id.fragment_container_recyclerView1);
+        params1 = recyclerView1.getLayoutParams();
+        //paramBuoiTrua = txtBuoiTrua.getLayoutParams();
+        RecyclerView.LayoutManager mLayoutManager1 = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false);
+        mLayoutManager.scrollToPosition(0);//Thiết lập phần tử mặc định nếu muốn
+        recyclerView1.setHasFixedSize(true);//Mượt hơn nếu k cập nhập gì
+        recyclerView1.setLayoutManager(mLayoutManager1);
 
         return view;
     }
@@ -736,7 +1645,7 @@ public class Fragment_Home extends Fragment {
             @Override
             public void run() {
                 try {
-                    this.sleep(1000);
+                    this.sleep(3000);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
@@ -744,8 +1653,11 @@ public class Fragment_Home extends Fragment {
             }
         }.start();
 
-        myContext = (MainActivity) getContext();
-        myContext.createRecycleView(listFullData, listTrua, listToi, listFullData);
-        myContext.addControl();
+
+
+        foodRecyclerViewImageAdapter = new FoodRecyclerViewImageAdapter(getContext(), listFullData, listFullData);
+        foodRecyclerViewAdapter = new FoodRecyclerViewAdapter(getContext(), listFullData, listFullData);
+        recyclerView.setAdapter(foodRecyclerViewImageAdapter);
+        recyclerView1.setAdapter(foodRecyclerViewAdapter);
     }
 }
