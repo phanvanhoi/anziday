@@ -119,7 +119,7 @@ public class MainActivity extends AppCompatActivity {
         bottomNavigationView.setOnNavigationItemSelectedListener(navLister);
 
 
-        initializeTextToSpeech();
+        //initializeTextToSpeech();
         initializeSpeechRecognizer();
 
         btnBackMain = findViewById(R.id.btnBackMain);
@@ -341,8 +341,17 @@ public class MainActivity extends AppCompatActivity {
                             break;
 
                         case R.id.nav_suggest:
-                            selectedFragment = new Fragment_Recommend();
-                            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, selectedFragment).addToBackStack(null).commit();
+                            if (bundle != null) {
+                                User objUser = bundle.getParcelable("user");
+                                bundle.putParcelable("user", objUser);
+                                selectedFragment = new Fragment_Suggests();
+                                selectedFragment.setArguments(bundle);
+
+                                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, selectedFragment).commit();
+                            } else {
+                                yeuCauLogin();
+                            }
+
                             break;
                         case R.id.nav_profile:
 

@@ -271,7 +271,7 @@ public class Fragment_Home extends Fragment {
                 "Bước 2: Chiên vàng giòn phần thịt đã ướp, sau đó cho ra dĩa có giấy thấm dầu để giúp thịt không bị quá ngậy.\n" +
                 "\n" +
                 "Bước 3: Thịt chiên xong chị em đem xóc đều với tỏi phi sẵn trước đó, dọn ra dĩa, trang trí thêm một ít xà lách và dưa leo tỉa hoa để món ăn thêm bắt mắt.");
-        Heo1.put("formatly", Arrays.asList("Ăn trưa","Ăn tối"));
+        Heo1.put("formatly", Arrays.asList("Ăn tối"));
         Heo1.put("illness", Arrays.asList("béo phì", "gout","cao huyết áp","tim mạch"));
         Heo1.put("image", "heo1");
         Heo1.put("link", "https://heo1.html");
@@ -310,7 +310,7 @@ public class Fragment_Home extends Fragment {
                 "Tiếp theo cho ít nước màu và nước mắm vào đảo đều để thịt lên màu, nước màu sôi thì chị em cho hành, tỏi, gừng và cà rốt vào đảo 5 phút.\n" +
                 "\n" +
                 "Cho ít nước vào xăm xắm thịt đun to lửa đến khi thịt sôi thì giảm dần, để lửat riu riu trong 40 phút, đến khi thấy thịt mềm, cạn còn ⅓ nước thì nêm gia vị vừa miệng là hoàn thành.");
-        Heo2.put("formatly", Arrays.asList("Ăn trưa","Ăn tối"));
+        Heo2.put("formatly", Arrays.asList("Ăn trưa"));
         Heo2.put("illness", Arrays.asList("béo phì", "gout","cao huyết áp","tim mạch"));
         Heo2.put("image", "heo2");
         Heo2.put("link", "link ne");
@@ -349,7 +349,7 @@ public class Fragment_Home extends Fragment {
                 "Bước 4: Cho dầu vào chảo chiên vàng đều các cây chả, sau đó vớt ra để ráo dầu, bày ra dĩa, thêm ít rau ngò trang trí.\n" +
                 "\n" +
                 "Món này có thể ăn với cơm, bún chấm cùng tương ớt hoặc nước mắm đều ngọt tuyệt đấy nhé!");
-        Heo3.put("formatly", Arrays.asList("Ăn trưa","Ăn tối"));
+        Heo3.put("formatly", Arrays.asList("Ăn tối"));
         Heo3.put("illness", Arrays.asList("béo phì", "gout","cao huyết áp","tim mạch"));
         Heo3.put("image", "heo3");
         Heo3.put("link", "link ne");
@@ -375,7 +375,7 @@ public class Fragment_Home extends Fragment {
                 "Bước 1:  Để làm món thịt heo rang muối ớt ngon, chị em nên lựa loại ba chỉ heo hơi mỡ tí xíu, \n sau đó rửa sạch, thái khúc vừa ăn ( đừng thái quá mỏng khi chiên thịt sẽ co rúm lại), để ráo.\n" +
                 "\n" +
                 "Bước 2: Chị em cho thịt vào chảo rang đến khi thịt ra mỡ, hơi vàng và thịt săn lại thì cho tỏi băm\n vào đảo đều từ 2-3 phút thì cho tiếp sả và ớt băm vào, lúc này nên để lửa riu riu nhỏ, cho thêm ít\n muối và hạt nêm đảo đều đến khi thịt thấm gia vị thì tắt bếp, dọn ra dĩa.");
-        Heo4.put("formatly", Arrays.asList("Ăn trưa","Ăn tối"));
+        Heo4.put("formatly", Arrays.asList("Ăn trưa"));
         Heo4.put("illness", Arrays.asList("béo phì", "gout","cao huyết áp","tim mạch"));
         Heo4.put("image", "heo4");
         Heo4.put("link", "link ne");
@@ -405,7 +405,7 @@ public class Fragment_Home extends Fragment {
                 "Bước 3: Thêm 2 thìa đường vào chén mắm ruốc rồi khuấy tan\n" +
                 "\n" +
                 "Bước 4: Phi thơm hành khô trong chảo dầu, sau đó cho thêm sả băm vào đảo đều, tiếp đó cho thịt vào xào cùng đến khi thịt săn thì cho mắm ruốc vào cùng ớt, kho đến khi nồi thịt sốt keo lại là được.");
-        Heo5.put("formatly", Arrays.asList("Ăn trưa","Ăn tối"));
+        Heo5.put("formatly", Arrays.asList("Ăn trưa"));
         Heo5.put("illness", Arrays.asList("béo phì", "gout","cao huyết áp","tim mạch"));
         Heo5.put("image", "heo5");
         Heo5.put("link", "link ne");
@@ -455,7 +455,7 @@ public class Fragment_Home extends Fragment {
                 "Để lửa riu riu kho trong 30 phút, nước cạn có thể cho thêm phần nước dừa vào, nêm nếm gia vị vừa ăn đến khi thịt chuyển sang màu nâu đỏ thì cho trứng cút vào, nấu thêm 2-3 phút nữa thì tắt bếp.\n" +
                 "\n" +
                 "Cho thịt ra dĩa, rưới phần nước kho thịt nâu óng sóng sánh lên để thêm hấp dẫn, cùng 1 ít cọng rau mùi, ớt đỏ để thêm bắt mắt.");
-        Heo6.put("formatly", Arrays.asList("Ăn trưa","Ăn tối"));
+        Heo6.put("formatly", Arrays.asList("Ăn tối"));
         Heo6.put("illness", Arrays.asList("béo phì", "gout","cao huyết áp","tim mạch"));
         Heo6.put("image", "heo6");
         Heo6.put("link", "link ne");
@@ -491,7 +491,7 @@ public class Fragment_Home extends Fragment {
                 "Bước 4: Hòa tan bột bắp và dầu hào vào 1 chén nhỏ rồi đổ vào chảo riêng đun tới khi sôi hơi sánh lại là được.\n" +
                 "\n" +
                 "Bước 5: Xếp từng phần thịt cuộn đã chiên chín ra dĩa, rưới sốt lên trên là xong.");
-        Heo7.put("formatly", Arrays.asList("Ăn trưa","Ăn tối"));
+        Heo7.put("formatly", Arrays.asList("Ăn tối"));
         Heo7.put("illness", Arrays.asList("béo phì", "gout","cao huyết áp","tim mạch"));
         Heo7.put("image", "heo7");
         Heo7.put("link", "link ne");
@@ -525,7 +525,7 @@ public class Fragment_Home extends Fragment {
                 "Bước 4: Cho thịt và củ cải vào nồi bật lửa vừa phải đến khi thịt hơi săn thì thêm ít nước vừa ngập thịt và củ cải là được.\n" +
                 "\n" +
                 "Sau đó đun sôi lần 2 thì nêm nếm gia vị vừa ăn, để lửa riu riu tới khi thịt và củ cải mềm, thêm ít ớt sừng để tăng vị cay nếu thích.");
-        Heo8.put("formatly", Arrays.asList("Ăn trưa","Ăn tối"));
+        Heo8.put("formatly", Arrays.asList("Ăn trưa"));
         Heo8.put("illness", Arrays.asList("béo phì", "gout","cao huyết áp","tim mạch"));
         Heo8.put("image", "heo8");
         Heo8.put("link", "link ne");
@@ -559,7 +559,7 @@ public class Fragment_Home extends Fragment {
                 "Uớp thịt với ít sả, ớt, 1 thìa dầu hào, 1 thìa muối, 1 thìa hạt tiêu trong 20 phút để thịt thấm gia vị.\n" +
                 "\n" +
                 "Bước 2: Phi thơm tỏi, cho thịt vào xào đều đến khi thịt hơi săn thì thêm ít muối vừa ăn thì tắt bếp, dọn ra dĩa với ít hành, ngò để món ăn thêm đẹp mắt.");
-        Heo9.put("formatly", Arrays.asList("Ăn trưa","Ăn tối"));
+        Heo9.put("formatly", Arrays.asList("Ăn tối"));
         Heo9.put("illness", Arrays.asList("béo phì", "gout","cao huyết áp","tim mạch"));
         Heo9.put("image", "heo9");
         Heo9.put("link", "link ne");
@@ -588,7 +588,7 @@ public class Fragment_Home extends Fragment {
                 "Phi thơm dầu với hành tím, gừng, cho thịt vào xào cùng thêm ít ớt màu đảo đều để thịt thấm gia vị, đậy nắp vung để nước thịt chảy ra, đun đến khi cạn, phần mỡ hòa với đường tạo thành màu nâu cánh gián là được.\n" +
                 "\n" +
                 "Món thịt heo kho gừng thích hợp ăn cùng cơm nóng trong những ngày se lạnh, mưa sẽ vô cùng ngon.");
-        Heo10.put("formatly", Arrays.asList("Ăn trưa","Ăn tối"));
+        Heo10.put("formatly", Arrays.asList("Ăn tối"));
         Heo10.put("illness", Arrays.asList("béo phì", "gout","cao huyết áp","tim mạch"));
         Heo10.put("image", "heo10");
         Heo10.put("link", "link ne");
@@ -619,7 +619,7 @@ public class Fragment_Home extends Fragment {
                 "Bước 4: Đun nóng với lửa vừa lượng dầu ngập đáy chảo, thịt heo nhúng qua bột và dầu ăn rồi cho vào chảo chiên vàng hai mặt rồi vớt ra. Sau thịt thì chiên ớt chuông, hành tây, thơm, cà rốt đã cắt nhỏ và đảo cho chín tới là vớt ra.\n" +
                 "\n" +
                 "Bước 5: Cho cả thịt và rau củ đã chiên vào chung với nước sốt, nấu nhỏ lửa cho tới khi thịt và rau đều ngấm sốt thì tắt bếp, dọn ra dĩa.");
-        Heo11.put("formatly", Arrays.asList("Ăn trưa","Ăn tối"));
+        Heo11.put("formatly", Arrays.asList("Ăn trưa"));
         Heo11.put("illness", Arrays.asList("béo phì", "gout","cao huyết áp","tim mạch"));
         Heo11.put("image", "heo11");
         Heo11.put("link", "link ne");
@@ -648,7 +648,7 @@ public class Fragment_Home extends Fragment {
                 "Bước 3: Ướp thịt đã cắt nhỏ với riềng đã xay nhuyễn, mẻ, mắm tôm, nước nghệ, bột ngọt, ớt, hạt nêm trong khoảng 30 phút.\n" +
                 "\n" +
                 "Bước 4: Đun nóng dầu trong nồi, cho thịt đã ướp vào đảo đều cho tới khi thịt hơi săn lại. Tiếp theo cho khoảng ⅔ nước ngập thịt rồi cho lửa nhỏ nấu tới khi thịt chín mềm là tắt bếp.");
-        Heo12.put("formatly", Arrays.asList("Ăn trưa","Ăn tối"));
+        Heo12.put("formatly", Arrays.asList("Ăn tối"));
         Heo12.put("illness", Arrays.asList("béo phì", "gout","cao huyết áp","tim mạch"));
         Heo12.put("image", "heo12");
         Heo12.put("link", "link ne");
@@ -689,7 +689,7 @@ public class Fragment_Home extends Fragment {
                 "Bước 4: Tiếp đó cho phần thịt ba chỉ vào rồi thêm ít nước xâm xấp mặt thịt rồi đậy vung đun đến khi thịt sôi lại thì hạ nhỏ lửa.\n" +
                 "\n" +
                 "Khi thịt chín mềm, nước sốt sền sệt thì nêm nếm lại cho vừa miệng rồi tắt bếp. Chị em có thể rắc thêm ít tiêu và hành lá cho món ăn thêm đẹp mắt và thơm ngon.");
-        rau1.put("formatly", Arrays.asList("Ăn trưa","Ăn tối"));
+        rau1.put("formatly", Arrays.asList("Ăn trưa"));
         rau1.put("illness", Arrays.asList("béo phì", "gout","cao huyết áp","tim mạch"));
         rau1.put("image", "rau1");
         rau1.put("link", "link ne");
@@ -719,7 +719,7 @@ public class Fragment_Home extends Fragment {
                 "Bước 3: Cho cải ra chậu nước đá trong 1-2 phút thì vớt ra để ráo.\n" +
                 "\n" +
                 "Bước 4: Cho dầu vào chảo, phi thơm vàng tỏi, cho rau vào xào với lửa lớn, nêm thêm ít muối và vài giọt dầu mè đảo đều đến khi rau chín thì tắt bếp.");
-        rau2.put("formatly", Arrays.asList("Ăn trưa","Ăn tối"));
+        rau2.put("formatly", Arrays.asList("Ăn tối"));
         rau2.put("illness", Arrays.asList("béo phì", "gout","cao huyết áp","tim mạch"));
         rau2.put("image", "rau2");
         rau2.put("link", "link ne");
@@ -983,7 +983,7 @@ public class Fragment_Home extends Fragment {
                 "Bước 2: Giữ lửa lớn, cho tiếp cải thìa đã sơ chế vào xào nhanh tay, nêm thêm ít muối là hoàn thành.\n" +
                 "\n" +
                 "Với cách chế biến này bạn sẽ không cần quá nhiều gia vị mà vẫn thưởng thức được vị ngon ngọt tự nhiên của rau và nấm.");
-        rau10.put("formatly", Arrays.asList("Ăn trưa","Ăn tối"));
+        rau10.put("formatly", Arrays.asList("Ăn trưa"));
         rau10.put("illness", Arrays.asList("béo phì", "gout","cao huyết áp","tim mạch"));
         rau10.put("image", "rau10");
         rau10.put("link", "link ne");
@@ -1011,7 +1011,7 @@ public class Fragment_Home extends Fragment {
                 "Bước 2: Giữ lửa lớn, cho tiếp cải thìa đã sơ chế vào xào nhanh tay, nêm thêm ít muối là hoàn thành.\n" +
                 "\n" +
                 "Với cách chế biến này bạn sẽ không cần quá nhiều gia vị mà vẫn thưởng thức được vị ngon ngọt tự nhiên của rau và nấm.");
-        rau11.put("formatly", Arrays.asList("Ăn trưa","Ăn tối"));
+        rau11.put("formatly", Arrays.asList("Ăn tối"));
         rau11.put("illness", Arrays.asList("béo phì", "gout","cao huyết áp","tim mạch"));
         rau11.put("image", "rau11");
         rau11.put("link", "link ne");
@@ -1039,7 +1039,7 @@ public class Fragment_Home extends Fragment {
                 "Bước 2: Giữ lửa lớn, cho tiếp cải thìa đã sơ chế vào xào nhanh tay, nêm thêm ít muối là hoàn thành.\n" +
                 "\n" +
                 "Với cách chế biến này bạn sẽ không cần quá nhiều gia vị mà vẫn thưởng thức được vị ngon ngọt tự nhiên của rau và nấm.");
-        rau12.put("formatly", Arrays.asList("Ăn trưa","Ăn tối"));
+        rau12.put("formatly", Arrays.asList("Ăn trưa"));
         rau12.put("illness", Arrays.asList("béo phì", "gout","cao huyết áp","tim mạch"));
         rau12.put("image", "rau12");
         rau12.put("link", "link ne");
@@ -1066,7 +1066,7 @@ public class Fragment_Home extends Fragment {
                 "Bước 2: Giữ lửa lớn, cho tiếp cải thìa đã sơ chế vào xào nhanh tay, nêm thêm ít muối là hoàn thành.\n" +
                 "\n" +
                 "Với cách chế biến này bạn sẽ không cần quá nhiều gia vị mà vẫn thưởng thức được vị ngon ngọt tự nhiên của rau và nấm.");
-        rau13.put("formatly", Arrays.asList("Ăn trưa","Ăn tối"));
+        rau13.put("formatly", Arrays.asList("Ăn trưa"));
         rau13.put("illness", Arrays.asList("béo phì", "gout","cao huyết áp","tim mạch"));
         rau13.put("image", "rau13");
         rau13.put("link", "link ne");
@@ -1094,7 +1094,7 @@ public class Fragment_Home extends Fragment {
                 "Bước 2: Giữ lửa lớn, cho tiếp cải thìa đã sơ chế vào xào nhanh tay, nêm thêm ít muối là hoàn thành.\n" +
                 "\n" +
                 "Với cách chế biến này bạn sẽ không cần quá nhiều gia vị mà vẫn thưởng thức được vị ngon ngọt tự nhiên của rau và nấm.");
-        rau14.put("formatly", Arrays.asList("Ăn trưa","Ăn tối"));
+        rau14.put("formatly", Arrays.asList("Ăn tối"));
         rau14.put("illness", Arrays.asList("béo phì", "gout","cao huyết áp","tim mạch"));
         rau14.put("image", "rau14");
         rau14.put("link", "link ne");
@@ -1122,7 +1122,7 @@ public class Fragment_Home extends Fragment {
                 "Bước 2: Giữ lửa lớn, cho tiếp cải thìa đã sơ chế vào xào nhanh tay, nêm thêm ít muối là hoàn thành.\n" +
                 "\n" +
                 "Với cách chế biến này bạn sẽ không cần quá nhiều gia vị mà vẫn thưởng thức được vị ngon ngọt tự nhiên của rau và nấm.");
-        rau15.put("formatly", Arrays.asList("Ăn trưa","Ăn tối"));
+        rau15.put("formatly", Arrays.asList("Ăn trưa"));
         rau15.put("illness", Arrays.asList("béo phì", "gout","cao huyết áp","tim mạch"));
         rau15.put("image", "rau15");
         rau15.put("link", "link ne");
@@ -1412,13 +1412,13 @@ public class Fragment_Home extends Fragment {
                 .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
                     @Override
                     public void onSuccess(DocumentReference documentReference) {
-                        Log.d(TAG, "DocumentSnapshot added with ID: " + documentReference.getId());
+                        //Log.d(TAG, "DocumentSnapshot added with ID: " + documentReference.getId());
                     }
                 })
                 .addOnFailureListener(new OnFailureListener() {
                     @Override
                     public void onFailure(@NonNull Exception e) {
-                        Log.w(TAG, "Error adding document", e);
+                        //Log.w(TAG, "Error adding document", e);
                     }
                 });
     }
@@ -1481,7 +1481,7 @@ public class Fragment_Home extends Fragment {
                                 //Log.d(TAG, document.getId() + " => " + document.getData());
                             }
                         } else {
-                            Log.d(TAG, "Error getting documents: ", task.getException());
+                            //Log.d(TAG, "Error getting documents: ", task.getException());
                         }
                     }
                 });
@@ -1519,7 +1519,7 @@ public class Fragment_Home extends Fragment {
                                     listAdap.add(new food(nameFood, image, rating));
                                     food food = new food(document.getId(),decription, formatly, illness, image, link, material, nameFood, rating, region, session);
                                     listFullData.add(food);
-                                    Log.d(TAG, document.getId() + " => " + document.getData());
+                                    //Log.d(TAG, document.getId() + " => " + document.getData());
 
                                     try {
                                         for (String x : formatly) {
@@ -1565,7 +1565,7 @@ public class Fragment_Home extends Fragment {
                                         listAdap.add(new food(nameFood, image, rating));
                                         food food = new food(document.getId(),decription, formatly, illness, image, link, material, nameFood, rating, region, session);
                                         listFullData.add(food);
-                                        Log.d(TAG, document.getId() + " => " + document.getData());
+                                        //Log.d(TAG, document.getId() + " => " + document.getData());
 
                                         try {
                                             for (String x : formatly) {

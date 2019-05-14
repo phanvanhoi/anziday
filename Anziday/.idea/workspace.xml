@@ -9,26 +9,126 @@
     <option name="TOOL_WINDOW_CUSTOM_FILTER" value="MapATVT" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="No Filters" />
   </component>
+  <component name="AvailableLibraryUpdateStorage">
+    <library-updates>
+      <library-update>
+        <group-id>com.google.android.gms</group-id>
+        <name>play-services-location</name>
+        <version>16.0.0</version>
+        <repository>Google,Google Repository</repository>
+      </library-update>
+      <library-update>
+        <group-id>com.android.support</group-id>
+        <name>recyclerview-v7</name>
+        <version>28.0.0</version>
+        <repository>Google,Android Repository</repository>
+      </library-update>
+      <library-update>
+        <group-id>com.google.android.gms</group-id>
+        <name>play-services-maps</name>
+        <version>16.1.0</version>
+        <repository>Google,Google Repository</repository>
+      </library-update>
+      <library-update>
+        <group-id>com.android.support</group-id>
+        <name>appcompat-v7</name>
+        <version>28.0.0</version>
+        <repository>Google,Android Repository</repository>
+      </library-update>
+      <library-update>
+        <group-id>com.google.code.gson</group-id>
+        <name>gson</name>
+        <version>2.8.5</version>
+        <repository>JCenter</repository>
+      </library-update>
+      <library-update>
+        <group-id>com.android.support</group-id>
+        <name>design</name>
+        <version>28.0.0</version>
+        <repository>Google,Android Repository</repository>
+      </library-update>
+      <library-update>
+        <group-id>com.google.firebase</group-id>
+        <name>firebase-messaging</name>
+        <version>18.0.0</version>
+        <repository>Google,Google Repository</repository>
+      </library-update>
+      <library-update>
+        <group-id>com.google.firebase</group-id>
+        <name>firebase-core</name>
+        <version>16.0.9</version>
+        <repository>Google,Google Repository</repository>
+      </library-update>
+      <library-update>
+        <group-id>com.android.support</group-id>
+        <name>cardview-v7</name>
+        <version>28.0.0</version>
+        <repository>Google,Android Repository</repository>
+      </library-update>
+      <library-update>
+        <group-id>com.squareup.picasso</group-id>
+        <name>picasso</name>
+        <version>2.71828</version>
+        <repository>JCenter</repository>
+      </library-update>
+      <library-update>
+        <group-id>com.google.firebase</group-id>
+        <name>firebase-firestore</name>
+        <version>19.0.0</version>
+        <repository>Google</repository>
+      </library-update>
+      <library-update>
+        <group-id>com.android.support</group-id>
+        <name>support-v4</name>
+        <version>28.0.0</version>
+        <repository>Google,Android Repository</repository>
+      </library-update>
+      <library-update>
+        <group-id>com.android.support.constraint</group-id>
+        <name>constraint-layout</name>
+        <version>2.0.0-beta1</version>
+        <repository>Google</repository>
+      </library-update>
+      <library-update>
+        <group-id>com.google.firebase</group-id>
+        <name>firebase-database</name>
+        <version>17.0.0</version>
+        <repository>Google,Google Repository</repository>
+      </library-update>
+      <library-update>
+        <group-id>junit</group-id>
+        <name>junit</name>
+        <version>4.13-beta-3</version>
+        <repository>JCenter</repository>
+      </library-update>
+      <library-update>
+        <group-id>com.android.support.test</group-id>
+        <name>runner</name>
+        <version>1.0.2</version>
+        <repository>Google,Android Repository</repository>
+      </library-update>
+      <library-update>
+        <group-id>com.android.support.test.espresso</group-id>
+        <name>espresso-core</name>
+        <version>3.0.2</version>
+        <repository>Google,Android Repository</repository>
+      </library-update>
+    </library-updates>
+    <last-search-timestamp>1557800418901</last-search-timestamp>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="03cc055f-1bde-4696-ac53-d66b797eb038" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/Leogo/capstone2_anziday/Fragment_Recommend.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_recommend.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/recommend_list_system.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/Leogo/capstone2_anziday/Fragment_Suggests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/Leogo/capstone2_anziday/Models/Rating.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_fragment__suggests.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/Leogo/capstone2_anziday/Adapter/FoodRecyclerViewAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/Leogo/capstone2_anziday/Adapter/FoodRecyclerViewAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/Leogo/capstone2_anziday/Fragment_DetailFood.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/Leogo/capstone2_anziday/Fragment_DetailFood.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/google-services.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/google-services.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/Leogo/capstone2_anziday/Fragment_Home.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/Leogo/capstone2_anziday/Fragment_Home.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/Leogo/capstone2_anziday/Fragment_Profile.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/Leogo/capstone2_anziday/Fragment_Profile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/Leogo/capstone2_anziday/Fragment_Recommend.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/Leogo/capstone2_anziday/Fragment_Recommend.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/Leogo/capstone2_anziday/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/Leogo/capstone2_anziday/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/Leogo/capstone2_anziday/Models/food.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/Leogo/capstone2_anziday/Models/food.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/detail_food.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/detail_food.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/item_food_cycle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_food_cycle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/item_food_cycle_image.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_food_cycle_image.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -61,8 +161,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/Leogo/capstone2_anziday/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-187">
-              <caret line="337" column="75" selection-start-line="337" selection-start-column="75" selection-end-line="337" selection-end-column="75" />
+            <state relative-caret-position="95">
+              <caret line="346" column="67" selection-start-line="346" selection-start-column="67" selection-end-line="346" selection-end-column="67" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#initializeTextToSpeech#0;class#MainActivity#0" />
@@ -75,29 +175,21 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/Leogo/capstone2_anziday/Fragment_Home.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="81">
-              <caret line="1384" column="45" lean-forward="true" selection-start-line="1384" selection-start-column="45" selection-end-line="1384" selection-end-column="45" />
+            <state relative-caret-position="41">
+              <caret line="56" column="33" selection-start-line="56" selection-start-column="33" selection-end-line="56" selection-end-column="33" />
               <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#insertDataFood#0;class#Fragment_Home#0" />
                 <element signature="method#addNewDocument#0;class#Fragment_Home#0" />
                 <element signature="method#onAttach#0;class#Fragment_Home#0" />
                 <element signature="method#onActivityCreated#0;class#Fragment_Home#0" />
                 <element signature="method#newInstance#0;class#Fragment_Home#0" />
-                <element signature="method#getListRating#0;class#Fragment_Home#0" />
-                <element signature="method#getData1#0;class#Fragment_Home#0" />
+                <element signature="e#74039#75594#0" expanded="true" />
+                <element signature="e#75593#75594#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml">
-          <provider editor-type-id="android-designer2" />
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="40" selection-start-line="3" selection-start-column="40" selection-end-line="3" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -105,23 +197,53 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/Leogo/capstone2_anziday/Fragment_Recommend.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="169">
-              <caret line="229" selection-start-line="229" selection-end-line="229" />
+            <state relative-caret-position="111">
+              <caret line="232" column="27" selection-start-line="232" selection-start-column="27" selection-end-line="232" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#getListRating#0;class#Fragment_Recommend#0" />
                 <element signature="method#getData1#0;class#Fragment_Recommend#0" />
+                <element signature="e#13894#14184#0" expanded="true" />
+                <element signature="e#14183#14184#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/Leogo/capstone2_anziday/Fragment_Suggests.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="183">
+              <caret line="313" column="51" selection-start-line="313" selection-start-column="51" selection-end-line="313" selection-end-column="51" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#3565#4788#0" expanded="true" />
+                <element signature="e#4787#4788#0" expanded="true" />
+                <element signature="e#9171#9461#0" expanded="true" />
+                <element signature="e#9460#9461#0" expanded="true" />
+                <element signature="e#10222#11777#0" expanded="true" />
+                <element signature="e#11776#11777#0" expanded="true" />
+                <element signature="e#11935#15279#0" expanded="true" />
+                <element signature="e#15278#15279#0" expanded="true" />
+                <element signature="e#27535#27785#0" expanded="true" />
+                <element signature="e#27784#27785#0" expanded="true" />
+                <element signature="e#29256#30888#0" expanded="true" />
+                <element signature="e#30887#30888#0" expanded="true" />
+                <element signature="e#33323#34342#0" expanded="true" />
+                <element signature="e#34341#34342#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_recommend.xml">
-          <provider editor-type-id="android-designer2" />
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/Leogo/capstone2_anziday/Fragment_DetailFood.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+            <state relative-caret-position="170">
+              <caret line="69" column="104" selection-start-line="69" selection-start-column="28" selection-end-line="69" selection-end-column="104" />
+              <folding>
+                <element signature="e#2370#4012#0" expanded="true" />
+                <element signature="e#4011#4012#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -138,36 +260,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>getData</find>
-      <find>setResult</find>
-      <find>RESULT_OK</find>
-      <find>adapter</find>
-      <find>params1</find>
-      <find>Fragment_Home</find>
-      <find>Bu</find>
-      <find>putParcelable</find>
-      <find>btnLogin</find>
-      <find>food</find>
-      <find>foodDetail</find>
-      <find>getR</find>
-      <find>bundle</find>
-      <find>main</find>
+      <find>getArrRantingInMatrix</find>
+      <find>outArr</find>
+      <find>getArrRanting</find>
+      <find>arrRangting</find>
+      <find>outDouble</find>
+      <find>repalceValueNullInItem</find>
+      <find>getAverageOfUser</find>
+      <find>StandardizeData</find>
+      <find>stringList</find>
       <find>thre</find>
-      <find>db</find>
-      <find>tos</find>
-      <find>Toast</find>
+      <find>giatriTB</find>
+      <find>log</find>
+      <find>LOG</find>
+      <find>getIDfood</find>
+      <find>mapRating</find>
+      <find>user</find>
+      <find>TAG</find>
+      <find>raiting</find>
       <find>listSang</find>
-      <find>param</find>
-      <find>fragment_container</find>
-      <find>btnBackMain</find>
-      <find>Fragment_Detail_Profile</find>
-      <find>FragmentTransaction</find>
-      <find>textView_Rating</find>
-      <find>fragment_detailFood</find>
-      <find>getda</find>
-      <find>foods.document</find>
-      <find>myContext</find>
-      <find>foodRecyclerViewAdapter</find>
+      <find>textView</find>
+      <find>recyclerView</find>
+      <find>getListRating</find>
+      <find>on</find>
+      <find>bundle</find>
+      <find>rating</find>
+      <find>getdata1</find>
+      <find>listFoods</find>
+      <find>CheckListRecommend</find>
+      <find>&quot;Ăn trưa&quot;,&quot;Ăn tối&quot;</find>
+      <find>BuoiTrua</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -219,10 +341,14 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/item_food_cycle.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/item_food_cycle_image.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/recommend_list_system.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/Leogo/capstone2_anziday/MainActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/Leogo/capstone2_anziday/Fragment_Recommend.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_recommend.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/Leogo/capstone2_anziday/Models/Rating.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/Leogo/capstone2_anziday/Adapter/Recommend.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/Leogo/capstone2_anziday/MainActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_fragment__suggests.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/Leogo/capstone2_anziday/Fragment_Recommend.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/Leogo/capstone2_anziday/Fragment_Home.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/Leogo/capstone2_anziday/Fragment_Suggests.java" />
       </list>
     </option>
   </component>
@@ -238,6 +364,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane" />
       <pane id="AndroidView">
         <subPane>
@@ -249,14 +376,30 @@
             <path>
               <item name="Anziday" type="1abcf292:AndroidViewProjectNode" />
               <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+            </path>
+            <path>
+              <item name="Anziday" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="capstone2_anziday" type="cbb59c9e:AndroidPsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Anziday" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
               <item name="res" type="d4f16f75:AndroidResFolderNode" />
+            </path>
+            <path>
+              <item name="Anziday" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="res" type="d4f16f75:AndroidResFolderNode" />
+              <item name="layout" type="ddeffd01:AndroidResFolderTypeNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -266,6 +409,9 @@
     <property name="device.picker.selection" value="Pixel_XL_API_27" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Dependencies" />
+    <property name="project.structure.proportion" value="0.17" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
@@ -273,8 +419,8 @@
       <recent name="com.example.Leogo.capstone2_anziday" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\Capstone2\FinalHomNayAnGi\Anziday\app\src\main\res\layout" />
       <recent name="E:\Capstone2\FinalHomNayAnGi\Anziday\app\src\main\java\com\example\Leogo\capstone2_anziday" />
+      <recent name="E:\Capstone2\FinalHomNayAnGi\Anziday\app\src\main\res\layout" />
       <recent name="E:\Capstone2\FinalHomNayAnGi\Anziday\app\src\main\res\drawable" />
       <recent name="E:\Anziday\app\src\main\res\drawable" />
       <recent name="E:\Capstone2\FinalHomNayAnGi\Anziday\app\src\main\res\drawable-v24" />
@@ -439,26 +585,26 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1295" height="735" extended-state="7" />
+    <frame x="-7" y="-7" width="1295" height="735" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.49900597" visible="true" weight="0.20809716" />
+      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.49880096" visible="true" weight="0.20809716" />
       <window_info id="Structure" order="2" side_tool="true" />
-      <window_info id="Favorites" order="3" sideWeight="0.500994" side_tool="true" visible="true" weight="0.20809716" />
+      <window_info id="Favorites" order="3" sideWeight="0.50119907" side_tool="true" weight="0.20809716" />
       <window_info id="Build Variants" order="4" side_tool="true" />
       <window_info id="Image Layers" order="5" />
       <window_info id="Designer" order="6" />
       <window_info id="Capture Tool" order="7" />
       <window_info id="Resources Explorer" order="8" />
-      <window_info anchor="bottom" id="Run" order="0" sideWeight="0.87065053" visible="true" weight="0.16583748" />
-      <window_info anchor="bottom" id="Logcat" order="1" sideWeight="0.4969743" weight="0.61774194" />
+      <window_info active="true" anchor="bottom" id="Run" order="0" sideWeight="0.6340081" visible="true" weight="0.33001658" />
+      <window_info anchor="bottom" id="Logcat" order="1" sideWeight="0.4969743" weight="0.6169154" />
       <window_info anchor="bottom" id="TODO" order="2" sideWeight="0.49848714" weight="0.3283582" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49924356" weight="0.4212272" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49924356" weight="0.23548922" />
       <window_info anchor="bottom" id="Terminal" order="4" sideWeight="0.49848714" weight="0.32903227" />
-      <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.50075644" side_tool="true" weight="0.31129032" />
+      <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.3659919" side_tool="true" weight="0.28689885" />
       <window_info anchor="bottom" id="Version Control" order="6" />
-      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.494705" weight="0.14262024" />
+      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.494705" weight="0.3084577" />
       <window_info anchor="bottom" id="Android Profiler" order="8" sideWeight="0.49924356" weight="0.32903227" />
       <window_info anchor="bottom" id="Find" order="9" weight="0.32903227" />
       <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" />
@@ -467,36 +613,8 @@
       <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info anchor="right" id="Palette&#9;" order="4" />
       <window_info anchor="right" id="Preview" order="5" weight="0.32955465" />
-      <window_info anchor="right" id="Assistant" order="6" weight="0.04387292" />
+      <window_info anchor="right" id="Assistant" order="6" weight="0.26639676" />
     </layout>
-    <layout-to-restore>
-      <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.20809716" />
-      <window_info id="Structure" order="2" side_tool="true" />
-      <window_info id="Favorites" order="3" side_tool="true" />
-      <window_info id="Build Variants" order="4" side_tool="true" />
-      <window_info id="Image Layers" order="5" />
-      <window_info id="Designer" order="6" />
-      <window_info id="Capture Tool" order="7" />
-      <window_info id="Resources Explorer" order="8" />
-      <window_info anchor="bottom" id="Run" order="0" sideWeight="0.87065053" visible="true" weight="0.27860695" />
-      <window_info anchor="bottom" id="Logcat" order="1" sideWeight="0.4969743" weight="0.61774194" />
-      <window_info anchor="bottom" id="TODO" order="2" sideWeight="0.49848714" weight="0.32903227" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49924356" weight="0.4212272" />
-      <window_info anchor="bottom" id="Terminal" order="4" sideWeight="0.49848714" weight="0.32903227" />
-      <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.50075644" side_tool="true" weight="0.31129032" />
-      <window_info anchor="bottom" id="Version Control" order="6" />
-      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.494705" weight="0.18242122" />
-      <window_info anchor="bottom" id="Android Profiler" order="8" sideWeight="0.49924356" weight="0.32903227" />
-      <window_info anchor="bottom" id="Find" order="9" weight="0.32903227" />
-      <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" />
-      <window_info anchor="right" id="Capture Analysis" order="1" />
-      <window_info anchor="right" id="Gradle" order="2" weight="0.32955465" />
-      <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info anchor="right" id="Palette&#9;" order="4" />
-      <window_info anchor="right" id="Preview" order="5" weight="0.32955465" />
-      <window_info anchor="right" id="Assistant" order="6" weight="0.04387292" />
-    </layout-to-restore>
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -512,18 +630,6 @@
           <line>103</line>
           <properties />
           <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/Leogo/capstone2_anziday/Fragment_DetailFood.java</url>
-          <line>66</line>
-          <properties />
-          <option name="timeStamp" value="18" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/Leogo/capstone2_anziday/Fragment_DetailFood.java</url>
-          <line>92</line>
-          <properties />
-          <option name="timeStamp" value="21" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -578,35 +684,13 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$USER_HOME$/AppData/Local/Android/Sdk/platforms/android-27/android.jar!/android/os/Looper.class" />
-    <entry file="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/firebase-firestore-18.2.0.aar/d6334cadf0cee4c55489479a848fba4a/jars/classes.jar!/com/google/firebase/firestore/FirebaseFirestore.class" />
-    <entry file="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-tasks-16.0.1.aar/916dbe3b93cf23eef997589c7aeca2fc/jars/classes.jar!/com/google/android/gms/tasks/zzi.class" />
-    <entry file="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-tasks-16.0.1.aar/916dbe3b93cf23eef997589c7aeca2fc/jars/classes.jar!/com/google/android/gms/tasks/zzu.class" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_register.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="1989">
-          <caret line="117" column="34" selection-start-line="117" selection-start-column="34" selection-end-line="117" selection-end-column="34" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/Leogo/capstone2_anziday/Fragment_Detail_Profile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="67" column="22" selection-start-line="67" selection-start-column="22" selection-end-line="67" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_detail_profile.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
       <provider editor-type-id="text-editor">
         <state relative-caret-position="441">
           <caret line="177" column="35" selection-start-line="177" selection-start-column="35" selection-end-line="177" selection-end-column="35" />
         </state>
       </provider>
-      <provider selected="true" editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/Leogo/capstone2_anziday/RegisterActivity.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -667,12 +751,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_update_user.xml">
+      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="386">
           <caret line="40" column="51" selection-start-line="40" selection-start-column="51" selection-end-line="40" selection-end-column="51" />
         </state>
       </provider>
-      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/Leogo/capstone2_anziday/Adapter/UserAdapter.java">
       <provider selected="true" editor-type-id="text-editor" />
@@ -680,15 +764,12 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/Leogo/capstone2_anziday/Adapter/FoodRecyclerViewImageAdapter.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/Leogo/capstone2_anziday/Models/user.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/Leogo/capstone2_anziday/Adapter/FoodGridAdapter.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/item_food.xml">
-      <provider selected="true" editor-type-id="text-editor" />
       <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d4d991685383c6625b3fea7e876bddd9/jars/classes.jar!/android/support/v4/app/FragmentActivity.class">
       <provider selected="true" editor-type-id="text-editor">
@@ -719,16 +800,16 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/news_promotion_item.xml">
-      <provider editor-type-id="text-editor" />
       <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main_recycleview.xml">
-      <provider editor-type-id="text-editor" />
       <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_profile.xml">
-      <provider selected="true" editor-type-id="text-editor" />
       <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e06e0fe8b7415c541d850d65af2db59e/jars/classes.jar!/com/google/android/gms/tasks/zzj.class">
       <provider selected="true" editor-type-id="text-editor">
@@ -752,21 +833,8 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_welcome.xml">
-      <provider editor-type-id="text-editor" />
       <provider selected="true" editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/Leogo/capstone2_anziday/Fragment_DetailFood.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-187">
-          <caret line="31" column="13" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
-          <folding>
-            <element signature="e#2344#3928#0" expanded="true" />
-            <element signature="e#2903#3722#0" expanded="true" />
-            <element signature="e#3721#3722#0" expanded="true" />
-            <element signature="e#3927#3928#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+      <provider editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/Leogo/capstone2_anziday/Fragment_Profile.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -779,20 +847,20 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/toolbar_submenu.xml">
+      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="24" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="24" />
         </state>
       </provider>
-      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/detail_food.xml">
+      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="76" column="41" selection-start-line="70" selection-start-column="12" selection-end-line="76" selection-end-column="41" />
         </state>
       </provider>
-      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/Leogo/capstone2_anziday/Models/food.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -808,12 +876,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/item_food_cycle_image.xml">
+      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="36" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
         </state>
       </provider>
-      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/jre/jre/lib/rt.jar!/sun/misc/FloatingDecimal.class">
       <provider selected="true" editor-type-id="text-editor">
@@ -823,16 +891,16 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/recommend_list_system.xml">
-      <provider editor-type-id="text-editor" />
       <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
       <provider editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="14" column="36" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
         </state>
       </provider>
-      <provider selected="true" editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/Leogo/capstone2_anziday/Adapter/savemain">
       <provider selected="true" editor-type-id="text-editor">
@@ -842,25 +910,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/item_food_cycle.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
       <provider editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="39" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/Leogo/capstone2_anziday/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-187">
-          <caret line="337" column="75" selection-start-line="337" selection-start-column="75" selection-end-line="337" selection-end-column="75" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#initializeTextToSpeech#0;class#MainActivity#0" />
-            <element signature="method#speak#0;class#MainActivity#0" />
-            <element signature="method#processResult#0;class#MainActivity#0" />
-            <element signature="method#initializeSpeechRecognizer#0;class#MainActivity#0" />
-            <element signature="method#clearStack#0;class#MainActivity#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -875,45 +928,145 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/db9df93855ba11dd690b366696d4166a/jars/classes.jar!/com/google/firebase/firestore/QueryDocumentSnapshot.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/Leogo/capstone2_anziday/Models/user.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/AndroidProject/sources/android-28/android/media/Rating.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="34" column="19" selection-start-line="34" selection-start-column="19" selection-end-line="34" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/Leogo/capstone2_anziday/Adapter/Recommend.java" />
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml">
+      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="40" selection-start-line="3" selection-start-column="40" selection-end-line="3" selection-end-column="40" />
         </state>
       </provider>
-      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_recommend.xml">
+      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
         </state>
       </provider>
-      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_fragment__suggests.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/Leogo/capstone2_anziday/Models/Rating.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="19" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="19" />
+          <folding>
+            <element signature="e#186#187#0" expanded="true" />
+            <element signature="e#213#214#0" expanded="true" />
+            <element signature="e#253#254#0" expanded="true" />
+            <element signature="e#285#286#0" expanded="true" />
+            <element signature="e#318#319#0" expanded="true" />
+            <element signature="e#347#348#0" expanded="true" />
+            <element signature="e#391#392#0" expanded="true" />
+            <element signature="e#427#428#0" expanded="true" />
+            <element signature="e#463#464#0" expanded="true" />
+            <element signature="e#495#496#0" expanded="true" />
+            <element signature="e#545#546#0" expanded="true" />
+            <element signature="e#587#588#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/Leogo/capstone2_anziday/Fragment_DetailFood.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="69" column="104" selection-start-line="69" selection-start-column="28" selection-end-line="69" selection-end-column="104" />
+          <folding>
+            <element signature="e#2370#4012#0" expanded="true" />
+            <element signature="e#4011#4012#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/Leogo/capstone2_anziday/Fragment_Recommend.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="229" selection-start-line="229" selection-end-line="229" />
+        <state relative-caret-position="111">
+          <caret line="232" column="27" selection-start-line="232" selection-start-column="27" selection-end-line="232" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#getListRating#0;class#Fragment_Recommend#0" />
             <element signature="method#getData1#0;class#Fragment_Recommend#0" />
+            <element signature="e#13894#14184#0" expanded="true" />
+            <element signature="e#14183#14184#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/Leogo/capstone2_anziday/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="346" column="67" selection-start-line="346" selection-start-column="67" selection-end-line="346" selection-end-column="67" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#initializeTextToSpeech#0;class#MainActivity#0" />
+            <element signature="method#speak#0;class#MainActivity#0" />
+            <element signature="method#processResult#0;class#MainActivity#0" />
+            <element signature="method#initializeSpeechRecognizer#0;class#MainActivity#0" />
+            <element signature="method#clearStack#0;class#MainActivity#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/Leogo/capstone2_anziday/Fragment_Home.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="1384" column="45" lean-forward="true" selection-start-line="1384" selection-start-column="45" selection-end-line="1384" selection-end-column="45" />
+        <state relative-caret-position="41">
+          <caret line="56" column="33" selection-start-line="56" selection-start-column="33" selection-end-line="56" selection-end-column="33" />
           <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#insertDataFood#0;class#Fragment_Home#0" />
             <element signature="method#addNewDocument#0;class#Fragment_Home#0" />
             <element signature="method#onAttach#0;class#Fragment_Home#0" />
             <element signature="method#onActivityCreated#0;class#Fragment_Home#0" />
             <element signature="method#newInstance#0;class#Fragment_Home#0" />
-            <element signature="method#getListRating#0;class#Fragment_Home#0" />
-            <element signature="method#getData1#0;class#Fragment_Home#0" />
+            <element signature="e#74039#75594#0" expanded="true" />
+            <element signature="e#75593#75594#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/Leogo/capstone2_anziday/Fragment_Suggests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="313" column="51" selection-start-line="313" selection-start-column="51" selection-end-line="313" selection-end-column="51" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3565#4788#0" expanded="true" />
+            <element signature="e#4787#4788#0" expanded="true" />
+            <element signature="e#9171#9461#0" expanded="true" />
+            <element signature="e#9460#9461#0" expanded="true" />
+            <element signature="e#10222#11777#0" expanded="true" />
+            <element signature="e#11776#11777#0" expanded="true" />
+            <element signature="e#11935#15279#0" expanded="true" />
+            <element signature="e#15278#15279#0" expanded="true" />
+            <element signature="e#27535#27785#0" expanded="true" />
+            <element signature="e#27784#27785#0" expanded="true" />
+            <element signature="e#29256#30888#0" expanded="true" />
+            <element signature="e#30887#30888#0" expanded="true" />
+            <element signature="e#33323#34342#0" expanded="true" />
+            <element signature="e#34341#34342#0" expanded="true" />
           </folding>
         </state>
       </provider>

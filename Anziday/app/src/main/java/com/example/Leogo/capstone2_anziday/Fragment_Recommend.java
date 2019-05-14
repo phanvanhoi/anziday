@@ -47,7 +47,6 @@ public class Fragment_Recommend extends Fragment {
     ViewGroup.LayoutParams params;
     ViewGroup.LayoutParams params1;
     ViewGroup.LayoutParams params2;
-    FoodRecyclerViewImageAdapter foodRecyclerViewImageAdapter;
     FoodRecyclerViewAdapter foodRecyclerViewAdapter;
     FoodRecyclerViewAdapter foodRecyclerViewAdapter1;
     FoodRecyclerViewAdapter foodRecyclerViewAdapter2;
@@ -58,8 +57,8 @@ public class Fragment_Recommend extends Fragment {
 
     private FirebaseFirestore db;
     private MainActivity myContext;
-
-
+    Bundle bundle;
+    private User user;
     @Override
     public void onAttach(Context context) {
         myContext = (MainActivity) context;

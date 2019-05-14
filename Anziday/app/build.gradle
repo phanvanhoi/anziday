@@ -44,6 +44,7 @@ dependencies {
     implementation 'com.google.code.gson:gson:2.8.5'
     implementation 'com.nex3z:notification-badge:0.1.0'
     implementation 'com.github.pchmn:MaterialChipsInput:1.0.8'
+    implementation files('E:\\commons-math3-3.6.1.jar')
 
 }
 apply plugin: 'com.google.gms.google-services'
