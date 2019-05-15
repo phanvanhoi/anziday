@@ -1,6 +1,7 @@
 package com.example.Leogo.capstone2_anziday;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -40,6 +41,10 @@ public class Fragment_DetailFood extends Fragment {
     private FirebaseFirestore db;
     private User user;
     private String id ="";
+    Intent intent;
+
+
+
     @SuppressLint("SetTextI18n")
     @Nullable
     @Override
@@ -65,6 +70,12 @@ public class Fragment_DetailFood extends Fragment {
                 if(user == null){
                     mainActivity.yeuCauLogin();
                 }else {
+                    intent = new Intent(getActivity(), MainActivity.class);
+                    Bundle bundle = new Bundle();
+                    bundle.putParcelable("user", user);
+                    intent.putExtras(bundle);
+                    startActivityForResult(intent, Fragment_Profile.REQUEST_CODE);
+
                     db = FirebaseFirestore.getInstance();
                     db.collection("rating")
                             .whereEqualTo("user", user.getUserName()).whereEqualTo("foodID",list.get(4))

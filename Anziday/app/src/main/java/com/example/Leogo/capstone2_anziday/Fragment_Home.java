@@ -277,7 +277,7 @@ public class Fragment_Home extends Fragment {
         Heo1.put("link", "https://heo1.html");
         Heo1.put("material", Arrays.asList("Ma1", "Ma2"));
         Heo1.put("nameFood", "Thịt heo chiên xóc tỏi trưa");
-        Heo1.put("rating", 4.7);
+        Heo1.put("rating", 0);
         Heo1.put("region", Arrays.asList("Miền Trung"));
         Heo1.put("session", Arrays.asList("Mùa Mưa"));
         Heo1.put("groupPerson",Arrays.asList("Tăng cân"));
@@ -316,7 +316,7 @@ public class Fragment_Home extends Fragment {
         Heo2.put("link", "link ne");
         Heo2.put("material", Arrays.asList("Ma1", "Ma2"));
         Heo2.put("nameFood", "Thịt heo hầm cà rốt");
-        Heo2.put("rating", 4.7);
+        Heo2.put("rating", 0);
         Heo2.put("region", Arrays.asList("Miền Trung"));
         Heo2.put("session", Arrays.asList("Mùa Mưa"));
         Heo2.put("groupPerson",Arrays.asList("Tăng cân"));
@@ -355,7 +355,7 @@ public class Fragment_Home extends Fragment {
         Heo3.put("link", "link ne");
         Heo3.put("material", Arrays.asList("Ma1", "Ma2"));
         Heo3.put("nameFood", "Thịt heo bọc sả chiên giòn");
-        Heo3.put("rating", 4.7);
+        Heo3.put("rating", 0);
         Heo3.put("region", Arrays.asList("Miền Trung"));
         Heo3.put("session", Arrays.asList("Mùa Mưa"));
         Heo3.put("groupPerson",Arrays.asList("Tăng cân"));
@@ -381,7 +381,7 @@ public class Fragment_Home extends Fragment {
         Heo4.put("link", "link ne");
         Heo4.put("material", Arrays.asList("Ma1", "Ma2"));
         Heo4.put("nameFood", "Thịt heo rang muối ớt");
-        Heo4.put("rating", 4.7);
+        Heo4.put("rating", 0);
         Heo4.put("region", Arrays.asList("Miền Trung"));
         Heo4.put("session", Arrays.asList("Mùa Mưa"));
         Heo4.put("groupPerson",Arrays.asList("Tăng cân"));
@@ -411,7 +411,7 @@ public class Fragment_Home extends Fragment {
         Heo5.put("link", "link ne");
         Heo5.put("material", Arrays.asList("Ma1", "Ma2"));
         Heo5.put("nameFood", "Thịt heo kho mắm ruốc");
-        Heo5.put("rating", 4.7);
+        Heo5.put("rating", 0);
         Heo5.put("region", Arrays.asList("Miền Trung"));
         Heo5.put("session", Arrays.asList("Mùa Mưa"));
         Heo5.put("groupPerson",Arrays.asList("Tăng cân"));
@@ -461,7 +461,7 @@ public class Fragment_Home extends Fragment {
         Heo6.put("link", "link ne");
         Heo6.put("material", Arrays.asList("Ma1", "Ma2"));
         Heo6.put("nameFood", "Thịt heo kho tàu");
-        Heo6.put("rating", 4.7);
+        Heo6.put("rating", 0);
         Heo6.put("region", Arrays.asList("Miền Trung"));
         Heo6.put("session", Arrays.asList("Mùa Mưa"));
         Heo6.put("groupPerson",Arrays.asList("Tăng cân"));
@@ -497,7 +497,7 @@ public class Fragment_Home extends Fragment {
         Heo7.put("link", "link ne");
         Heo7.put("material", Arrays.asList("Ma1", "Ma2"));
         Heo7.put("nameFood", "Thịt heo cuộn măng hầm");
-        Heo7.put("rating", 4.7);
+        Heo7.put("rating", 0);
         Heo7.put("region", Arrays.asList("Miền Trung"));
         Heo7.put("session", Arrays.asList("Mùa Mưa"));
         Heo7.put("groupPerson",Arrays.asList("Tăng cân"));
@@ -531,7 +531,7 @@ public class Fragment_Home extends Fragment {
         Heo8.put("link", "link ne");
         Heo8.put("material", Arrays.asList("Ma1", "Ma2"));
         Heo8.put("nameFood", "Thịt heo kho củ cải trắng");
-        Heo8.put("rating", 4.7);
+        Heo8.put("rating", 0);
         Heo8.put("region", Arrays.asList("Miền Trung"));
         Heo8.put("session", Arrays.asList("Mùa Mưa"));
         Heo8.put("groupPerson",Arrays.asList("Tăng cân"));
@@ -565,7 +565,7 @@ public class Fragment_Home extends Fragment {
         Heo9.put("link", "link ne");
         Heo9.put("material", Arrays.asList("Ma1", "Ma2"));
         Heo9.put("nameFood", "Thịt heo xào lăn");
-        Heo9.put("rating", 4.7);
+        Heo9.put("rating", 0);
         Heo9.put("region", Arrays.asList("Miền Trung"));
         Heo9.put("session", Arrays.asList("Mùa Mưa"));
         Heo9.put("groupPerson",Arrays.asList("Tăng cân"));
@@ -594,7 +594,7 @@ public class Fragment_Home extends Fragment {
         Heo10.put("link", "link ne");
         Heo10.put("material", Arrays.asList("Ma1", "Ma2"));
         Heo10.put("nameFood", "Thịt heo kho gừng");
-        Heo10.put("rating", 4.7);
+        Heo10.put("rating", 0);
         Heo10.put("region", Arrays.asList("Miền Trung"));
         Heo10.put("session", Arrays.asList("Mùa Mưa"));
         Heo10.put("groupPerson",Arrays.asList("Tăng cân"));
@@ -625,7 +625,7 @@ public class Fragment_Home extends Fragment {
         Heo11.put("link", "link ne");
         Heo11.put("material", Arrays.asList("Ma1", "Ma2"));
         Heo11.put("nameFood", "Thịt heo xào chua ngọt");
-        Heo11.put("rating", 4.7);
+        Heo11.put("rating", 0);
         Heo11.put("region", Arrays.asList("Miền Trung"));
         Heo11.put("session", Arrays.asList("Mùa Mưa"));
         Heo11.put("groupPerson",Arrays.asList("Tăng cân"));
@@ -654,7 +654,7 @@ public class Fragment_Home extends Fragment {
         Heo12.put("link", "link ne");
         Heo12.put("material", Arrays.asList("Ma1", "Ma2"));
         Heo12.put("nameFood", "Thịt heo giả cầy");
-        Heo12.put("rating", 4.7);
+        Heo12.put("rating", 0);
         Heo12.put("region", Arrays.asList("Miền Trung"));
         Heo12.put("session", Arrays.asList("Mùa Mưa"));
         Heo12.put("groupPerson",Arrays.asList("Tăng cân"));
@@ -695,7 +695,7 @@ public class Fragment_Home extends Fragment {
         rau1.put("link", "link ne");
         rau1.put("material", Arrays.asList("Ma1", "Ma2"));
         rau1.put("nameFood", "Rau củ luộc kho quẹt");
-        rau1.put("rating", 4.7);
+        rau1.put("rating", 0);
         rau1.put("region", Arrays.asList("Miền Trung"));
         rau1.put("session", Arrays.asList("Mùa Mưa"));
         rau1.put("groupPerson",Arrays.asList("Tăng cân"));
@@ -725,7 +725,7 @@ public class Fragment_Home extends Fragment {
         rau2.put("link", "link ne");
         rau2.put("material", Arrays.asList("Ma1", "Ma2"));
         rau2.put("nameFood", "Cải ngồng xào tỏi xanh giòn");
-        rau2.put("rating", 4.7);
+        rau2.put("rating", 0);
         rau2.put("region", Arrays.asList("Miền Trung"));
         rau2.put("session", Arrays.asList("Mùa Mưa"));
         rau2.put("groupPerson",Arrays.asList("Tăng cân"));
@@ -769,7 +769,7 @@ public class Fragment_Home extends Fragment {
         rau3.put("link", "link ne");
         rau3.put("material", Arrays.asList("Ma1", "Ma2"));
         rau3.put("nameFood", "Nộm rau lang thịt bò");
-        rau3.put("rating", 4.7);
+        rau3.put("rating", 0);
         rau3.put("region", Arrays.asList("Miền Trung"));
         rau3.put("session", Arrays.asList("Mùa Mưa"));
         rau3.put("groupPerson",Arrays.asList("Tăng cân"));
@@ -803,7 +803,7 @@ public class Fragment_Home extends Fragment {
         rau4.put("link", "link ne");
         rau4.put("material", Arrays.asList("Ma1", "Ma2"));
         rau4.put("nameFood", "Salad Hawaii");
-        rau4.put("rating", 4.7);
+        rau4.put("rating", 0);
         rau4.put("region", Arrays.asList("Miền Trung"));
         rau4.put("session", Arrays.asList("Mùa Mưa"));
         rau4.put("groupPerson",Arrays.asList("Tăng cân"));
@@ -837,7 +837,7 @@ public class Fragment_Home extends Fragment {
         rau5.put("link", "link ne");
         rau5.put("material", Arrays.asList("Ma1", "Ma2"));
         rau5.put("nameFood", "Cải bó xôi xào tỏi");
-        rau5.put("rating", 4.7);
+        rau5.put("rating", 0);
         rau5.put("region", Arrays.asList("Miền Trung"));
         rau5.put("session", Arrays.asList("Mùa Mưa"));
         rau5.put("groupPerson",Arrays.asList("Tăng cân"));
@@ -869,7 +869,7 @@ public class Fragment_Home extends Fragment {
         rau6.put("link", "link ne");
         rau6.put("material", Arrays.asList("Ma1", "Ma2"));
         rau6.put("nameFood", "Chả viên rau củ");
-        rau6.put("rating", 4.7);
+        rau6.put("rating", 0);
         rau6.put("region", Arrays.asList("Miền Trung"));
         rau6.put("session", Arrays.asList("Mùa Mưa"));
         rau6.put("groupPerson",Arrays.asList("Tăng cân"));
@@ -902,7 +902,7 @@ public class Fragment_Home extends Fragment {
         rau7.put("link", "link ne");
         rau7.put("material", Arrays.asList("Ma1", "Ma2"));
         rau7.put("nameFood", "Canh bông cải xanh");
-        rau7.put("rating", 4.7);
+        rau7.put("rating", 0);
         rau7.put("region", Arrays.asList("Miền Trung"));
         rau7.put("session", Arrays.asList("Mùa Mưa"));
         rau7.put("groupPerson",Arrays.asList("Tăng cân"));
@@ -933,7 +933,7 @@ public class Fragment_Home extends Fragment {
         rau8.put("link", "link ne");
         rau8.put("material", Arrays.asList("Ma1", "Ma2"));
         rau8.put("nameFood", "Salad bông cải xanh");
-        rau8.put("rating", 4.7);
+        rau8.put("rating", 0);
         rau8.put("region", Arrays.asList("Miền Trung"));
         rau8.put("session", Arrays.asList("Mùa Mưa"));
         rau8.put("groupPerson",Arrays.asList("Tăng cân"));
@@ -961,7 +961,7 @@ public class Fragment_Home extends Fragment {
         rau9.put("link", "link ne");
         rau9.put("material", Arrays.asList("Ma1", "Ma2"));
         rau9.put("nameFood", "Ngô xào lạ miệng");
-        rau9.put("rating", 4.7);
+        rau9.put("rating", 0);
         rau9.put("region", Arrays.asList("Miền Trung"));
         rau9.put("session", Arrays.asList("Mùa Mưa"));
         rau9.put("groupPerson",Arrays.asList("Tăng cân"));
@@ -989,7 +989,7 @@ public class Fragment_Home extends Fragment {
         rau10.put("link", "link ne");
         rau10.put("material", Arrays.asList("Ma1", "Ma2"));
         rau10.put("nameFood", "Cải thìa xào nấm");
-        rau10.put("rating", 4.7);
+        rau10.put("rating", 0);
         rau10.put("region", Arrays.asList("Miền Trung"));
         rau10.put("session", Arrays.asList("Mùa Mưa"));
         rau10.put("groupPerson",Arrays.asList("Tăng cân"));
@@ -1017,7 +1017,7 @@ public class Fragment_Home extends Fragment {
         rau11.put("link", "link ne");
         rau11.put("material", Arrays.asList("Ma1", "Ma2"));
         rau11.put("nameFood", "Rau cần muối xổi");
-        rau11.put("rating", 4.7);
+        rau11.put("rating", 0);
         rau11.put("region", Arrays.asList("Miền Trung"));
         rau11.put("session", Arrays.asList("Mùa Mưa"));
         rau11.put("groupPerson",Arrays.asList("Tăng cân"));
@@ -1045,7 +1045,7 @@ public class Fragment_Home extends Fragment {
         rau12.put("link", "link ne");
         rau12.put("material", Arrays.asList("Ma1", "Ma2"));
         rau12.put("nameFood", "Canh hầm rau củ");
-        rau12.put("rating", 4.7);
+        rau12.put("rating", 0);
         rau12.put("region", Arrays.asList("Miền Trung"));
         rau12.put("session", Arrays.asList("Mùa Mưa"));
         rau12.put("groupPerson",Arrays.asList("Tăng cân"));
@@ -1072,7 +1072,7 @@ public class Fragment_Home extends Fragment {
         rau13.put("link", "link ne");
         rau13.put("material", Arrays.asList("Ma1", "Ma2"));
         rau13.put("nameFood", "Món cà tím xào");
-        rau13.put("rating", 4.7);
+        rau13.put("rating", 0);
         rau13.put("region", Arrays.asList("Miền Trung"));
         rau13.put("session", Arrays.asList("Mùa Mưa"));
         rau13.put("groupPerson",Arrays.asList("Tăng cân"));
@@ -1100,7 +1100,7 @@ public class Fragment_Home extends Fragment {
         rau14.put("link", "link ne");
         rau14.put("material", Arrays.asList("Ma1", "Ma2"));
         rau14.put("nameFood", "Cải thảo xào giấm");
-        rau14.put("rating", 4.7);
+        rau14.put("rating", 0);
         rau14.put("region", Arrays.asList("Miền Trung"));
         rau14.put("session", Arrays.asList("Mùa Mưa"));
         rau14.put("groupPerson",Arrays.asList("Tăng cân"));
@@ -1128,7 +1128,7 @@ public class Fragment_Home extends Fragment {
         rau15.put("link", "link ne");
         rau15.put("material", Arrays.asList("Ma1", "Ma2"));
         rau15.put("nameFood", "Cải thảo luộc kiểu mới");
-        rau15.put("rating", 4.7);
+        rau15.put("rating", 0);
         rau15.put("region", Arrays.asList("Miền Trung"));
         rau15.put("session", Arrays.asList("Mùa Mưa"));
         rau15.put("groupPerson",Arrays.asList("Tăng cân"));
@@ -1263,7 +1263,7 @@ public class Fragment_Home extends Fragment {
 
         Map<String, Object> ratingHanhT01r12 = new HashMap<>();
         ratingHanhT01r12.put("user", "HanhT01");
-        ratingHanhT01r12.put("foodID", "Heo2");
+        ratingHanhT01r12.put("foodID", "rau12");
         ratingHanhT01r12.put("pointRate", 1);
         rating.document("ratingHanhT01r12").set(ratingHanhT01r12);
 
@@ -1366,7 +1366,7 @@ public class Fragment_Home extends Fragment {
 
         Map<String, Object> ratingtritcmr12 = new HashMap<>();
         ratingtritcmr12.put("user", "tritcm");
-        ratingtritcmr12.put("foodID", "rau9");
+        ratingtritcmr12.put("foodID", "rau12");
         ratingtritcmr12.put("pointRate", 2);
         rating.document("ratingtritcmr12").set(ratingtritcmr12);
 
@@ -1377,26 +1377,14 @@ public class Fragment_Home extends Fragment {
         Map<String, Object> ratinghungnkH7 = new HashMap<>();
         ratinghungnkH7.put("user", "hungnk");
         ratinghungnkH7.put("foodID", "Heo7");
-        ratinghungnkH7.put("pointRate", 2);
+        ratinghungnkH7.put("pointRate", 4);
         rating.document("ratinghungnkH7").set(ratinghungnkH7);
 
         Map<String, Object> ratinghungnkH1 = new HashMap<>();
         ratinghungnkH1.put("user", "hungnk");
         ratinghungnkH1.put("foodID", "Heo1");
-        ratinghungnkH1.put("pointRate", 1);
+        ratinghungnkH1.put("pointRate", 5);
         rating.document("ratinghungnkH1").set(ratinghungnkH1);
-
-        Map<String, Object> ratinghungnkr10 = new HashMap<>();
-        ratinghungnkr10.put("user", "hungnk");
-        ratinghungnkr10.put("foodID", "rau10");
-        ratinghungnkr10.put("pointRate", 5);
-        rating.document("ratinghungnkr10").set(ratinghungnkr10);
-
-        Map<String, Object> ratinghungnkr9 = new HashMap<>();
-        ratinghungnkr9.put("user", "hungnk");
-        ratinghungnkr9.put("foodID", "rau9");
-        ratinghungnkr9.put("pointRate", 4);
-        rating.document("ratinghungnkr9").set(ratinghungnkr9);
 
         //-------------------------------------End Raiting--------------------------------
 

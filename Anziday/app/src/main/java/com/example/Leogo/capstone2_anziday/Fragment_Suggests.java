@@ -251,7 +251,7 @@ public class Fragment_Suggests extends Fragment {
         recyclerView.setAdapter(foodRecyclerViewAdapter);
         recyclerView1.setAdapter(foodRecyclerViewAdapter1);
         recyclerView2.setAdapter(foodRecyclerViewAdapter2);
-        Log.d("CheckListRecommend",listFoodTest.size()+"");
+        Log.d("CheckListRecommend", listFoodTest.size() + "");
     }
 
     private Map<String, Double> mapRating;
@@ -295,8 +295,8 @@ public class Fragment_Suggests extends Fragment {
                     @Override
                     public void onComplete(@NonNull Task<QuerySnapshot> task) {
                         if (task.isSuccessful()) {
-                            for (QueryDocumentSnapshot document : task.getResult()) {
-                                for (Map.Entry<String,Double> x1: sortgetDataItem(user).entrySet()){
+                            for (Map.Entry<String, Double> x1 : sortgetDataItem(user).entrySet()) {
+                                for (QueryDocumentSnapshot document : task.getResult()) {
                                     if (document.getId().equals(x1.getKey())) {
                                         String decription = document.getData().get("decription").toString();
                                         ArrayList<String> formatly = (ArrayList) document.getData().get("formatly");
@@ -309,23 +309,28 @@ public class Fragment_Suggests extends Fragment {
                                         ArrayList<String> region = (ArrayList) document.getData().get("region");
 
                                         ArrayList<String> session = (ArrayList) document.getData().get("session");
-                                        double rating = x1.getValue();
+                                        double rating;
+                                        if (mapRating.get(document.getId()) != null){
+                                            rating = mapRating.get(document.getId());
+                                        }
+                                        else rating = 0.0;
 
                                         food food = new food(document.getId(), decription, formatly, illness, image, link, material, nameFood, rating, region, session);
 
+                                        Log.d("CaNgay", x1.getKey() + rating);
                                         try {
                                             for (String x : formatly) {
                                                 if (x.equals("Điểm tâm") || x.equals("Tráng miệng")) {
                                                     listSang.add(food);
-                                                    Log.d("BuoiSang",rating+"");
+                                                    Log.d("BuoiSang", x1.getKey() + rating);
                                                 }
                                                 if (x.equals("Ăn trưa") || x.equals("Tráng miệng")) {
                                                     listTrua.add(food);
-                                                    Log.d("BuoiTrua",rating+"");
+                                                    Log.d("BuoiTrua", x1.getKey() + rating);
                                                 }
                                                 if (x.equals("Ăn tối") || x.equals("Tráng miệng")) {
                                                     listToi.add(food);
-                                                    Log.d("BuoiToi",rating+"");
+                                                    Log.d("BuoiToi", x1.getKey() + rating);
                                                 }
                                             }
 
@@ -337,7 +342,7 @@ public class Fragment_Suggests extends Fragment {
                                 }
                             }
 
-                            Log.d("CheckListRecommend",listFoodTest.size()+"");
+                            Log.d("CheckListRecommend", listFoodTest.size() + "");
                         } else {
                             Log.w(TAG, "Error getting documents.", task.getException());
                         }
@@ -380,6 +385,7 @@ public class Fragment_Suggests extends Fragment {
         for (Rating ranting : ratingList) {
             int indexItem = 1;
             int indexUser = 1;
+
             System.out.println(ranting.getUser());
             System.out.println(ranting.getFoodID());
             for (int i = 0; i < getAllUserList.size() - 1; i++) {
